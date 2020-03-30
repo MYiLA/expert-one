@@ -1,0 +1,30 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title ExpertOne
+    //- link(rel="preload" href="fonts/opensans-regular.woff2" as="font" crossorigin="anonymous")
+    link(rel="stylesheet", href="lib/css-awesome/all.min.css")
+    link(rel="stylesheet", href="lib/css-awesome/brands.css")
+    link(rel="stylesheet" href="lib/glide/glide.core.min.css")
+    link(rel="stylesheet" href="css/style.min.css")
+
+  body
+
+    main.home-page
+      .home-page__hover(style="background-image: url(img/home-hover.jpg)")
+        .wrap
+          h1.home-page__hover-title Study online with ESSEC Augmented Digital Campus
+          a.home-page__hover-btn(href="programmes-page.html") Explore our online courses now
+      .wrap
+        section.home-page__advantage.advantage
+          //- include ../modules/advantage
+
+
+    //- include ../modules/footer
+
+    script(src="js/polyfill.min.js")
+    script(src="js/script.js" defer)
+    
