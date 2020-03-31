@@ -5,26 +5,23 @@ html(lang="ru")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible" content="ie=edge")
     title ExpertOne
-    //- link(rel="preload" href="fonts/opensans-regular.woff2" as="font" crossorigin="anonymous")
-    link(rel="stylesheet", href="lib/css-awesome/all.min.css")
-    link(rel="stylesheet", href="lib/css-awesome/brands.css")
+    link(rel="stylesheet" href="lib/choices/choices.min.css")
     link(rel="stylesheet" href="lib/glide/glide.core.min.css")
     link(rel="stylesheet" href="css/style.min.css")
 
-  body
-
-    main.home-page
-      .home-page__hover(style="background-image: url(img/home-hover.jpg)")
-        .wrap
-          h1.home-page__hover-title Study online with ESSEC Augmented Digital Campus
-          a.home-page__hover-btn(href="programmes-page.html") Explore our online courses now
+  body.expert-one
+    main.expert-one__home-page.home-page
       .wrap
-        section.home-page__advantage.advantage
-          //- include ../modules/advantage
+        .home-page__header.header
+          include ../modules/header
+        .home-page__search.search
+        .home-page__filter.filter
+          include ../modules/filter
+        .home-page__speakers.speakers
+          include ../modules/speakers
 
-
-    //- include ../modules/footer
-
+    script(src="lib/choices/choices.min.js")
+    script(src="lib/jquery3.4.1.js")
     script(src="js/polyfill.min.js")
-    script(src="js/script.js" defer)
+    script(src="js/script.js")
     
