@@ -1,6 +1,92 @@
 button.filter__open(type=button) Открыть фильтры
-.filter__wrap
+.filter__popup
+  
   .filter__header
-    span
+    span.filter__main-title Фильтры
     button.filter__close(type="button" aria-label="Закрыть фильтры")
   
+  .filter__wrap
+    fieldset
+      legend.filter__title Сортировать по
+      input.visually-hidden(type="radio" id="expert-sort-price" name="sort-by" value="Цене")
+      label.filter__tab(for="expert-sort-price") Цене
+      input.visually-hidden(type="radio" id="expert-sort-fame" name="sort-by" value="Популярности")
+      label.filter__tab(for="expert-sort-fame") Популярности
+  
+  .filter__wrap
+    input.visually-hidden(type="checkbox" id="expert-only-favorites" name="only-favorites" value="Только избранные" disabled)
+    label.filter__checkbox(for="expert-only-favorites") Только избранные
+  
+  .filter__wrap
+    .filter__sub-wrap
+      label.filter__title(for="expert-lang") Язык
+      select.filter__select(value="Язык" id="#expert-lang")
+        option(disabled selected="selected") Выберите язык
+        option Русский
+        option Английский
+        option Немецкий
+        option Французский
+        option Испанский
+      label.filter__title(for="expert-country") Страна
+      select.filter__select(value="Страна" id="#expert-country")
+        option(disabled selected="selected") Выберите страну
+        option Россия
+        option Франция
+        option Англия
+        option Германия
+        option Испания
+    .filter__sub-wrap
+      fieldset
+        legend.filter__title Цена
+        input.visually-hidden(type="checkbox" id="expert-price5" name="price" value="5 000 - 10 000" checked)
+        label.filter__checkbox(for="expert-price5") 5 000 - 10 000
+        input.visually-hidden(type="checkbox" id="expert-price10" name="price" value="10 000 - 20 000")
+        label.filter__checkbox(for="expert-price10") 10 000 - 20 000
+        input.visually-hidden(type="checkbox" id="expert-price20" name="price" value="20 000 - 30 000")
+        label.filter__checkbox(for="expert-price20") 20 000 - 30 000
+        input.visually-hidden(type="checkbox" id="expert-price30" name="price" value="30 000 - 50 000")
+        label.filter__checkbox(for="expert-price30") 30 000 - 50 000
+        input.visually-hidden(type="checkbox" id="expert-price50" name="price" value="50 000 - 100 000")
+        label.filter__checkbox(for="expert-price50") 50 000 - 100 000
+    .filter__sub-wrap
+      fieldset
+        legend.filter__title Доступность для выступления
+        input.visually-hidden(type="radio" id="expert-available-yes" name="available" value="Да" checked)
+        label.filter__tab(for="expert-available-yes") Да
+        input.visually-hidden(type="radio" id="expert-available-no" name="available" value="Нет")
+        label.filter__tab(for="expert-available-no") Нет
+    .filter__sub-wrap
+      fieldset
+        legend.filter__title Доступность для интервью
+        input.visually-hidden(type="radio" id="expert-interview-yes" name="interview" value="Да")
+        label.filter__tab(for="expert-interview-yes") Да
+        input.visually-hidden(type="radio" id="expert-interview-no" name="interview" value="Нет" checked)
+        label.filter__tab(for="expert-interview-no") Нет
+    .filter__sub-wrap
+      input.visually-hidden(type="checkbox" id="expert-only-video" name="only-video" value="Только с видео" checked)
+      label.filter__checkbox(for="expert-only-video") Только с видео
+    .filter__sub-wrap
+      label.filter__title(for="expert-tags") Теги
+      button.filter__clean-tags(type="button") Очистить все
+      input.filter__textarea(type="textarea" id="expert-tags" name="tags" value="#Психология, #Финансы, #Образование")
+      button.filter__add-tags(type="button") + Добавить условие
+    .filter__sub-wrap
+      fieldset
+        legend.filter__title Цена 
+          span.filter__note (Служ.)
+        input.visually-hidden(type="radio" id="expert-price-fix" name="price-type" value="Фикс" checked)
+        label.filter__tab(for="expert-price-fix") Фикс
+        input.visually-hidden(type="radio" id="expert-price-range" name="price-type" value="Диапазон")
+        label.filter__tab(for="expert-price-range") Диапазон
+    .filter__sub-wrap
+      fieldset
+        legend.filter__title Верифицирован
+          span.filter__note (Служ.)
+        input.visually-hidden(type="radio" id="expert-verification-yes" name="verification" value="Да" checked)
+        label.filter__tab(for="expert-verification-yes") Да
+        input.visually-hidden(type="radio" id="expert-verification-no" name="verification" value="Нет")
+        label.filter__tab(for="expert-verification-no") Нет
+  
+  .filter__wrap-sticky
+    button.filter__submit(type="submit") Применить фильтры
+    button.filter__dropping(type="button") Сбросить фильтры
