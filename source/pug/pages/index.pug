@@ -11,10 +11,12 @@ html(lang="ru")
 
   body.expert-one
     main.expert-one__home-page.home-page
-      .wrap
-        .home-page__header.header
+      .home-page__header.header
+        .header__wrap
           include ../modules/header
+      .wrap
         .home-page__search.search
+          include ../modules/search
         .home-page__filter.filter
           include ../modules/filter
         .home-page__speakers.speakers

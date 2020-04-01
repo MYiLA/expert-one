@@ -1,0 +1,10 @@
+form.search__form(action="#" method="GET")
+  label.visually-hidden(for="search") Поиск по имени и фамилии
+  input.search__input(id="search" type="text" placeholder="Поиск по имени и фамилии" autocomplete="off")
+  button.search__btn(type="button")
+.search__result.result
+  .result__counter Результаты поиска: 3
+  ul.result__list
+    li.result__item Иванов Иван Иванович
+    li.result__item Иванов Сергей Анатольевич
+    li.result__item Иванов Петр Михайлович

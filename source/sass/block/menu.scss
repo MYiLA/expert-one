@@ -196,14 +196,16 @@
     .menu__wrap {
       width: 100%;
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       margin-top: -5px;
     }
 
     .menu__tel {
+      flex-shrink: 0;
       justify-content: flex-start;
       box-shadow: none;
       flex-grow: 1;
+      margin-right: 30px;
     }
 
     .menu__list {
@@ -220,6 +222,8 @@
     .menu__link {
       padding: 0;
       border-bottom: none;
+      font-size: 18px;
+      line-height: 18px;
     }
 
     .menu__language-wrap {
@@ -228,10 +232,6 @@
     }
 
     @media (min-width: 640px) {
-      .menu {
-
-      }
-
       .choices__list--dropdown .choices__item--selectable {
         padding-right: 0;
         padding-left: 0;
@@ -245,5 +245,26 @@
 }
 
 @media (min-width: $desktop-width) {
-  
+  .expert-one {
+    .menu {
+      margin-right: 20px;
+    }
+
+    .header__logo {
+      margin-right: 30px;
+      img {
+        width: 188px;
+      }
+    }
+
+    .menu__tel {
+      font-weight: 700;
+    }
+
+    .menu__link {
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+
 }

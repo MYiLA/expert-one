@@ -47,6 +47,7 @@ html {
   min-width: $mobile-width;
   overflow-x: hidden;
   @include text;
+  background-color: #eff0f3;
 
   a {
     text-decoration: none;
@@ -64,7 +65,8 @@ html {
   }
 
   .wrap {
-    width: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
 
     @media (min-width: $tablet-width) {
       margin: 0 auto;
