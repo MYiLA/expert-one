@@ -565,6 +565,16 @@ input:checked + .filter__tab {
     }
   }
 
+
+  .filter__select {
+    .choices__list--dropdown .choices__item--selectable {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+
+
   .filter__wrap-mobile {
     min-height: auto;
     background-color: transparent;
@@ -589,7 +599,7 @@ input:checked + .filter__tab {
     font-size: 14px;
     line-height: 14px;
     font-weight: 400;
-    
+
     svg {
       top: 50%;
     }
