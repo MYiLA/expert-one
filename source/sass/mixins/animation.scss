@@ -1,5 +1,6 @@
 @mixin animation {
   transition: 0.4s;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.9;

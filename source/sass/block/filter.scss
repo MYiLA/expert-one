@@ -143,6 +143,8 @@ label.filter__title {
   line-height: 14px;
   font-weight: 400;
   color: $black;
+
+  cursor: pointer;
 }
 
 input:checked + .filter__tab {
@@ -158,6 +160,7 @@ input:checked + .filter__tab {
   padding-bottom: 7px;
   padding-top: 7px;
   margin-bottom: 15px;
+  cursor: pointer;
 
   font-weight: 400;
   font-size: 16px;
@@ -391,7 +394,7 @@ input:checked + .filter__tab {
 }
 
 .filter__add-tags {
-
+  cursor: pointer;
   margin: 0 auto;
   width: 200px;
   text-align: center;
@@ -462,6 +465,7 @@ input:checked + .filter__tab {
 }
 
 .filter__dropping {
+  cursor: pointer;
   position: relative;
   padding-left: 32px;
   padding-top: 2px;
