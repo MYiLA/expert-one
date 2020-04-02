@@ -1,4 +1,7 @@
-.speaker {}
+.speaker {
+  background-color: $white;
+  margin-bottom: 10px;
+}
 
 .speaker__photo {
   img {}
@@ -19,3 +22,6 @@
 .speaker__order-btn {}
 
 .speaker__more-btn {}
+
+// @media (min-width: $tablet-width) {}
+// @media (min-width: $desktop-width) {}

@@ -1,5 +1,5 @@
 .expert-one {
-  .header--open {
+  .header.active {
     .menu {
       opacity: 1;
       pointer-events: auto;
@@ -88,17 +88,13 @@
       padding-right: 22px;
     }
 
-    .choices[data-type*=select-one]:after {
-      content: '';
-      top: 43%;
+    .choices[data-type*=select-one] {
+      @include arrow;
 
-      border: none;
-      width: 8px;
-      height: 8px;
-      border-bottom: 2px solid $blue;
-      border-right: 2px solid $blue;
-      transform: rotate(45deg);
-      transition: 0.4s;
+      &:after {
+        top: 43%;
+        transform: rotate(45deg);
+      }
     }
 
     .is-open {
@@ -252,6 +248,7 @@
 
     .header__logo {
       margin-right: 30px;
+
       img {
         width: 188px;
       }

@@ -65,11 +65,14 @@ html {
   }
 
   .wrap {
+    position: static;
     margin-left: 15px;
     margin-right: 15px;
 
     @media (min-width: $tablet-width) {
       margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
       width: 800px;
     }
 
@@ -77,4 +80,17 @@ html {
       width: 1050px;
     }
   }
+
+  &.no-scroll {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    @media (min-width: $tablet-width) {
+      height: auto;
+      width: auto;
+      position: relative;
+      overflow: visible;
+    }
+ }
 }

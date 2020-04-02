@@ -1,26 +1,41 @@
 @mixin btn {
   display: block;
   width: 100%;
-  padding: 9px;
+  padding: 18px;
   padding-left: 25px;
   padding-right: 25px;
   border: none;
   text-align: center;
-  border-radius: 5px;
-  font-size: 16px;
-  line-height: 20px;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 14px;
   font-family: $font-main;
-  background-color: $accent-color;
+  background-color: $blue;
   color: $white;
   cursor: pointer;
 
-  &:focus,
   &:hover {
     outline: none;
-    opacity: 0.6;
+    background-color: #2e3e80;
   }
 
-  &:active {
-    opacity: 0.3;
+  &:active, &:focus {
+    outline: none;
+    background-color: #253369;
+  }
+
+  &--white {
+    background-color: $white;
+    color: #3d4f9c;
+
+    &:hover {
+      outline: none;
+      opacity: 0.9;
+    }
+  
+    &:active, &:focus {
+      outline: none;
+      opacity: 0.7;
+    }
   }
 }

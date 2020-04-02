@@ -1,7 +1,31 @@
-.speakers {}
+.speakers {
 
-.speakers__list {}
+}
+
+.speakers__list { 
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
 .speakers__item {}
 
 .speakers__loading {}
+
+
+
+@media (min-width: $tablet-width) {
+  .speakers {
+    width: 520px;
+    padding-bottom: 40px;
+    background-color: transparent;
+  }
+}
+
+
+
+@media (min-width: $desktop-width) {
+  .speakers {
+    width: 770px;
+  }
+}

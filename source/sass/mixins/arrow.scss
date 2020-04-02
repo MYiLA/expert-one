@@ -1,0 +1,11 @@
+@mixin arrow {
+  &:after {
+    content: '';
+    border: none;
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid $blue;
+    border-right: 2px solid $blue;
+    transition: 0.4s;
+  }
+}

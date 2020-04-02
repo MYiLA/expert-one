@@ -1,0 +1,22 @@
+@mixin mark {
+  transition: 0.4s;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 48%;
+    border: none;
+    width: 6px;
+    height: 10px;
+    border-bottom: 2px solid $blue;
+    border-right: 2px solid $blue;
+    transition: 0.4s;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  @media (min-width: $tablet-width) {
+    &:after {
+    left: 7px;
+    }
+  }
+}
