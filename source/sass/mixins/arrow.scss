@@ -1,6 +1,7 @@
 @mixin arrow {
   &:after {
     content: '';
+    position: absolute;
     border: none;
     width: 8px;
     height: 8px;

@@ -1,12 +1,43 @@
-.availability {}
+.availability {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
 
-.availability__performance {}
+.availability__performance {
+  width: 50%;
+  border-right: 1px dashed #B1B5C5;
+}
 
-.availability__title {}
+.availability__title {
+  display: block;
+  max-width: 120px;
+  margin-top: 0;
+  margin-bottom: 7px;
 
-.availability__desc {}
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $black;
+}
 
-.availability__interview {}
+.availability__desc {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #666666;
+}
+
+.availability__interview {
+  width: 50%;
+  padding-left: 30px;
+}
 
 // @media (min-width: $tablet-width) {}
-// @media (min-width: $desktop-width) {}
+@media (min-width: $desktop-width) {
+  .availability__title {
+    max-width: 100%;
+    margin-bottom: 2px;
+  }
+}

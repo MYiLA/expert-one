@@ -43,3 +43,9 @@ $('.expert-one .filter__close').on('click', function () {
   $('.expert-one .filter__popup').removeClass('active');
   $('.expert-one').removeClass('no-scroll');
 })
+
+// избранное. смена вида кнопки
+
+$('.expert-one .speaker__favourites').on('click', function () {
+  $(this).toggleClass('active');
+})
