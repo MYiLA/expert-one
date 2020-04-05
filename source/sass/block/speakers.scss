@@ -1,45 +1,55 @@
-.speakers {
-  padding-bottom: 40px;
+.expert-one {
+  .speakers {
+    padding-bottom: 40px;
+  }
+
+  .speakers__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .speakers__speaker {
+    margin-bottom: 10px;
+  }
+
+  .loading {
+    width: 60px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    background-image: url(../img/loader.png);
+    animation: 0.7s linear 0s normal none infinite running rot;
+  }
+
+  @keyframes rot {
+    0% {
+      transform: rotate(0);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 }
-
-.speakers__list { 
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.speakers__speaker {
-  margin-bottom: 10px;
-}
-
-.loading {
-  width: 60px;
-  height: 60px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 40px;
-  background-image: url(../img/loader.png);
-  animation: 0.7s linear 0s normal none infinite running rot;
-}
-
-@keyframes rot {
-  0% { transform: rotate(0); }
-  100% { transform: rotate(360deg); }
- }
-
 
 
 @media (min-width: $tablet-width) {
-  .speakers {
-    width: 520px;
-    background-color: transparent;
+  .expert-one {
+    .speakers {
+      width: 520px;
+      background-color: transparent;
+    }
   }
 }
 
 
 
 @media (min-width: $desktop-width) {
-  .speakers {
-    width: 770px;
+  .expert-one {
+    .speakers {
+      width: 770px;
+    }
   }
 }

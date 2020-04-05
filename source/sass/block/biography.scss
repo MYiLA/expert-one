@@ -1,0 +1,74 @@
+.expert-one {
+  .biography {
+    &.active {
+      .biography__btn-collapse {
+        &--max {
+          display: none;
+        }
+
+        &--min {
+          display: block;
+        }
+      }
+
+      p {
+        &:not(:nth-child(2)) {
+          display: block;
+        }
+      }
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      color: #555555;
+
+      &:not(:nth-child(2)) {
+        display: none;
+      }
+    }
+  }
+
+  .biography__title {}
+
+
+
+  .biography__btn-collapse {
+    @include arrow;
+
+    position: relative;
+    font-family: $font-main;
+    font-size: 16px;
+    line-height: 16px;
+    color: #3d4f9c;
+    background-color: transparent;
+    border: none;
+    padding-left: 16px;
+
+    &::after {
+      left: 0;
+    }
+
+    &--max {
+      display: block;
+
+      &::after {
+        top: 25%;
+        transform: rotate(45deg);
+      }
+    }
+
+    &--min {
+      display: none;
+
+      &::after {
+        top: 50%;
+        transform: rotate(225deg);
+        border-color: #2e3e80;
+      }
+    }
+  }
+}

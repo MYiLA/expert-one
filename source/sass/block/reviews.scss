@@ -1,0 +1,50 @@
+.expert-one {
+  .reviews {}
+
+  .reviews__title {}
+
+  .reviews__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .reviews__item {
+    padding-top: 47px;
+    padding-left: 0;
+    padding-bottom: 27px;
+    border-bottom: 1px solid #e7e7e7;
+    margin-bottom: 30px;
+
+    background-image: url(../img/quote-mark.svg);
+    background-repeat: no-repeat;
+    background-size: 30px auto;
+    background-position: left top;
+  }
+
+  .reviews__desc {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 25px;
+
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #666666;
+  }
+
+  .reviews__autor {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    color: $black;
+    margin-right: 10px;
+  }
+
+  .reviews__position {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #999999;
+  }
+}

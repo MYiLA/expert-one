@@ -1,80 +1,87 @@
-.service {
-  display: flex;
-  flex-grow: 1;
-  justify-content: flex-end;
-}
-
-.service__favourites, .service__basket {
-  position: relative;
-}
-
-.service__favourites {
-  margin-right: 32px;
-  .service__service {
-    background-image: url(../img/heart.svg);
-  }
-}
-
-.service__basket {
-  .service__service {
-    background-image: url(../img/basket.svg);
-  }
-}
-
-.service__label {
-  background-size: 21px auto;
-}
-
-.service__service {
-  @include animation;
-
-  display: block;
-  width: 21px;
-  height: 21px;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% auto;
-  border: none;
-}
-
-.service__counter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  top: -10px;
-  left: 12px;
-  background-color: #3d4f9c;
-  color: $white;
-  font-size: 12px;
-  line-height: 12px;
-  font-weight: 700;
-}
-
-@media (min-width: $tablet-width) {}
-
-@media (min-width: $desktop-width) {
-  .service__favourites, .service__basket {
+.expert-one {
+  .service {
     display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+
+  .service__favourites,
+  .service__basket {
+    position: relative;
+  }
+
+  .service__favourites {
+    margin-right: 32px;
+
     .service__service {
-    background-image: none;
-    width: auto;
-    margin-right: 5px;
+      background-image: url(../img/heart.svg);
+    }
+  }
+
+  .service__basket {
+    .service__service {
+      background-image: url(../img/basket.svg);
     }
   }
 
   .service__label {
+    background-size: 21px auto;
+  }
+
+  .service__service {
+    @include animation;
+
     display: block;
-    font-size: 18px;
-    line-height: 18px;
-    font-weight: 400;
+    width: 21px;
+    height: 21px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    border: none;
   }
 
   .service__counter {
-    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    top: -10px;
+    left: 12px;
+    background-color: #3d4f9c;
+    color: $white;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .expert-one {
+
+    .service__favourites,
+    .service__basket {
+      display: flex;
+
+      .service__service {
+        background-image: none;
+        width: auto;
+        margin-right: 5px;
+      }
+    }
+
+    .service__label {
+      display: block;
+      font-size: 18px;
+      line-height: 18px;
+      font-weight: 400;
+    }
+
+    .service__counter {
+      position: static;
+    }
   }
 }

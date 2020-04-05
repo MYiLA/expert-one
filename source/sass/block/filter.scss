@@ -1,3 +1,4 @@
+.expert-one {
 .filter {
 position: static;
   fieldset {
@@ -505,9 +506,10 @@ input:checked + .filter__tab {
     }
   }
 }
-
+}
 
 @media (min-width: $tablet-width) {
+  .expert-one {
   .filter__open {
     display: none;
   }
@@ -577,8 +579,6 @@ input:checked + .filter__tab {
     }
   }
 
-
-
   .filter__wrap-mobile {
     min-height: auto;
     background-color: transparent;
@@ -608,4 +608,5 @@ input:checked + .filter__tab {
       top: 50%;
     }
   }
+}
 }

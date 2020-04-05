@@ -1,0 +1,25 @@
+.expert-one {
+  .contacts {}
+
+  .contacts__title {
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    color: $black;
+  }
+
+  .contacts__link {
+    @include animation;
+    display: block;
+    font-size: 16px;
+    line-height: 26px;
+    color: #3d4f9c;
+  }
+
+  .contacts__tel {
+    @include animation;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}

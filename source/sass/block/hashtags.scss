@@ -1,0 +1,28 @@
+.expert-one {
+  .hashtags {
+    border-bottom: 1px solid #e7e7e7;
+  }
+
+  .hashtags__list {
+    padding: 0;
+    padding-bottom: 12px;
+    margin: 0;
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .hashtags__item {
+    margin-right: 14px;
+    margin-bottom: 5px;
+  }
+
+  .hashtags__hashtag {
+    @include animation;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #3d4f9c;
+  }
+}

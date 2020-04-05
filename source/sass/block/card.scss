@@ -1,19 +1,36 @@
 .expert-one {
   .card {
     padding-bottom: 60px;
+    background-color: $white;
+  }
+
+  .card__hover-wrap {
+    margin-bottom: 23px;
   }
 
   .card__title {
+    margin: 0;
+    margin-bottom: 13px;
     font-weight: 500;
     font-size: 18px;
     line-height: 26px;
     color: $black;
   }
+
+  .card__technical,
+  .card__progress,
+  .card__hashtags,
+  .card__video,
+  .card__biography,
+  .card__topics,
+  .card__books,
+  .card__reviews {
+    margin-bottom: 30px;
+  }
 }
 
-
-
 // @media (min-width: $tablet-width) {}
+
 @media (min-width: $desktop-width) {
   .expert-one {
     .card__title {

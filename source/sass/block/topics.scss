@@ -1,0 +1,30 @@
+.expert-one {
+.topics__title {}
+
+.topics__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.topics__item {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+
+  font-size: 16px;
+  line-height: 24px;
+  color: #555555;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #3d4f9c;
+  }
+}
+}

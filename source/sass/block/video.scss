@@ -1,0 +1,146 @@
+.expert-one {
+.video {}
+
+.video__glide {}
+
+.video__track {}
+
+.video__list {}
+
+.video__item-wrap {}
+
+.video__slide {
+  height: 195px;
+  position: relative;
+  overflow: hidden;
+}
+
+.video__wrap-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.video__play {
+  @include animation;
+  z-index: 1;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  width: 100px;
+  height: 100px;
+
+  background-image: url(../img/play.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+
+.video__hover {
+  position: absolute;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video__wrap-video {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  iframe {
+    height: 100%;
+  }
+}
+
+.video__bullets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video__bullet {
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  width: 10px;
+  height: 10px;
+
+
+  margin-right: 10px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+
+  background: radial-gradient(8px,#dddddd 93%,transparent 100%);
+ 
+  &:nth-last-child(1) {
+    margin-right: 0;
+  }
+}
+
+.video__arrow-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.video__arrow {
+  display: none;
+  @include arrow;
+  cursor: pointer;
+  transition: 0.4s;
+  position: relative;
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #c6c6c6;
+  &:hover {
+    outline: none;
+    border-color: #2e3e80;
+    &::after {
+      border-color: #2e3e80;
+    }
+  }
+
+  &:focus, &:active {
+    outline: none;
+    border-color: #27356d;
+    &::after {
+      border-color: #27356d;
+    }
+  }
+
+  &::after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-color: #c6c6c6;
+  }
+
+  &--left {
+    &::after {
+      left: 53%;
+      transform: translate(-50%, -50%) rotate(135deg);
+    }
+  }
+  &--right {
+    &::after {
+      left: 47%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}
+}

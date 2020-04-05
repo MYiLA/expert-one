@@ -1,0 +1,19 @@
+.expert-one {
+.social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 11px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.social__item {
+  margin-right: 10px;
+}
+
+.social__link {
+  @include animation;
+  img {}
+}
+}
