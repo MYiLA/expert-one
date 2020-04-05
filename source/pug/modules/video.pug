@@ -1,0 +1,32 @@
+.video__glide
+  .video__track.glide__track(data-glide-el="track")
+    ul.video__list.glide__slides
+      li.glide__slide.video__item-wrap
+        video__slide
+        video__wrap-hover
+          button.video__play(type="button" aria-label="включить видео")
+          img.video__hover(src="./img/video.jpg", alt="обложка видео")
+        video__wrap-video
+          iframe(width="560" height="315" src="https://www.youtube.com/embed/UwoekIZd47Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+      li.glide__slide.also__item-wrap
+        video__slide
+          video__wrap-hover
+            button.video__play(type="button" aria-label="включить видео")
+            img.video__hover(src="./img/video.jpg", alt="обложка видео")
+          video__wrap-video
+            iframe(width="560" height="315" src="https://www.youtube.com/embed/UwoekIZd47Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+      li.glide__slide.also__item-wrap
+        video__slide
+          video__wrap-hover
+            button.video__play(type="button" aria-label="включить видео")
+            img.video__hover(src="./img/video.jpg", alt="обложка видео")
+          video__wrap-video
+            iframe(width="560" height="315" src="https://www.youtube.com/embed/UwoekIZd47Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+  .video__bullets.glide__bullets(data-glide-el="controls[nav]")
+    button.video__bullet.glide__bullet(type="button" data-glide-dir="=0" aria-label="переключить на слайд 1")
+    button.video__bullet.glide__bullet(type="button" data-glide-dir="=1" aria-label="переключить на слайд 2")
+    button.video__bullet.glide__bullet(type="button" data-glide-dir="=2" aria-label="переключить на слайд 3")
+  .video__arrow-wrap.glide__arrows(data-glide-el="controls")
+    button.video__arrow.video__arrow--left.glide__arrow.glide__arrow--left(type="button" aria-label="last slide" data-glide-dir="<")
+    button.video__arrow.video__arrow--right.glide__arrow.glide__arrow--right(type="button" aria-label="next slide" data-glide-dir=">")

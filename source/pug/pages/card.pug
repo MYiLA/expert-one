@@ -14,29 +14,31 @@ html(lang="ru")
       .card__header.header
         .header__wrap
           include ../modules/header
-      .wrap
-        .card__speaker.speaker
+      .card__hover-wrap
+        .wrap
           include ../modules/speaker
-        .card__service.service
+      .wrap
+        .card__technical.technical
           include ../modules/technical
-        .card__service.progress
+        .card__progress.progress
           include ../modules/progress
-        .card__service.video
+        .card__hashtags.hashtags
+          include ../modules/hashtags
+        .card__video.video
           include ../modules/video
-        .card__service.biography
+        .card__biography.biography
           include ../modules/biography
-        .card__service.topics
+        .card__topics.topics
           include ../modules/topics
-        .card__service.books
+        .card__books.books
           include ../modules/books
-        .card__service.reviews
+        .card__reviews.reviews
           include ../modules/reviews
+        .card__loading.loading
       
-      
-      
-      
-      
-      
+    script(src="lib/jquery3.4.1.js")
     script(src="lib/choices/choices.min.js")
     script(src="js/polyfill.min.js")
+  
     script(src="js/script.js")
+    script(src="js/card.js")

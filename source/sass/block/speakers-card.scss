@@ -1,0 +1,323 @@
+.expert-one {
+  .card__hover-wrap {
+    background: linear-gradient(83.52deg, #3D58C8 -21.83%, #38498E 55.9%, #2E3E80 121.08%);
+  }
+
+  .card {
+    .speaker {
+      padding: 0;
+      padding-top: 30px;
+      background-color: transparent;
+    }
+
+    .speaker__photo {
+      position: relative;
+      order: 1;
+      width: 100%;
+      height: 345px;
+      margin-bottom: 20px;
+      top: 0;
+      left: 0;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      @media (min-width: 320px) {
+        height: 290px;
+      }
+
+      @media (min-width: 375px) {
+        height: 345px;
+      }
+
+      @media (min-width: 500px) {
+        height: 453px;
+      }
+    }
+
+    .speaker__favourites {
+      order: 2;
+      margin-bottom: 20px;
+      color: #adbdff;
+      background-color: rgba(173, 189, 255, .15);
+
+      &:hover {
+        background-color: rgba(173, 189, 255, .15);
+      }
+
+      .speaker__favourites-icon {
+        background-image: url(../img/heart-blue.svg);
+      }
+
+      &.active {
+        color: $white;
+        background-color: rgba(173, 189, 255, .3);
+
+        .speaker__favourites-icon {
+          background-image: url(../img/heart-full-white.svg);
+        }
+
+        &:hover {
+          background-color: rgba(173, 189, 255, .3);
+        }
+      }
+    }
+
+    .speaker__name {
+      margin: 0;
+      order: 3;
+      color: $white;
+      font-size: 26px;
+      line-height: 36px;
+      margin-bottom: 7px;
+    }
+
+    .speaker__desc {
+      order: 4;
+      color: #adbdff;
+      font-size: 18px;
+      line-height: 26px;
+      margin-bottom: 25px;
+    }
+
+    .speaker__info {
+      order: 5;
+      margin: 0;
+      padding-bottom: 18px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 18px;
+      color: white;
+      border-bottom: 1px dashed #ADBDFF;
+    }
+
+    .info__item {
+      padding-left: 27px;
+      margin-right: 20px;
+
+      &--country {
+        background-image: url(../img/country-blue.svg);
+      }
+
+      &--lang {
+        background-image: url(../img/lang-blue.svg);
+      }
+
+      &--range {
+        background-image: url(../img/range-blue.svg);
+      }
+    }
+
+    .speaker__availability {
+      order: 6;
+    }
+
+    .availability {
+      padding-top: 20px;
+    }
+
+    .availability__performance {
+      margin-bottom: 25px;
+    }
+
+    .availability__performance,
+    .availability__interview {
+      width: 100%;
+      padding-left: 0;
+      border-right: none;
+    }
+
+    .availability__title {
+      max-width: 100%;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 16px;
+      margin-bottom: 12px;
+      color: #ADBDFF;
+    }
+
+    .availability__desc {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 16px;
+      color: $white;
+    }
+
+    .speaker__order-btn {
+      @include animation;
+      order: 7;
+
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 16px;
+      margin-bottom: 30px;
+
+      background-color: $white;
+      color: #3d4f9c;
+    }
+
+    .speaker__more-btn {
+      display: none;
+    }
+
+    @media (min-width: 600px) {
+      .speaker {
+        padding-top: 40px;
+        padding-bottom: 30px;
+      }
+
+      .speaker__name {
+        min-height: auto;
+        margin-bottom: 16px;
+      }
+
+      .speaker__desc {
+        min-height: 78px;
+      }
+
+      .speaker__photo {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 250px;
+        height: 250px;
+      }
+
+      .speaker__favourites {
+        position: absolute;
+        width: 250px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        left: 0;
+        top: 382px;
+      }
+
+      .speaker__favourites-text {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 16px;
+      }
+
+      .speaker__order-btn {
+        position: absolute;
+        width: 250px;
+        left: 0;
+        top: 310px;
+      }
+
+      .speaker__name,
+      .speaker__info,
+      .speaker__desc,
+      .speaker__availability {
+        margin-left: 280px;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .expert-one {
+    .card {
+
+      .card__hover-wrap {
+        background: linear-gradient(37.88deg, #3D58C8 -21.83%, #38498E 55.9%, #2E3E80 121.08%);
+      }
+      .speaker {
+        margin-bottom: 0;
+      }
+
+      .speaker__name,
+      .speaker__info,
+      .speaker__desc,
+      .speaker__availability,
+      .speaker__order-btn {
+        margin-left: 360px;
+      }
+
+      .speaker__photo {
+        width: 330px;
+        height: 330px;
+      }
+
+      .speaker__favourites {
+        border-radius: 3px;
+        width: 170px;
+        padding: 0;
+        margin-bottom: 0;
+        top: 30px;
+        left: 890px;
+        background-color: transparent;
+
+        &.active {
+          background-color: transparent;
+        }
+      }
+
+      .speaker__favourites-icon {
+        width: 18px;
+        height: 16px;
+        background-size: 18px auto;
+        margin-right: 10px;
+      }
+
+      .speaker__favourites-text {
+        display: block;
+        font-family: $font-main;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 14px;
+      }
+
+      .speaker__name {
+        font-weight: 500;
+        font-size: 46px;
+        line-height: 56px;
+        margin-bottom: 12px;
+      }
+
+      .speaker__desc {
+        min-height: 56px;
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 16px;
+      }
+
+      .speaker__info {
+        padding-bottom: 0;
+        border-bottom: none;
+        margin-bottom: 15px;
+      }
+
+      .speaker__availability {
+        padding: 0;
+      }
+
+      .speaker__availability {
+        display: flex;
+      }
+
+      .availability__performance, .availability__interview {
+        width: 260px;
+        margin-bottom: 0;
+      }
+
+      .availability__performance {
+        border-right: 1px dashed #ADBDFF;
+        margin-right: 21px;
+      }
+
+      .speaker__order-btn {
+        position: static;
+        max-width: 200px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 500;
+      }
+
+    }
+  }
+}
