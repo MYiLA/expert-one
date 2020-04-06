@@ -1,22 +1,45 @@
 .expert-one {
-.video {}
+.video {
+  width: 100%;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e7e7e7;
+}
 
 .video__glide {}
 
-.video__track {}
+.video__track {
+  position: relative;
+  z-index: 1;
+}
 
-.video__list {}
+.video__list {
+  margin-bottom: 30px;
+}
 
-.video__item-wrap {}
+.video__item-wrap {
+  position: relative;
+  z-index: 1;
+}
 
 .video__slide {
-  height: 195px;
+  margin: 0 auto;
+  max-width: 330px;
+  height: 186px;
   position: relative;
   overflow: hidden;
+  &.active {
+    .video__wrap-hover {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
 }
 
 .video__wrap-hover {
+  opacity: 1;
+  pointer-events: auto;
   position: absolute;
+  transition: 0.4s;
   top: 0;
   left: 0;
   right: 0;
@@ -25,7 +48,7 @@
 
 .video__play {
   @include animation;
-  z-index: 1;
+  z-index: 3;
 
   position: absolute;
   top: 50%;
@@ -46,22 +69,31 @@
 
 .video__hover {
   position: absolute;
+  transition: 0.4s;
+  z-index: 2;
   height: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
+.video__glide {
+  position: relative;
+}
+
 .video__wrap-video {
-  position: absolute;
-  z-index: -1;
-  height: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  width: 330px;
+  height: 186px;
   iframe {
+    position: absolute;
+    z-index: 0;
+    left: 47%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     height: 100%;
   }
+
 }
 
 .video__bullets {
@@ -72,6 +104,7 @@
 
 .video__bullet {
   cursor: pointer;
+  transition: 0.4s;
   padding: 0;
   margin: 0;
   width: 10px;
@@ -90,13 +123,23 @@
   }
 }
 
+.glide__bullet--active {
+  transition: 0.4s;
+  background: radial-gradient(8px,#3d4f9c 93%,transparent 100%);
+}
+
 .video__arrow-wrap {
-  display: flex;
+  position: absolute;
+  z-index: 0;
+  width: 800px;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
   justify-content: space-between;
 }
 
 .video__arrow {
-  display: none;
   @include arrow;
   cursor: pointer;
   transition: 0.4s;
@@ -144,3 +187,22 @@
   }
 }
 }
+
+@media (min-width: $tablet-width) {.expert-one {
+  .video__glide {
+    margin: 0 auto;
+    width: 80%;
+  }
+  .video__arrow-wrap {
+    display: flex;
+  }
+}}
+
+@media (min-width: $desktop-width) {.expert-one {
+  .video__glide {
+    width: 100%;
+  }
+  .video__arrow-wrap {
+    width: 1190px;
+  }
+}}

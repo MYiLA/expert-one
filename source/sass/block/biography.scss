@@ -1,5 +1,7 @@
 .expert-one {
   .biography {
+    padding-bottom: 40px;
+    border-bottom: 1px solid #e7e7e7;
     &.active {
       .biography__btn-collapse {
         &--max {
@@ -38,6 +40,7 @@
 
   .biography__btn-collapse {
     @include arrow;
+    @include animation;
 
     position: relative;
     font-family: $font-main;
@@ -72,3 +75,6 @@
     }
   }
 }
+
+// @media (min-width: $tablet-width) {.expert-one {}}
+// @media (min-width: $desktop-width) {.expert-one {}}

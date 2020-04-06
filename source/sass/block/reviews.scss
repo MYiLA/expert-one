@@ -48,3 +48,19 @@
     color: #999999;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .expert-one {
+    .reviews {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .expert-one {
+    .reviews__title {
+      margin-bottom: 23px;
+    }
+  }
+}

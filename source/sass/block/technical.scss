@@ -8,10 +8,16 @@
     border-radius: 5px;
   }
 
-  .technical__title {}
+  .technical__title {
+    min-width: 50%;
+    text-align: left;
+    flex-grow: 1;
+  }
 
   .technical__edit-btn {
     @include animation;
+
+    text-align: right;
 
     background-color: transparent;
     border: none;
@@ -19,6 +25,7 @@
     padding-top: 2px;
     padding-bottom: 2px;
     margin-top: -10px;
+    margin-bottom: 10px;
 
     background-image: url(../img/technical-edit.svg);
     background-repeat: no-repeat;
@@ -104,5 +111,63 @@
     font-size: 16px;
     line-height: 24px;
     color: #666666;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .expert-one {
+    .technical {
+      padding-bottom: 30px;
+    }
+  .technical__wrap {
+    margin-bottom: 0;
+    &--1 {
+      width: 210px;
+      margin-right: 10px;
+    }
+    &--2 {
+      width: 180px;
+      margin-right: 10px;
+      display: flex;
+      flex-direction: column;
+      .technical__wrap-back {
+        flex-grow: 1;
+        align-items: center;
+        justify-content: flex-start;
+        &:nth-last-child(1) {
+          margin-bottom: 0;
+        }
+      }
+    }
+    &--3 {
+      flex-grow: 1;
+      width: 250px;
+    }
+  }
+
+  .technical__wrap-back {
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+
+  .technical__title {
+    min-width: 75%;
+    text-align: left;
+    flex-grow: 1;
+  }
+  
+  .technical__edit-btn {
+    width: auto;
+  }
+}
+}
+
+@media (min-width: $desktop-width) {
+  .expert-one {
+    .technical__wrap {
+      &--1 {
+        width: 240px;
+      }
+    }
   }
 }

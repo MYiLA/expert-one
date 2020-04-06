@@ -1,4 +1,8 @@
 .expert-one {
+.topics {
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e7e7e7;
+}
 .topics__title {}
 
 .topics__list {
@@ -27,4 +31,35 @@
     background-color: #3d4f9c;
   }
 }
+}
+
+@media (min-width: $tablet-width) {
+  .expert-one {
+    .topics__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .topics__item {
+      width: 370px;
+      margin-right: 30px;
+      margin-bottom: 18px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .expert-one {
+    .topics {
+      padding-bottom: 25px;
+    }
+
+    .topics__title {
+      margin-bottom: 25px;
+    }
+
+    .topics__item {
+      width: 490px;
+    }
+  }
 }
