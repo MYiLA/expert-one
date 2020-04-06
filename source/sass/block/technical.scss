@@ -15,7 +15,8 @@
   }
 
   .technical__edit-btn {
-    @include animation;
+    position: relative;
+    transition: 0.4s;
 
     text-align: right;
 
@@ -27,16 +28,37 @@
     margin-top: -10px;
     margin-bottom: 10px;
 
-    background-image: url(../img/technical-edit.svg);
-    background-repeat: no-repeat;
-    background-size: 18px auto;
-    background-position: left center;
-
     font-family: $font-main;
     font-size: 14px;
     line-height: 14px;
     font-weight: 500;
     color: #999999;
+    path {
+      transition: 0.4s;
+    }
+
+    &:hover {
+      outline: none;
+      color: #2e3e80;
+      path {
+        fill:#2e3e80;
+      }
+    }
+  
+    &:focus, &:active {
+      outline: none;
+      color: #253369;
+      path {
+        fill:#253369;
+      }
+    }
+
+    svg {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 
   .technical__wrap {

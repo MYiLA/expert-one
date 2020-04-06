@@ -146,12 +146,29 @@ label.filter__title {
   color: $black;
 
   cursor: pointer;
+
+  &:hover {
+    background-color: #ebebee;
+  }
+
+  &:focus, &:active {
+    background-color: #e2e3e5;
+  }
 }
 
 input:checked + .filter__tab {
   background-color: $blue;
   font-weight: 500;
   color: $white;
+
+  
+  &:hover {
+    background-color: #2e3e80;
+  }
+
+  &:focus, &:active {
+    background-color: #2a3975;
+  }
 }
 
 .filter__checkbox {
@@ -280,7 +297,13 @@ input:checked + .filter__tab {
     border-radius: 3px;
     background-color: #eff0f3;
     padding: 0;
-    
+    &:hover {
+      background-color: #ebebee;
+    }
+  
+    &:focus, &:active {
+      background-color: #e2e3e5;
+    }
   }
 
   .choices[data-type*=select-one] .choices__inner {
@@ -380,7 +403,8 @@ input:checked + .filter__tab {
 }
 
 .filter__clean-tags {
-  @include animation;
+  cursor: pointer;
+  transition: 0.4s;
 
   margin-bottom: 8px;
 
@@ -392,6 +416,16 @@ input:checked + .filter__tab {
   line-height: 14px;
   font-weight: 400;
   color: #888888;
+
+  &:hover {
+    outline: none;
+    color: #2e3e80;
+  }
+
+  &:focus, &:active {
+    outline: none;
+    color: #253369;
+  }
 }
 
 .filter__add-tags {
@@ -489,6 +523,11 @@ input:checked + .filter__tab {
     transform: translateY(-50%);
     transition: 0.4s;
   }
+
+  path {
+    transition: 0.4s;
+  }
+
   &:hover {
     outline: none;
     color: #2e3e80;

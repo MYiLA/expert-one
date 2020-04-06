@@ -168,6 +168,10 @@
     .choices__item {
       padding-bottom: 4px;
       padding-top: 4px;
+
+      &.is-selected {
+        display: none;
+      }
     }
 
     .choices__list--dropdown .choices__item--selectable:after {

@@ -167,6 +167,20 @@
 
     @include arrow;
 
+    &:hover {
+      color: #2e3e80;
+      &::after {
+        border-color: #2e3e80;
+      }
+    }
+  
+    &:focus, &:active {
+      color: #2a3975;
+      &::after {
+        border-color: #2a3975;
+      }
+    }
+
     &::after {
       top: 51%;
       right: 0;
