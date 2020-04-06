@@ -22,13 +22,16 @@
 }
 
 .video__slide {
+  transition: 0.4s;
   margin: 0 auto;
   max-width: 330px;
   height: 186px;
   position: relative;
   overflow: hidden;
   &.active {
+    transition: 0.4s;
     .video__wrap-hover {
+      transition: 0.4s;
       opacity: 0;
       pointer-events: none;
     }
@@ -36,6 +39,7 @@
 }
 
 .video__wrap-hover {
+  transition: 0.4s;
   opacity: 1;
   pointer-events: auto;
   position: absolute;
@@ -88,7 +92,7 @@
   iframe {
     position: absolute;
     z-index: 0;
-    left: 47%;
+    left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     height: 100%;

@@ -10,7 +10,7 @@ const videoSlider = new Glide('.video__glide', {
   startAt: 0,
   perView: 3,
   gap: 30,
-  autoplay: 5000,
+  // autoplay: 5000,
   hoverpause: true,
   animationTimingFunc: 'cubic-bezier(.36,.39,.31,1.02)',
   dragThreshold: 50,
