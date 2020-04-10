@@ -191,6 +191,9 @@
 
 @media (min-width: $tablet-width) {
   .expert-one {
+    .speaker {
+      min-height: 350px;
+    }
 
     .speaker__photo {
       width: 180px;
@@ -248,12 +251,20 @@
       left: 30px;
     }
 
+    .speaker__more-btn {
+      display: flex;
+      align-items: center;
+      &::after {
+        top: 50%;
+      }
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .expert-one {
     .speaker {
+      min-height: 290px;
       padding-bottom: 50px;
     }
 
