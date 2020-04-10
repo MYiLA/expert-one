@@ -5,6 +5,7 @@
 
   .card {
     .speaker {
+      min-height: 470px;
       padding: 0;
       padding-top: 30px;
       background-color: transparent;
@@ -83,6 +84,8 @@
     }
 
     .speaker__info {
+      min-height: auto;
+      min-width: auto;
       order: 5;
       margin: 0;
       padding-bottom: 18px;
@@ -162,10 +165,22 @@
       display: none;
     }
 
+    .speaker__order-btn {
+      max-height: 55px;
+    }
+
+    .speaker__name,
+    .speaker__info,
+    .speaker__desc,
+    .speaker__availability {
+      width: 100%;
+    }
+
     @media (min-width: 600px) {
       .speaker {
         padding-top: 40px;
         padding-bottom: 30px;
+        flex-direction: column;
       }
 
       .speaker__name {
@@ -174,7 +189,7 @@
       }
 
       .speaker__desc {
-        min-height: 78px;
+        min-height: auto;
       }
 
       .speaker__photo {
@@ -211,20 +226,37 @@
       .speaker__info,
       .speaker__desc,
       .speaker__availability {
+        padding-left: 280px;
+      }
+
+      .speaker__info {
+        border-bottom: none;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      .speaker__name,
+      .speaker__info,
+      .speaker__desc,
+      .speaker__availability {
+        width: 515px;
         margin-left: 280px;
+        padding-left: 0;
       }
     }
   }
 }
 
+
+
 @media (min-width: $desktop-width) {
   .expert-one {
     .card {
-
       .card__hover-wrap {
         background: linear-gradient(37.88deg, #3D58C8 -21.83%, #38498E 55.9%, #2E3E80 121.08%);
       }
       .speaker {
+        min-height: 419px;
         margin-bottom: 0;
       }
 
@@ -233,7 +265,12 @@
       .speaker__desc,
       .speaker__availability,
       .speaker__order-btn {
+        width: 671px;
         margin-left: 360px;
+      }
+
+      .speaker__name {
+        width: 550px;
       }
 
       .speaker__photo {
@@ -278,7 +315,7 @@
       }
 
       .speaker__desc {
-        min-height: 56px;
+        min-height: auto;
         font-size: 20px;
         line-height: 28px;
         margin-bottom: 16px;
