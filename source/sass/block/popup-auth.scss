@@ -1,7 +1,30 @@
 .expert-one {
-  .expert-one {}
+  .popup-auth {
+    @include popup;
+    background-color: rgba(5, 8, 21, .85);
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
 
-  .expert-one__popup-auth {}
+  .popup-auth__close {
+    @include close-btn;
+    position: absolute;
+    top: 70px;
+    right: 15px;
+  }
+
+  // .popup-auth__auth {
+    
+  // }
+
+  // .popup-auth__form-auth {
+  //   background-color: white;
+  // }
+
+  // .popup-auth__thanks {
+  //   background-color: white;
+  // }
+
 }
 
 // @media (min-width: $tablet-width) {

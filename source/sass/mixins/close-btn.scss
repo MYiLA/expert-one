@@ -10,8 +10,8 @@
   &::after {
     content: '';
     position: absolute;
-    width: 32px;
-    height: 3px;
+    width: 26px;
+    height: 2px;
     top: 50%;
     left: 0;
     background-color: #999999;
@@ -34,6 +34,7 @@
   }
 
   &:focus, &:active {
+    outline: none;
     &::after, &::before {
       background-color: #253369;
     }

@@ -1,42 +1,42 @@
 .form-auth__btn-back Вернуться назад
 form.form-auth__form(method="POST")
 
-  label.form-auth__label(for="auth-") Фамилия*
-  input.form-auth__input(type="text" id="auth-" name="" placeholder="Введите фамилию")
+  label.form-auth__label(for="auth-last-name") Фамилия*
+  input.form-auth__input(type="text" id="auth-last-name" name="last-name" placeholder="Введите фамилию")
 
-  label.form-auth__label(for="auth-") Имя*
-  input.form-auth__input(type="text" id="auth-" name="" placeholder="Введите имя")
+  label.form-auth__label(for="auth-first-name") Имя*
+  input.form-auth__input(type="text" id="auth-first-name" name="first-name" placeholder="Введите имя")
 
-  label.form-auth__label(for="auth-") Отчество*
-  input.form-auth__input(type="text" id="auth-" name="" placeholder="Введите отчество")
+  label.form-auth__label(for="auth-middle-name") Отчество*
+  input.form-auth__input(type="text" id="auth-middle-name" name="middle-name" placeholder="Введите отчество")
 
-  label.form-auth__label(for="auth-") E-mail*
-  input.form-auth__input(type="text" id="auth-" name="" placeholder="Введите почту")
+  label.form-auth__label(for="auth-mail") E-mail*
+  input.form-auth__input(type="text" id="auth-mail" name="mail" placeholder="Введите почту")
 
-  label.form-auth__label(for="auth-") Телефон*
-  input.form-auth__input(type="text" id="auth-" name="" placeholder="+7 ___ ___-__-__")
+  label.form-auth__label(for="auth-tel") Телефон*
+  input.form-auth__input(type="text" id="auth-tel" name="tel" placeholder="+7 ___ ___-__-__")
 
-  label.form-auth__label(for="auth-") Должность*
-  input.form-auth__input(type="text" id="auth-" name="" placeholder="Ваша должность")
+  label.form-auth__label(for="auth-position") Должность*
+  input.form-auth__input(type="text" id="auth-position" name="position" placeholder="Ваша должность")
 
-  label.form-auth__label(for="auth-") Компания*
-  input.form-auth__input(type="text" id="auth-" name="" placeholder="Введите название компании")
+  label.form-auth__label(for="auth-company") Компания*
+  input.form-auth__input(type="text" id="auth-company" name="company" placeholder="Введите название компании")
 
-  label.form-auth__label(for="auth-") Сайт
-  input.form-auth__input(type="text" id="auth-" name="" placeholder="Введите адрес сайта")
+  label.form-auth__label(for="auth-website") Сайт
+  input.form-auth__input(type="text" id="auth-website" name="website" placeholder="Введите адрес сайта")
 
-  label.form-auth__label(for="auth-") Вы заказчик или агентство?
+  label.form-auth__label(for="auth-client") Вы заказчик или агентство?
   .form-auth__select
-    select.form-auth__select--(value="Страна" id="auth-")
+    select.form-auth__select--client(id="auth-client")
       option(selected="selected") Заказчик
       option Агентство
 
-  label.form-auth__label(for="auth-") Сколько спикеров заказали за последний год?
-  input.form-auth__input(type="text" id="auth-" name="" placeholder="0")
+  label.form-auth__label(for="auth-speakers-num") Сколько спикеров заказали за последний год?
+  input.form-auth__input(type="text" id="auth-speakers-num" name="speakers-num" placeholder="0")
 
-  label.form-auth__label(for="auth-") Ваш самый дорогой спикер за последние 3 года?
+  label.form-auth__label(for="auth-expensive-speaker") Ваш самый дорогой спикер за последние 3 года?
   .form-auth__select
-    select.form-auth__select--(value="Страна" id="auth-")
+    select.form-auth__select--expensive-speaker(id="auth-expensive-speaker")
       option более 200к
       option(selected="selected") до 200к
       option до 100к
@@ -46,23 +46,23 @@ form.form-auth__form(method="POST")
       option до 10к
       option до 5к
 
-  label.form-auth__label(for="auth-") Есть ли собственный event-отдел?
+  label.form-auth__label(for="auth-event-department") Есть ли собственный event-отдел?
   .form-auth__select
-    select.form-auth__select--(value="Страна" id="auth-")
+    select.form-auth__select--event-department(id="auth-event-department")
       option(selected="selected") Да
       option Нет
 
-  label.form-auth__label(for="auth-") Проводите ли вы внешние конференции?
+  label.form-auth__label(for="auth-external-conference") Проводите ли вы внешние конференции?
   .form-auth__select
-    select.form-auth__select--(value="Страна" id="auth-")
+    select.form-auth__select--external-conference(id="auth-external-conference")
       option Да
       option(selected="selected") Нет
 
-  label.form-auth__label(for="auth-") Проводите ли выездные конференции?
+  label.form-auth__label(for="auth-field-conference") Проводите ли выездные конференции?
   .form-auth__select
-    select.form-auth__select--(value="Страна" id="auth-")
+    select.form-auth__select--field-conference(id="auth-field-conference")
       option(selected="selected") Да
       option Нет
 
-  p.form-auth__privacy Регистрируясь, вы принимаете #[a.form-auth__privacy-link(href="#") Пользовательское соглашение] и даете Согласие на обработку #[a.form-auth__privacy-link(href="#") персональных данных].
+  p.form-auth__privacy Регистрируясь, вы принимаете #[a.form-auth__privacy-link(href="#" onclick="return false") Пользовательское соглашение] и даете Согласие на обработку #[a.form-auth__privacy-link(href="#" onclick="return false") персональных данных].
   button.form-auth__submit(type="submit") Отправить анкету на регистрацию
