@@ -8,6 +8,7 @@
 @import "mixins/close-btn.scss";
 @import "mixins/popup.scss";
 @import "mixins/input.scss";
+@import "mixins/select.scss";
 @import "mixins/animation.scss";
 
 @import "block/global.scss";
@@ -37,4 +38,8 @@
 @import "block/topics.scss";
 @import "block/video.scss";
 
-
+@import "block/auth.scss";
+@import "block/form-auth.scss";
+@import "block/popup-auth.scss";
+@import "block/social-enter.scss";
+@import "block/user-profile.scss";

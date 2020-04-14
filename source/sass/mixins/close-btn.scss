@@ -14,7 +14,7 @@
     height: 3px;
     top: 50%;
     left: 0;
-    background-color: $dark-gray;
+    background-color: #999999;
     transform: translate(-50%);
   }
 
@@ -26,16 +26,16 @@
     transform: rotate(-45deg);
   }
 
-  &:focus, &:hover {
+  &:hover {
     outline: none;
     &::after, &::before {
-      background-color: $light-gray;
+      background-color: $blue;
     }
   }
 
-  &:active {
+  &:focus, &:active {
     &::after, &::before {
-      background-color: $white;
+      background-color: #253369;
     }
   }
 }

@@ -192,6 +192,7 @@
 @media (min-width: $tablet-width) {
   .expert-one {
     .menu {
+      overflow: hidden;
       position: static;
       opacity: 1;
       flex-grow: 1;
