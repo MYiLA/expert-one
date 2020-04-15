@@ -1,6 +1,7 @@
 .expert-one {
   .popup-auth {
     @include popup;
+    text-align: center;
     background-color: rgba(5, 8, 21, .85);
     padding-bottom: 50px;
     padding-top: 50px;
@@ -13,17 +14,19 @@
     right: 15px;
   }
 
-  // .popup-auth__auth {
-    
-  // }
+  .popup-auth__auth {
+    margin-bottom: 20px;
+  }
 
-  // .popup-auth__form-auth {
-  //   background-color: white;
-  // }
+  .popup-auth__form-auth {
+    background-color: $white;
+    margin-bottom: 20px;
+  }
 
-  // .popup-auth__thanks {
-  //   background-color: white;
-  // }
+  .popup-auth__thanks {
+    background-color: $white;
+    margin-bottom: 20px;
+  }
 
 }
 

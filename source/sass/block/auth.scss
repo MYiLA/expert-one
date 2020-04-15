@@ -6,6 +6,26 @@
     padding-bottom: 57px;
   
     background-color: white;
+
+    &.signin {
+      .auth__desc {
+        &--signup {display: none;}
+      }
+
+      .auth__btn {   
+        &--signup {display: none;}
+      }
+    }
+
+    &.signup {
+      .auth__desc {
+        &--signin {display: none;}
+      }
+
+      .auth__btn {
+        &--signin {display: none;}
+      }
+    }
   }
 
   .auth__title {
@@ -18,24 +38,82 @@
   }
 
   .auth__desc {
+    margin: 0;
+    margin-bottom: 36px;
+    padding: 20px;
+    background-color: rgba(173, 189, 255, .2);
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #667097;
     &--signin {}
 
     &--signup {}
   }
 
-  .auth__social-enter {}
+  .auth__social-enter {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .social-enter__label {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+
+  .social-enter__list {
+
+  }
 
   .auth__user-profile {}
 
   .auth__btn {
+    @include btn;
+    display: inline-block;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 46px;
     &--signin {}
 
     &--signup {}
   }
 
-  .auth__help {}
+  .auth__link-wrap {
+    display: block;
+    text-align: center;
+  }
 
-  .auth__change {}
+  .auth__help, .auth__change {
+    @include animation;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #3d4f9c;
+  }
+
+  .auth__help {
+    padding-bottom: 0;
+    border-bottom: 1px solid #3d4f9c;
+  }
+
+  .auth__change {
+    display: none;
+    padding-bottom: 3px;
+    border-bottom: 1px dashed #3d4f9c;
+  }
+
+  .auth__help.active,
+  .auth__change.active {
+    display: inline-block;
+  }
 }
 
 

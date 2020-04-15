@@ -1,14 +1,50 @@
 .expert-one {
-  .social-enter {}
+  .social-enter {
+    display: inline-block;
+    min-width: 150px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
 
-  .social-enter__label {}
+  .social-enter__label {
+    display: block;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
 
-  .social-enter__list {}
+  .social-enter__list {
+    flex-basis: 150px;
+    list-style: none;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 70px;
+    background-color: #eff0f3;
+  }
 
-  .social-enter__item {}
+  .social-enter__item {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    margin-right: 10px;
+    &:nth-last-child(1) {
+      margin-right: 0;
+    }
+  }
 
   .social-enter__link {
-    img {}
+    img {
+      width: 100%;
+    }
   }
 }
 
