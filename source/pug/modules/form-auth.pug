@@ -9,16 +9,18 @@ form.form-auth__form(method="POST")
 
   label.form-auth__label(for="auth-middle-name") Отчество*
   input.form-auth__input(type="text" id="auth-middle-name" name="middle-name" placeholder="Введите отчество")
-
-  label.form-auth__label(for="auth-mail") E-mail*
-  input.form-auth__input(type="text" id="auth-mail" name="mail" placeholder="Введите почту")
-
-  label.form-auth__label(for="auth-tel") Телефон*
-  input.form-auth__input.form-auth__input--mask(type="text" id="auth-tel" name="tel" placeholder="+7 ___ ___-__-__")
+  .form-auth__wrap-hint
+    label.form-auth__label(for="auth-mail") E-mail*
+    input.form-auth__input(type="text" id="auth-mail" name="mail" placeholder="Введите почту")
+    p.form-auth__invalid-message неверно введен e-mail
+  .form-auth__wrap-hint
+    label.form-auth__label(for="auth-tel") Телефон*
+    input.form-auth__input.form-auth__input--mask(type="text" id="auth-tel" name="tel" placeholder="+7 ___ ___-__-__")
+    p.form-auth__invalid-message неверно введен номер
 
   label.form-auth__label(for="auth-position") Должность*
   input.form-auth__input(type="text" id="auth-position" name="position" placeholder="Ваша должность")
-
+  
   label.form-auth__label(for="auth-company") Компания*
   input.form-auth__input(type="text" id="auth-company" name="company" placeholder="Введите название компании")
 
@@ -65,4 +67,6 @@ form.form-auth__form(method="POST")
       option Нет
 
   p.form-auth__privacy Регистрируясь, вы принимаете #[a.form-auth__privacy-link(href="#" onclick="return false") Пользовательское соглашение] и даете Согласие на обработку #[a.form-auth__privacy-link(href="#" onclick="return false") персональных данных].
-  button.form-auth__submit(type="submit") Отправить анкету на регистрацию
+  .form-auth__wrap-hint
+    button.form-auth__submit(type="submit") Отправить анкету на регистрацию
+    p.form-auth__invalid-message Пользователь с таким номером телефона или e-mail уже существует. Попробуйте авторизоваться через Вконтакте или Facebook или обратитесь в поддержку.

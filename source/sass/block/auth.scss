@@ -67,6 +67,7 @@
     margin-left: auto;
     margin-right: auto;
     display: none;
+    transition: 0.4s;
     &.active {
       display: inline-block;
     }
@@ -84,6 +85,7 @@
 
   .auth__user-profile {
     display: none;
+    transition: 0.4s;
     &.active {
       display: inline-block;
     }
@@ -142,6 +144,8 @@
       max-width: 450px;
       padding: 50px;
       padding-bottom: 57px;
+
+      border-radius: 5px;
     }
 
     .auth__title {

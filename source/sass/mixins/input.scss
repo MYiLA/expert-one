@@ -14,9 +14,11 @@
   border-radius: 3px;
   background-color: #eff0f3;
 
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 16px;
+  line-height: 16px;
   font-weight: 400;
+
+  transition: 0.4s;
 
   &:hover {
     background-color: #ebebee;
@@ -29,7 +31,7 @@
     outline: none;
   }
 
- &::placeholder { 
+  &::placeholder {
     font-size: 16px;
     line-height: 16px;
     font-family: $font-main;
@@ -39,5 +41,13 @@
 
   &:focus::placeholder {
     color: transparent;
+  }
+
+  &--mask {
+    color: #888888;
+
+    &.active {
+      color: $black;
+    }
   }
 }

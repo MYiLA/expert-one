@@ -77,18 +77,27 @@
 
   .form-auth__input {
     @include input;
-    &--mask {
-      color: #888888;
-    }
   }
 
 
 
   .form-auth__select {
     @include select;
+
+    .choices__list--single {
+      .choices__item {
+        color: $black;
+      }
+    }
+
+    .choices__inner {
+      font-size: 16px;
+    }
+
   }
 
-  .form-auth__privacy, .form-auth__privacy-link {
+  .form-auth__privacy,
+  .form-auth__privacy-link {
     font-size: 13px;
     line-height: 18px;
     font-weight: 400;
@@ -106,14 +115,86 @@
   }
 
   .form-auth__submit {
-    @include btn;
+    cursor: auto;
+    transition: 0.4s;
+    display: block;
+    width: 100%;
+    padding: 18px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: none;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 14px;
+    font-family: $font-main;
+    background-color: #888888;
+
+    color: $white;
+    cursor: pointer;
+
+    &:hover {
+      outline: none;
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+
+    &.active {
+      cursor: pointer;
+      background-color: $blue;
+
+      &:hover {
+        background-color: #2e3e80;
+      }
+
+      &:active,
+      &:focus {
+        background-color: #253369;
+      }
+    }
+
+    & + .form-auth__invalid-message {
+      top: 50px;
+    }
+  }
+
+  .form-auth__invalid-message {
+    opacity: 0;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    color: $red;
+    margin: 0;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+
+    transition: 0.4s;
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  .form-auth__wrap-hint {
+    position: relative;
   }
 
 }
 
-// @media (min-width: $tablet-width) {
-//   .expert-one {}
-// }
+@media (min-width: $tablet-width) {
+  .expert-one {
+    .form-auth {
+      max-width: 450px;
+      padding: 50px;
+      padding-bottom: 57px;
+
+      border-radius: 5px;
+    }
+  }
+}
 
 // @media (min-width: $desktop-width) {
 //   .expert-one {}

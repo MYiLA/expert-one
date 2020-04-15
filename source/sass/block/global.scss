@@ -83,16 +83,24 @@ body {
     width: 100%;
     position: fixed;
     overflow: hidden;
+
     @media (min-width: $tablet-width) {
       height: auto;
       width: auto;
       position: relative;
       overflow: visible;
     }
- }
+  }
 
- .expert-one_btn {
-   @include btn;
-   margin: 50px;
- }
+  .expert-one_btn {
+    @include btn;
+    width: auto;
+    margin: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .dissolve {
+    opacity: 0;
+  }
 }

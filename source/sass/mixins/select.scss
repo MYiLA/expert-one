@@ -46,6 +46,10 @@
     padding-bottom: 5px;
     padding-top: 5px;
     color: $black;
+
+    &::after {
+      content: none;
+    }
   }
 
   .choices__list--single .choices__item {
