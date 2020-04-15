@@ -20,11 +20,13 @@
 
   &:hover {
     background-color: #ebebee;
+    outline: none;
   }
 
   &:focus,
   &:active {
     background-color: #e2e3e5;
+    outline: none;
   }
 
  &::placeholder { 

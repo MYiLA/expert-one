@@ -1,4 +1,4 @@
-.form-auth__btn-back Вернуться назад
+button(type="button").form-auth__btn-back #[span.form-auth__arrow.form-auth__arrow--left]Вернуться назад
 form.form-auth__form(method="POST")
 
   label.form-auth__label(for="auth-last-name") Фамилия*
@@ -14,7 +14,7 @@ form.form-auth__form(method="POST")
   input.form-auth__input(type="text" id="auth-mail" name="mail" placeholder="Введите почту")
 
   label.form-auth__label(for="auth-tel") Телефон*
-  input.form-auth__input(type="text" id="auth-tel" name="tel" placeholder="+7 ___ ___-__-__")
+  input.form-auth__input.form-auth__input--mask(type="text" id="auth-tel" name="tel" placeholder="+7 ___ ___-__-__")
 
   label.form-auth__label(for="auth-position") Должность*
   input.form-auth__input(type="text" id="auth-position" name="position" placeholder="Ваша должность")

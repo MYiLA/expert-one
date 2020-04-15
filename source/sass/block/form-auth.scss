@@ -1,28 +1,113 @@
 .expert-one {
-.form-auth {
-  padding-top: 53px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 57px;
+  .form-auth {
+    position: relative;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 53px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 57px;
 
-  background-color: white;
-}
+    background-color: white;
+  }
 
-.form-auth__btn-back {}
+  .form-auth__close {
+    @include close-btn;
+  }
 
-.form-auth__form {}
+  .form-auth__btn-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 16px;
+    color: #888888;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s;
 
-.form-auth__label {}
+    &:hover {
+      outline: none;
+      color: #2e3e80;
 
-.form-auth__input {}
+      .form-auth__arrow {
+        border-color: #2e3e80;
 
-.form-auth__select {}
-  
-.form-auth__privacy {}
+        &::after {
+          border-color: #2e3e80;
+        }
+      }
+    }
 
-.form-auth__privacy-link {}
+    &:focus,
+    &:active {
+      outline: none;
+      color: #253369;
 
-.form-auth__submit {}
+      .form-auth__arrow {
+        border-color: #253369;
+
+        &::after {
+          border-color: #253369;
+        }
+      }
+    }
+
+  }
+
+  .form-auth__arrow {
+    @include arrow-circle;
+    margin-right: 10px;
+    display: inline-block;
+  }
+
+  .form-auth__form {
+    text-align: left;
+  }
+
+  .form-auth__label {
+    @include label;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .form-auth__input {
+    @include input;
+    &--mask {
+      color: #888888;
+    }
+  }
+
+
+
+  .form-auth__select {
+    @include select;
+  }
+
+  .form-auth__privacy, .form-auth__privacy-link {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+
+  .form-auth__privacy {
+    color: #888888;
+  }
+
+  .form-auth__privacy-link {
+    @include animation;
+    color: #2e3e80;
+    text-decoration: underline;
+    // border-bottom: 1px solid #2e3e80;
+  }
+
+  .form-auth__submit {
+    @include btn;
+  }
 
 }
 

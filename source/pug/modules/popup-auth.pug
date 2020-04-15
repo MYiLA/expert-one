@@ -1,11 +1,13 @@
-button.popup-auth__close(type="button" aria-label="закрыть окно авторизации")
-
-.popup-auth__auth.auth.signin
-  include auth
-
-.popup-auth__form-auth.form-auth
-  include form-auth
-
-.popup-auth__thanks.thanks
-  h2.thanks__title Благодарим за&nbsp;регистрацию!
-  p.thanks__desc Ваша заявка принята, после рассмотрения менеджером вы получите доступ к сервису
+.expert-one__popup-auth.popup-auth.popup-auth--auth.active
+  .popup-auth__auth.auth.signin
+    button.auth__close(type="button" aria-label="закрыть окно авторизации")
+    include auth
+.expert-one__popup-auth.popup-auth.popup-auth--form
+  .popup-auth__form-auth.form-auth
+    button.form-auth__close(type="button" aria-label="закрыть форму регистрации")
+    include form-auth
+.expert-one__popup-auth.popup-auth.popup-auth--thanks
+  .popup-auth__thanks.thanks
+    button.thanks__close(type="button" aria-label="закрыть окно благодарности")
+    h2.thanks__title Благодарим за&nbsp;регистрацию!
+    p.thanks__desc Ваша заявка принята, после рассмотрения менеджером вы получите доступ к сервису

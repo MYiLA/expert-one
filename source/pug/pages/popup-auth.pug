@@ -12,8 +12,11 @@ html(lang="ru")
   body
     main
       .expert-one
-        .expert-one__popup-auth.popup-auth
-          include ../modules/popup-auth
+        .wrap
+          button.expert-one_btn.expert-one_btn--signin Авторизация
+          button.expert-one_btn.expert-one_btn--signup Регистрация
+          a(href="index.html").expert-one_btn Вернуться на главную
+        include ../modules/popup-auth
 
     script(src="lib/jquery3.4.1.js")
     script(src="lib/choices/choices.min.js")

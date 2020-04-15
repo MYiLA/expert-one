@@ -90,4 +90,9 @@ body {
       overflow: visible;
     }
  }
+
+ .expert-one_btn {
+   @include btn;
+   margin: 50px;
+ }
 }

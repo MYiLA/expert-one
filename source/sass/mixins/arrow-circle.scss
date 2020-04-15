@@ -1,0 +1,47 @@
+@mixin arrow-circle {
+  @include arrow;
+  cursor: pointer;
+  transition: 0.4s;
+  position: relative;
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #c6c6c6;
+  &:hover {
+    outline: none;
+    border-color: #2e3e80;
+    &::after {
+      border-color: #2e3e80;
+    }
+  }
+
+  &:focus, &:active {
+    outline: none;
+    border-color: #27356d;
+    &::after {
+      border-color: #27356d;
+    }
+  }
+
+  &::after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-color: #c6c6c6;
+  }
+
+  &--left {
+    &::after {
+      left: 53%;
+      transform: translate(-50%, -50%) rotate(135deg);
+    }
+  }
+  &--right {
+    &::after {
+      left: 47%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}

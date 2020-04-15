@@ -27,5 +27,4 @@ $('.expert-one .speaker__favourites').on('click', function () {
     $(this).addClass('active');
     $(this).children('.speaker__favourites-text').text('В избранном')
   }
-  
 })

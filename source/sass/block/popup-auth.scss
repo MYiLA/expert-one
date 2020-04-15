@@ -1,21 +1,36 @@
 .expert-one {
   .popup-auth {
     @include popup;
+    display: none;
+    opacity: 0;
+    transition: 0.4s;
     text-align: center;
     background-color: rgba(5, 8, 21, .85);
     padding-bottom: 50px;
     padding-top: 50px;
-  }
 
-  .popup-auth__close {
-    @include close-btn;
-    position: absolute;
-    top: 70px;
-    right: 15px;
+    &--auth {
+      z-index: 10;
+    }
+
+    &--form {
+      z-index: 11;
+    }
+
+    &--thanks {
+      z-index: 12;
+    }
+
+    &.active {
+      display: block;
+      opacity: 1;
+    }
   }
 
   .popup-auth__auth {
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
   }
 
   .popup-auth__form-auth {
@@ -30,9 +45,18 @@
 
 }
 
-// @media (min-width: $tablet-width) {
-//   .expert-one {}
-// }
+@media (min-width: $tablet-width) {
+  .expert-one {
+    .popup-auth {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &.active {
+        display: flex;
+      }
+  }
+}
+}
 
 // @media (min-width: $desktop-width) {
 //   .expert-one {}

@@ -1,12 +1,45 @@
 .thanks {
-  padding-top: 53px;
+  position: relative;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 113px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom: 57px;
+  padding-bottom: 130px;
 
   background-color: white;
 }
 
-.thanks__title {}
+.thanks__close {
+  @include close-btn;
+}
 
-.thanks__desc {}
+.thanks__title {
+  width: 200px;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.thanks__desc {
+  width: 310px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .expert-one {
+    .thanks {
+      max-width: 450px;
+      padding: 50px;
+      padding-bottom: 57px;
+    }
+  }
+}

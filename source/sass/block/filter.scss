@@ -110,15 +110,7 @@
   }
 
   .filter__title {
-    width: auto;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 14px;
-    line-height: 14px;
-    margin-bottom: 18px;
-    color: #212121;
-    font-weight: 500;
+    @include label;
   }
 
   label.filter__title {
@@ -545,6 +537,8 @@
 
     .filter__checkbox {
       padding-left: 30px;
+      padding-top: 5px;
+      padding-bottom: 5px;
 
       font-size: 14px;
       line-height: 14px;
@@ -596,6 +590,16 @@
       svg {
         top: 50%;
       }
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .expert-one {
+    .filter {
+      max-width: 450px;
+      padding: 50px;
+      padding-bottom: 57px;
     }
   }
 }

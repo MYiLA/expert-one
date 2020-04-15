@@ -1,6 +1,5 @@
 .expert-one {
   .social-enter {
-    display: inline-block;
     min-width: 150px;
     text-align: center;
     margin-bottom: 40px;
@@ -42,6 +41,7 @@
   }
 
   .social-enter__link {
+    @include animation;
     img {
       width: 100%;
     }
