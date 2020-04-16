@@ -1,270 +1,381 @@
+'use strict';
+
 // кастомные селекты
 
 // import { template } from "babel-core";
+(function () {
+  var choiceAuthClient = new Choices('.form-auth__select--client', {
+    searchChoices: false,
+    shouldSort: true,
+    sorter: function () {
+      return true
+    }
+  });
 
-const choiceAuthClient = new Choices('.form-auth__select--client', {
-  searchChoices: false,
-  shouldSort: true,
-  sorter: function () {
-    return true
-  }
-});
+  var choiceAuthExpensiveSpeaker = new Choices('.form-auth__select--expensive-speaker', {
+    searchChoices: false,
+    shouldSort: true,
+    sorter: function () {
+      return true
+    }
+  });
 
-const choiceAuthExpensiveSpeaker = new Choices('.form-auth__select--expensive-speaker', {
-  searchChoices: false,
-  shouldSort: true,
-  sorter: function () {
-    return true
-  }
-});
+  var choiceAuthDepartment = new Choices('.form-auth__select--event-department', {
+    searchChoices: false,
+    shouldSort: true,
+    sorter: function () {
+      return true
+    }
+  });
 
-const choiceAuthDepartment = new Choices('.form-auth__select--event-department', {
-  searchChoices: false,
-  shouldSort: true,
-  sorter: function () {
-    return true
-  }
-});
+  var choiceAuthExternalConf = new Choices('.form-auth__select--external-conference', {
+    searchChoices: false,
+    shouldSort: true,
+    sorter: function () {
+      return true
+    }
+  });
 
-const choiceAuthExternalConf = new Choices('.form-auth__select--external-conference', {
-  searchChoices: false,
-  shouldSort: true,
-  sorter: function () {
-    return true
-  }
-});
+  var choiceAuthFieldConf = new Choices('.form-auth__select--field-conference', {
+    searchChoices: false,
+    shouldSort: true,
+    sorter: function () {
+      return true
+    }
+  });
 
-const choiceAuthFieldConf = new Choices('.form-auth__select--field-conference', {
-  searchChoices: false,
-  shouldSort: true,
-  sorter: function () {
-    return true
-  }
-});
 
-// маски для формы
+  var invalidTime = 4000;
+  // маски для формы
+  var formAuthElement = document.querySelector('.form-auth__form');
+  var nameInputElement = formAuthElement.querySelector('#auth-first-name');
+  var nameLastInputElement = formAuthElement.querySelector('#auth-last-name');
+  var nameMiddleInputElement = formAuthElement.querySelector('#auth-middle-name');
 
-const formAuthElement = document.querySelector('.form-auth__form');
-const nameInputElement = formAuthElement.querySelector('#auth-first-name');
-const phoneInputElement = formAuthElement.querySelector('#auth-tel');
-const speakerNumInputElement = formAuthElement.querySelector('#auth-speakers-num');
+  var positionInputElement = formAuthElement.querySelector('#auth-position');
 
-const nameMask = IMask(nameInputElement, {
-  mask: /^(?!.*\s{2,})[a-zA-Zа-яА-Я\s]+$/,
-});
+  var phoneInputElement = formAuthElement.querySelector('#auth-tel');
 
-const phoneMask = IMask(phoneInputElement, {
-  mask: '+{7} 000 000-00-00',
-  placeholderChar: '_',
-  lazy: false,
-});
 
-var numberMask = IMask(speakerNumInputElement, {
-  mask: Number, // enable number mask
 
-  // other options are optional with defaults below
-  scale: 0, // digits after point, 0 for integers
-  signed: true, // disallow negative
-  thousandsSeparator: '', // any single char
-  padFractionalZeros: false, // if true, then pads zeros at end to the length of scale
-  normalizeZeros: false, // appends or removes zeros at ends
-  // radix: ',',  // fractional delimiter
-  // mapToRadix: ['.']  // symbols to process as radix
+  var speakerNumInputElement = formAuthElement.querySelector('#auth-speakers-num');
 
-  // additional number interval options (e.g.)
-  min: 0,
-  max: 10000
-});
 
-// вход через вк (показ/скрытие элементов)
-const closeSocialEnter = function () {
+
+  var nameMask = IMask(nameInputElement, {
+    mask: /^(?!.*\s{2,})[a-zA-Zа-яА-Я\s]+$/,
+  });
+
+  var nameLastMask = IMask(nameLastInputElement, {
+    mask: /^(?!.*\s{2,})[a-zA-Zа-яА-Я\s]+$/,
+  });
+
+  var nameMiddleMask = IMask(nameMiddleInputElement, {
+    mask: /^(?!.*\s{2,})[a-zA-Zа-яА-Я\s]+$/,
+  });
+
+  var positionMask = IMask(positionInputElement, {
+    mask: /^(?!.*\s{2,})[a-zA-Zа-яА-Я\s]+$/,
+  });
+
+  var phoneMask = IMask(phoneInputElement, {
+    mask: '+{7} 000 000-00-00',
+    placeholderChar: '_',
+    lazy: false,
+  });
+
+  var numberMask = IMask(speakerNumInputElement, {
+    mask: Number, // enable number mask
+
+    // other options are optional with defaults below
+    scale: 0, // digits after point, 0 for integers
+    signed: false, // disallow negative
+    thousandsSeparator: '', // any single char
+    padFractionalZeros: false, // if true, then pads zeros at end to the length of scale
+    normalizeZeros: false, // appends or removes zeros at ends
+    // radix: ',',  // fractional delimiter
+    // mapToRadix: ['.']  // symbols to process as radix
+
+    // additional number interval options (e.g.)
+    min: 0,
+    // max: 10000
+  });
+
+  // вход через вк (показ/скрытие элементов)
+  var closeSocialEnter = function () {
     $('.expert-one .social-enter').addClass('dissolve');
     $('.expert-one .social-enter').removeClass('active')
-}
+  }
 
-const openSocialEnter = function () {
-  $('.expert-one .social-enter').addClass('active')
-  setTimeout(function () {
-    $('.expert-one .social-enter').removeClass('dissolve');
-  }, 10);
-}
+  var openSocialEnter = function () {
+    $('.expert-one .social-enter').addClass('active')
+    setTimeout(function () {
+      $('.expert-one .social-enter').removeClass('dissolve');
+    }, 10);
+  }
 
-const openUserProfile = function () {
-  $('.expert-one .user-profile').addClass('active');
-  setTimeout(function () {
-    $('.expert-one .user-profile').removeClass('dissolve');
-  }, 10);
-}
+  var openUserProfile = function () {
+    $('.expert-one .user-profile').addClass('active');
+    setTimeout(function () {
+      $('.expert-one .user-profile').removeClass('dissolve');
+    }, 10);
+  }
 
-const closeUserProfile = function () {
+  var closeUserProfile = function () {
     $('.expert-one .user-profile').addClass('dissolve');
     $('.expert-one .user-profile').removeClass('active');
-}
+  }
 
-$('.expert-one .social-enter__link').on('click', function () {
-  closeSocialEnter();
-  openUserProfile();
-})
+  $('.expert-one .social-enter__link').on('click', function () {
+    closeSocialEnter();
+    openUserProfile();
+  })
 
-$('.form-auth__input--mask').on('focus', function () {
-  $(this).addClass('active')
-})
+  $('.form-auth__input--mask').on('focus', function () {
+    $(this).addClass('active')
+  })
 
-// функции закрытия попапов
-const closePopupAuth = function () {
-  setTimeout(function () {
-    $('.expert-one .popup-auth--auth').addClass('dissolve');
-  }, 0);
+  // функции закрытия попапов
+  var closePopupAuth = function () {
+    setTimeout(function () {
+      $('.expert-one .popup-auth--auth').addClass('dissolve');
+    }, 0);
 
-  setTimeout(function () {
-    $('.expert-one .popup-auth--auth').removeClass('active');
-    $('.expert-one .auth').removeClass('signin');
-    $('.expert-one .auth').removeClass('signup');
-    closeUserProfile();
-  }, 400)
-}
+    setTimeout(function () {
+      $('.expert-one .popup-auth--auth').removeClass('active');
+      $('.expert-one .auth').removeClass('signin');
+      $('.expert-one .auth').removeClass('signup');
+      closeUserProfile();
+    }, 400)
+  }
 
-const closeAuthForm = function () {
-  setTimeout(function () {
-    $('.expert-one .popup-auth--form').addClass('dissolve');
-  }, 0);
+  var form = $('.js__rf');
 
-  setTimeout(function () {
-    $('.expert-one .popup-auth--form').removeClass('active');
-  }, 400)
-}
+  var closeAuthForm = function () {
+    setTimeout(function () {
+      $('.expert-one .popup-auth--form').addClass('dissolve');
+    }, 0);
 
-const closePopupThanks = function () {
-  setTimeout(function () {
-    $('.expert-one .popup-auth--thanks').addClass('dissolve');
-  }, 0);
+    // закрыть и сбросить форму
+    setTimeout(function () {
+      $('.expert-one .popup-auth--form').removeClass('active');
+      form[0].reset();
+    }, 400)
+  }
 
-  setTimeout(function () {
-    $('.expert-one .popup-auth--thanks').removeClass('active');
-  }, 400);
-}
+  var closePopupThanks = function () {
+    setTimeout(function () {
+      $('.expert-one .popup-auth--thanks').addClass('dissolve');
+    }, 0);
 
-
-// функции открытия попапов
-
-const openPopupAuth = function () {
-  $('.expert-one .popup-auth--auth').addClass('active');
-  openSocialEnter();
-  setTimeout(function () {
-    $('.expert-one .popup-auth--auth').removeClass('dissolve');
-  }, 10);
-}
-
-const openAuthForm = function () {
-  $('.expert-one .popup-auth--form').addClass('active');
-  setTimeout(function () {
-    $('.expert-one .popup-auth--form').removeClass('dissolve');
-  }, 10);
-}
-
-const openPopupThanks = function () {
-  closePopupAuth();
-  closeAuthForm();
-  $('.expert-one .popup-auth--thanks').addClass('active');
-  setTimeout(function () {
-    $('.expert-one .popup-auth--thanks').removeClass('dissolve');
-  }, 10);
-}
-
-$('.expert-one .auth__btn--signin').on('click', function () {
-  closePopupAuth()
-})
-
-$('.expert-one .auth__close').on('click', function () {
-  closePopupAuth()
-})
-
-// временные кнопки template
-// открыть попап авторизации
-$('.expert-one .expert-one_btn--signin').on('click', function () {
-  openPopupAuth();
-  $('.expert-one .auth').addClass('signin');
-  $('.expert-one .auth__title').text('Авторизация');
-
-})
+    setTimeout(function () {
+      $('.expert-one .popup-auth--thanks').removeClass('active');
+    }, 400);
+  }
 
 
-// открыть попап регистрации
-$('.expert-one .expert-one_btn--signup').on('click', function () {
-  openPopupAuth();
-  $('.expert-one .auth').addClass('signup');
-  $('.expert-one .auth__title').text('Регистрация');
-})
+  // функции открытия попапов
 
+  var openPopupAuth = function () {
+    $('.expert-one .popup-auth--auth').addClass('active');
+    openSocialEnter();
+    setTimeout(function () {
+      $('.expert-one .popup-auth--auth').removeClass('dissolve');
+    }, 10);
+  }
 
+  var openAuthForm = function () {
+    $('.expert-one .popup-auth--form').addClass('active');
+    setTimeout(function () {
+      $('.expert-one .popup-auth--form').removeClass('dissolve');
+    }, 10);
+  }
 
-// внутреннее управление попапами регистрации/авторизации
+  var openPopupThanks = function () {
+    closePopupAuth();
+    closeAuthForm();
+    $('.expert-one .popup-auth--thanks').addClass('active');
+    setTimeout(function () {
+      $('.expert-one .popup-auth--thanks').removeClass('dissolve');
+    }, 10);
+  }
 
-$('.expert-one .auth__btn--signup').on('click', function () {
-  openAuthForm()
-})
+  $('.expert-one .auth__btn--signin').on('click', function () {
+    closePopupAuth()
+  })
 
+  $('.expert-one .auth__close').on('click', function () {
+    closePopupAuth()
+  })
 
-$('.expert-one .form-auth__btn-back').on('click', function () {
-  closeAuthForm()
-})
+  // открыть попап авторизации
+  $('.expert-one .expert-one_btn--signin').on('click', function () {
+    openPopupAuth();
+    $('.expert-one .auth').addClass('signin');
+    $('.expert-one .auth__title').text('Авторизация');
 
+  })
 
-$('.expert-one .form-auth__close').on('click', function () {
-  closePopupAuth();
-  closeAuthForm();
-})
+  // открыть попап регистрации
+  $('.expert-one .expert-one_btn--signup').on('click', function () {
+    openPopupAuth();
+    $('.expert-one .auth').addClass('signup');
+    $('.expert-one .auth__title').text('Регистрация');
+  })
 
 
 
+  // внутреннее управление попапами регистрации/авторизации
+
+  $('.expert-one .auth__btn--signup').on('click', function () {
+    openAuthForm()
+  })
 
 
+  $('.expert-one .form-auth__btn-back').on('click', function () {
+    closeAuthForm()
+  })
 
 
-// проверка заполненности обязательных полей
-// проверять перед открытием попапа(так как могли данные подгрузиться)
-let isRequiredFilled = true;
+  $('.expert-one .form-auth__close').on('click', function () {
+    closePopupAuth();
+    closeAuthForm();
+  })
 
-// пример
-// const validationTel = function (input) {
-//   if (input[0].value.length !== 17) {
-//       input.parent().addClass('invalid');
-//       alert('Пожалуйста введите телефон');
-//       return
-//   } else {
-//       input.parent().removeClass('invalid')
-//   }
-// }
-// $('#tel-popup').on('focusout', function () {
-//   validationTel($('#tel-popup'))
-// })
-// проверка когда убирается фокус с поля инпута
-if (isRequiredFilled) {
-  $('.form-auth__submit').addClass('active');
-} else {
-  $('.form-auth__submit').removeClass('active');
-}
+  //функции проверки заполненности обязательных полей
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  var btn = form.find('.js__btn-submit');
+  form.children('.js__rfield').addClass('js__empty-field');
+
+  var checkInputMail = function () {
+    if (($('#auth-mail').val() != '') &&
+    ($('#auth-mail').val().match(mailformat))) {
+      $('#auth-mail').removeClass('js__empty-field')
+    } else $('#auth-mail').addClass('js__empty-field');
+  }
 
 
-// проверка валидации
+  var checkInputTel = function () {
+    if (
+      ($('#auth-tel').val().search('_') === -1) &&
+      ($('#auth-tel').val() != '') &&
+      ($('#auth-tel').val()[3] === '9')
+    ) {
+      $('#auth-tel').removeClass('js__empty-field')
+    } else $('#auth-tel').addClass('js__empty-field')
+  }
 
-let isValide = true;
-// отправка формы
+  var checkInput = function () {
+    form.children('.js__rfield').each(function () {
+      if ($(this).val() != '') {
+        $(this).removeClass('js__empty-field');
+      } else {
+        $(this).addClass('js__empty-field');
+      }
+    });
+  }
 
-$('.expert-one .form-auth__submit').on('click', function (evt) {
-  evt.preventDefault();
-  if (isValide) {
-    $('.form-auth__submit').removeClass('active');
+  // Функция подсветки незаполненных полей
+  var lightEmpty = function () {
 
-    // аджакс-запрос. если ок - то попап "спасибо"
-    // openPopupThanks();
+    form.find('.js__empty-field').css({
+      'border-color': '#eb5757'
+    });
+    setTimeout(function () {
+      form.find('.js__empty-field').removeAttr('style');
+    }, invalidTime);
+  }
 
-  } else return
-})
+  var isRequiredFilled = false;
+  // Проверка в режиме реального времени
+  setInterval(function () {
+    // Запускаем функцию проверки полей на заполненность
+
+    checkInput();
+    checkInputMail();
+    checkInputTel();
+
+    var sizeEmpty = form.find('.js__empty-field').length;
+    if (sizeEmpty > 0) {
+      if (!btn.hasClass('active')) {
+        isRequiredFilled = false;
+        return false
+      } else {
+        isRequiredFilled = false;
+        btn.removeClass('active')
+      }
+    } else {
+      isRequiredFilled = true;
+      btn.addClass('active')
+    }
+  }, 500);
+  // проверка валидации после нажатия на сабмит
 
 
-// закрыть попап "спасибо"
+  // подсказка для емейла по потере фокуса
+  var mailIsValide = function () {
+    if ($('#auth-mail').val().match(mailformat)) {
+      return true
+    } else {
+      $('#auth-mail').siblings('.form-auth__invalid-message').addClass('active');
+      setTimeout(function () {
+        $('#auth-mail').siblings('.form-auth__invalid-message').removeClass('active');
+      }, invalidTime);
+      return false;
+    }
+  };
 
-$('.expert-one .thanks__close').on('click', function () {
-  closePopupThanks()
-})
+  $('#auth-mail').on('focusout', mailIsValide);
+  
+  // подсказка для телефона по потере фокуса
+  var telIsValide = function () {
+
+    if ($('#auth-tel').val()[3] === '9') {
+      return true;
+    } else {
+      $('#auth-tel').siblings('.form-auth__invalid-message').addClass('active');
+      setTimeout(function () {
+        $('#auth-tel').siblings('.form-auth__invalid-message').removeClass('active');
+      }, invalidTime);
+      return false;
+    }
+  };
+
+  $('#auth-tel').on('focusout', telIsValide);
+
+  // учесть isRequiredFilled = true
+  var isValide = function () {
+    var tel = telIsValide();
+    var mail = mailIsValide();
+    return tel && mail;
+  };
+
+
+  // отправка формы
+
+  $('.expert-one .form-auth__submit').on('click', function (evt) {
+    evt.preventDefault();
+
+    if (isValide() && isRequiredFilled) {
+      form.find('.form-auth__submit').css({
+        'cursor': 'auto',
+        'background-color': '#888888',
+        'pointer-event': 'auto',
+      });
+      setTimeout(function () {
+        form.find('.form-auth__submit').removeAttr('style');
+      }, 5000);
+
+      setTimeout(openPopupThanks, 1000);
+    } else {
+      lightEmpty();
+    }
+  });
+
+
+  // закрыть попап "спасибо"
+
+  $('.expert-one .thanks__close').on('click', function () {
+    closePopupThanks()
+  });
+})();

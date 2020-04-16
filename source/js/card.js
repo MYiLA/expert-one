@@ -1,3 +1,5 @@
+'use strict';
+(function () {
 // свернуть/развернуть биографию
 $('.expert-one .biography__btn-collapse').on('click', function () {
   $(this).parent().toggleClass('active');
@@ -5,7 +7,7 @@ $('.expert-one .biography__btn-collapse').on('click', function () {
 
 // слайдер .video__glide
 
-const videoSlider = new Glide('.video__glide', {
+var videoSlider = new Glide('.video__glide', {
   type: 'carousel',
   startAt: 0,
   perView: 3,
@@ -32,3 +34,5 @@ videoSlider.mount();
 $('.expert-one .video__play').on('click', function () {
   $(this).parent().parent().addClass('active');
 })
+
+})();

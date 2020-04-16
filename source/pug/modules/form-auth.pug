@@ -1,28 +1,28 @@
 button(type="button").form-auth__btn-back #[span.form-auth__arrow.form-auth__arrow--left]Вернуться назад
-form.form-auth__form(method="POST")
+form.form-auth__form.js__rf(method="POST")
 
   label.form-auth__label(for="auth-last-name") Фамилия*
-  input.form-auth__input(type="text" id="auth-last-name" name="last-name" placeholder="Введите фамилию")
+  input.form-auth__input.js__rfield(type="text" id="auth-last-name" name="last-name" placeholder="Введите фамилию")
 
   label.form-auth__label(for="auth-first-name") Имя*
-  input.form-auth__input(type="text" id="auth-first-name" name="first-name" placeholder="Введите имя")
+  input.form-auth__input.js__rfield(type="text" id="auth-first-name" name="first-name" placeholder="Введите имя")
 
   label.form-auth__label(for="auth-middle-name") Отчество*
-  input.form-auth__input(type="text" id="auth-middle-name" name="middle-name" placeholder="Введите отчество")
+  input.form-auth__input.js__rfield(type="text" id="auth-middle-name" name="middle-name" placeholder="Введите отчество")
   .form-auth__wrap-hint
     label.form-auth__label(for="auth-mail") E-mail*
-    input.form-auth__input(type="text" id="auth-mail" name="mail" placeholder="Введите почту")
+    input.form-auth__input.js__rfield(type="text" id="auth-mail" name="mail" placeholder="Введите почту")
     p.form-auth__invalid-message неверно введен e-mail
   .form-auth__wrap-hint
     label.form-auth__label(for="auth-tel") Телефон*
-    input.form-auth__input.form-auth__input--mask(type="text" id="auth-tel" name="tel" placeholder="+7 ___ ___-__-__")
+    input.form-auth__input.form-auth__input--mask.js__rf(type="text" id="auth-tel" name="tel")
     p.form-auth__invalid-message неверно введен номер
 
   label.form-auth__label(for="auth-position") Должность*
-  input.form-auth__input(type="text" id="auth-position" name="position" placeholder="Ваша должность")
+  input.form-auth__input.js__rfield(type="text" id="auth-position" name="position" placeholder="Ваша должность")
   
   label.form-auth__label(for="auth-company") Компания*
-  input.form-auth__input(type="text" id="auth-company" name="company" placeholder="Введите название компании")
+  input.form-auth__input.js__rfield(type="text" id="auth-company" name="company" placeholder="Введите название компании")
 
   label.form-auth__label(for="auth-website") Сайт
   input.form-auth__input(type="text" id="auth-website" name="website" placeholder="Введите адрес сайта")
@@ -68,5 +68,5 @@ form.form-auth__form(method="POST")
 
   p.form-auth__privacy Регистрируясь, вы принимаете #[a.form-auth__privacy-link(href="#" onclick="return false") Пользовательское соглашение] и даете Согласие на обработку #[a.form-auth__privacy-link(href="#" onclick="return false") персональных данных].
   .form-auth__wrap-hint
-    button.form-auth__submit(type="submit") Отправить анкету на регистрацию
+    button.form-auth__submit.js__btn-submit(type="submit") Отправить анкету на регистрацию
     p.form-auth__invalid-message Пользователь с таким номером телефона или e-mail уже существует. Попробуйте авторизоваться через Вконтакте или Facebook или обратитесь в поддержку.

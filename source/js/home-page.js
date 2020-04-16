@@ -1,6 +1,8 @@
-// кастомные селекты
+'use strict';
+(function () {
 
-const choiceFilterLang = new Choices('.expert-one .filter__select--lang', {
+// кастомные селекты
+var choiceFilterLang = new Choices('.expert-one .filter__select--lang', {
   searchChoices: false,
   shouldSort: true,
   sorter: function() {
@@ -8,7 +10,7 @@ const choiceFilterLang = new Choices('.expert-one .filter__select--lang', {
  }
 });
 
-const choiceFilterCountry = new Choices('.expert-one .filter__select--country', {
+var choiceFilterCountry = new Choices('.expert-one .filter__select--country', {
   searchChoices: false,
   shouldSort: true,
   sorter: function() {
@@ -27,3 +29,5 @@ $('.expert-one .filter__close').on('click', function () {
   $('.expert-one .filter__popup').removeClass('active');
   $('.expert-one').removeClass('no-scroll');
 })
+
+})();

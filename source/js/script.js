@@ -1,8 +1,8 @@
 'use strict';
-
+(function () {
 // кастомные селекты
 
-const choiceLang = new Choices('.expert-one .menu__lang', {
+var choiceLang = new Choices('.expert-one .menu__lang', {
   searchChoices: false,
   shouldSort: false,
   sorter: function() {
@@ -28,3 +28,5 @@ $('.expert-one .speaker__favourites').on('click', function () {
     $(this).children('.speaker__favourites-text').text('В избранном')
   }
 })
+
+})();
