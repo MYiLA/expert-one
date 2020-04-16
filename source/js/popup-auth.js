@@ -352,8 +352,7 @@
 
 
   // отправка формы
-
-  $('.expert-one .form-auth__submit').on('click', function (evt) {
+  var formSubmit = function(evt) {
     evt.preventDefault();
 
     if (isValide() && isRequiredFilled) {
@@ -370,8 +369,15 @@
     } else {
       lightEmpty();
     }
+  }
+
+  $('.expert-one .form-auth__submit').on('click', function (evt) {
+    formSubmit(evt)
   });
 
+  form.on('submit', function (evt) {
+    formSubmit(evt)
+  });
 
   // закрыть попап "спасибо"
 
