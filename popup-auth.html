@@ -45,27 +45,27 @@
                 <div class="popup-auth__form-auth form-auth">
                     <button class="form-auth__close" type="button" aria-label="закрыть форму регистрации"></button>
                     <button class="form-auth__btn-back" type="button"><span class="form-auth__arrow form-auth__arrow--left"></span>Вернуться назад</button>
-                    <form class="form-auth__form" method="POST">
+                    <form class="form-auth__form js__rf" method="POST">
                         <label class="form-auth__label" for="auth-last-name">Фамилия*</label>
-                        <input class="form-auth__input" type="text" id="auth-last-name" name="last-name" placeholder="Введите фамилию">
+                        <input class="form-auth__input js__rfield" type="text" id="auth-last-name" name="last-name" placeholder="Введите фамилию">
                         <label class="form-auth__label" for="auth-first-name">Имя*</label>
-                        <input class="form-auth__input" type="text" id="auth-first-name" name="first-name" placeholder="Введите имя">
+                        <input class="form-auth__input js__rfield" type="text" id="auth-first-name" name="first-name" placeholder="Введите имя">
                         <label class="form-auth__label" for="auth-middle-name">Отчество*</label>
-                        <input class="form-auth__input" type="text" id="auth-middle-name" name="middle-name" placeholder="Введите отчество">
+                        <input class="form-auth__input js__rfield" type="text" id="auth-middle-name" name="middle-name" placeholder="Введите отчество">
                         <div class="form-auth__wrap-hint">
                             <label class="form-auth__label" for="auth-mail">E-mail*</label>
-                            <input class="form-auth__input" type="text" id="auth-mail" name="mail" placeholder="Введите почту">
+                            <input class="form-auth__input js__rfield" type="text" id="auth-mail" name="mail" placeholder="Введите почту">
                             <p class="form-auth__invalid-message">неверно введен e-mail</p>
                         </div>
                         <div class="form-auth__wrap-hint">
                             <label class="form-auth__label" for="auth-tel">Телефон*</label>
-                            <input class="form-auth__input form-auth__input--mask" type="text" id="auth-tel" name="tel" placeholder="+7 ___ ___-__-__">
+                            <input class="form-auth__input form-auth__input--mask js__rf" type="text" id="auth-tel" name="tel">
                             <p class="form-auth__invalid-message">неверно введен номер</p>
                         </div>
                         <label class="form-auth__label" for="auth-position">Должность*</label>
-                        <input class="form-auth__input" type="text" id="auth-position" name="position" placeholder="Ваша должность">
+                        <input class="form-auth__input js__rfield" type="text" id="auth-position" name="position" placeholder="Ваша должность">
                         <label class="form-auth__label" for="auth-company">Компания*</label>
-                        <input class="form-auth__input" type="text" id="auth-company" name="company" placeholder="Введите название компании">
+                        <input class="form-auth__input js__rfield" type="text" id="auth-company" name="company" placeholder="Введите название компании">
                         <label class="form-auth__label" for="auth-website">Сайт</label>
                         <input class="form-auth__input" type="text" id="auth-website" name="website" placeholder="Введите адрес сайта">
                         <label class="form-auth__label" for="auth-client">Вы заказчик или агентство?</label>
@@ -113,7 +113,7 @@
                         </div>
                         <p class="form-auth__privacy">Регистрируясь, вы принимаете <a class="form-auth__privacy-link" href="#" onclick="return false">Пользовательское соглашение</a> и даете Согласие на обработку <a class="form-auth__privacy-link" href="#" onclick="return false">персональных данных</a>.</p>
                         <div class="form-auth__wrap-hint">
-                            <button class="form-auth__submit" type="submit">Отправить анкету на регистрацию</button>
+                            <button class="form-auth__submit js__btn-submit" type="submit">Отправить анкету на регистрацию</button>
                             <p class="form-auth__invalid-message">Пользователь с таким номером телефона или e-mail уже существует. Попробуйте авторизоваться через Вконтакте или Facebook или обратитесь в поддержку.</p>
                         </div>
                     </form>
