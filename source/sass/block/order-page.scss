@@ -1,0 +1,52 @@
+.expert-one {
+  .order-page {
+    .speaker__name, 
+    .speaker__info {
+      margin-left: 110px;
+    }
+
+    .speaker__photo {
+      left: 0;
+    }
+
+    .speaker__name {
+      padding-right: 35px;
+    }
+
+    .speakers {
+      padding-bottom: 0;
+    }
+
+    .speakers__list {
+      background-color: $white;
+      border: 1px solid #e2e4e9;
+    }
+
+    .speakers__speaker {
+      margin-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 20px;
+      margin-right: 20px;
+      border-bottom: 1px dashed #c0c4ce;
+      &:nth-last-child(1) {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .order-page__header,
+  .order-page__customer-data,
+  .order-page__orders {
+    margin-bottom: 33px;
+  }
+}
+
+@media (min-width: $tablet-width) {.expert-one {
+  .order-page__customer-data {
+    width: 270px;
+    margin-right: 10px;
+  }
+}}
+
+// @media (min-width: $desktop-width) {.expert-one {}}

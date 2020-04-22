@@ -196,6 +196,47 @@
       transform: translateY(-50%) rotate(-45deg);
     }
   }
+
+  .speaker__remove {
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: -10px;
+    top: 10px;
+    border: none;
+    background-color: transparent;
+
+    transition: 0.4s;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    path {
+      fill: #acacac ;
+      transition: 0.4s;
+    }
+
+    &:hover {
+      path {
+        fill: #eb5757 ;
+      }
+    }
+
+    @media (min-width: 375px) {
+      width: 30px;
+      height: 30px;
+      right: 0;
+      top: 15px;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {

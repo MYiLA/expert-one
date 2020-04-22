@@ -12,6 +12,7 @@
 @import "mixins/input.scss";
 @import "mixins/select.scss";
 @import "mixins/animation.scss";
+@import "mixins/animation-dark.scss";
 
 @import "block/global.scss";
 @import "block/header.scss";
@@ -46,3 +47,10 @@
 @import "block/social-enter.scss";
 @import "block/user-profile.scss";
 @import "block/thanks.scss";
+
+@import "block/order-page.scss";
+@import "block/customer-data.scss";
+@import "block/orders.scss";
+@import "block/date-time.scss";
+@import "block/download.scss";
+@import "block/management.scss";

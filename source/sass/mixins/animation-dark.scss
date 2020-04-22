@@ -1,0 +1,65 @@
+@mixin animation-dark {
+  transition: 0.4s;
+  cursor: pointer;
+
+  &::after {
+    transition: 0.4s;
+  }
+
+  path {
+    transition: 0.4s;
+  }
+
+  &:focus, &:active, &:hover {
+    outline: none;
+  }
+}
+
+@mixin animation-dark--blue {
+  @include animation-dark;
+  &:hover {
+    color: #2E3E80;
+    &::after {
+      border-color: #2E3E80;
+    }
+    path {
+      fill: #2E3E80;
+    }
+  }
+
+  &:focus, &:active {
+    color: #1f2c61;
+    &::after {
+      border-color: #1f2c61;
+    }
+    path {
+      fill: #1f2c61;
+    }
+  }
+}
+
+@mixin animation-dark--red {
+  @include animation-dark;
+
+  &:hover {
+    color: #d34e4e;
+    &::after {
+      border-color: #d34e4e;
+    }
+
+    path {
+      fill: #d34e4e;
+    }
+  }
+
+  &:focus, &:active {
+    color: #bd1313;
+    &::after {
+      border-color: #bd1313;
+    }
+
+    path {
+      fill: #bd1313;
+    }
+  }
+}

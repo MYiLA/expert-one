@@ -1,0 +1,27 @@
+.expert-one {
+  .download {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .download__label {
+    font-size: 14px;
+    line-height: 14px;
+    color: #888888;
+    margin-right: 12px;
+  }
+
+  .download__link {
+    @include animation;
+    margin-right: 9px;
+    &:nth-last-child(1) {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {.expert-one {
+
+}}
+// @media (min-width: $desktop-width) {.expert-one {}}

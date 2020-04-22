@@ -56,7 +56,6 @@
         }
       }
     }
-
   }
 
   .form-auth__arrow {
@@ -78,8 +77,6 @@
   .form-auth__input {
     @include input;
   }
-
-
 
   .form-auth__select {
     @include select;
@@ -111,7 +108,6 @@
     @include animation;
     color: #2e3e80;
     text-decoration: underline;
-    // border-bottom: 1px solid #2e3e80;
   }
 
   .form-auth__submit {
@@ -130,7 +126,6 @@
     font-family: $font-main;
     background-color: #888888;
     color: $white;
-
 
     &:hover {
       outline: none;
@@ -194,7 +189,3 @@
     }
   }
 }
-
-// @media (min-width: $desktop-width) {
-//   .expert-one {}
-// }

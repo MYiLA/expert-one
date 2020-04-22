@@ -1,0 +1,57 @@
+.expert-one {
+  .management {
+    padding-left: 20px;
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    background-color: $white;
+  }
+
+  .management__btn {
+    @include btn;
+    border: 2px solid #3d4f9c;
+    margin-bottom: 10px;
+
+    &--add,
+    &--clear {
+      @include animation;
+      background-color: $white;
+      font-weight: 500;
+
+      &:hover, &:active, &:focus {
+        background-color: $white;
+      }
+    }
+
+    &--add {
+      color: #3d4f9c;
+    }
+
+    &--clear {
+      color: #eb5757;
+      border-color: #eb5757;
+    }
+  }
+
+  .management__download {
+    padding-top: 20px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .expert-one {
+    .management {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    .management__download {
+      padding-top: 0;
+      .download__label {
+        display: none;
+      }
+    }
+  }
+}
+
+// @media (min-width: $desktop-width) {.expert-one {}}

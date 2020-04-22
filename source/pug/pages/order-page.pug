@@ -1,0 +1,29 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title ExpertOne
+    link(rel="stylesheet" href="lib/choices/choices.min.css")
+    link(rel="stylesheet" href="css/style.min.css")
+
+  body.expert-one
+    main.expert-one__order-page.order-page
+      .order-page__header.header
+        .header__wrap
+          include ../modules/header
+      .wrap
+        section.order-page__customer-data.customer-data
+          include ../modules/customer-data
+        section.order-page__orders.orders.orders--unsent
+          include ../modules/orders
+        section.order-page__orders.orders.orders--shipped
+          include ../modules/orders
+        section.order-page__orders.orders.orders--last
+          include ../modules/orders
+
+
+    script(src="lib/jquery3.4.1.js")
+    script(src="lib/choices/choices.min.js")
+    script(src="js/script.js")
