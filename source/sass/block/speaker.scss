@@ -362,5 +362,12 @@
     .speaker__availability {
       margin-bottom: 31px;
     }
+
+    .speaker__remove {
+      width: 40px;
+      height: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 }

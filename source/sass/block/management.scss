@@ -41,17 +41,42 @@
 @media (min-width: $tablet-width) {
   .expert-one {
     .management {
+      width: 520px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
       padding-left: 30px;
       padding-right: 30px;
     }
 
+    .management__btn {
+      width: 48.5%
+    }
+
     .management__download {
       padding-top: 0;
-      .download__label {
-        display: none;
-      }
     }
   }
 }
 
-// @media (min-width: $desktop-width) {.expert-one {}}
+@media (min-width: $desktop-width) {.expert-one {
+  .management {
+    width: 770px;
+    justify-content: flex-start;
+  }
+
+  .management__btn {
+    width: auto;
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+
+  .management__download {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    .download__label {
+      display: none;
+    }
+  }
+}}

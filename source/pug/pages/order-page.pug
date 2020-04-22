@@ -19,9 +19,27 @@ html(lang="ru")
         section.order-page__orders.orders.orders--unsent
           include ../modules/orders
         section.order-page__orders.orders.orders--shipped
-          include ../modules/orders
+          .orders__title-wrap
+            h2.orders__title Отправленные заказы
+              span.orders__title-num (2)
+            span.orders__date Вчера
+          .orders__date-time.date-time
+            include ../modules/date-time
+          .orders__speakers.speakers
+            ul.speakers__list
+              include ../modules/speaker-orders
+              include ../modules/speaker-orders
+          .orders__management.management
+            include ../modules/management
         section.order-page__orders.orders.orders--last
-          include ../modules/orders
+          .orders__title-wrap
+            span.orders__date 12.03.2020
+          .orders__date-time.date-time
+            include ../modules/date-time
+          .orders__speakers.speakers
+            ul.speakers__list
+              include ../modules/speaker-orders
+              include ../modules/speaker-orders
 
 
     script(src="lib/jquery3.4.1.js")

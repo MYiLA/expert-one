@@ -1,6 +1,7 @@
 .expert-one {
   .order-page {
-    .speaker__name, 
+
+    .speaker__name,
     .speaker__info {
       margin-left: 110px;
     }
@@ -29,9 +30,22 @@
       margin-left: 20px;
       margin-right: 20px;
       border-bottom: 1px dashed #c0c4ce;
+
       &:nth-last-child(1) {
         border-bottom: none;
       }
+    }
+
+    .speaker__btn-wrap {
+      min-height: 50px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+    }
+
+    .speaker__order-btn {
+      margin-bottom: 0;
+      margin-right: 20px;
     }
   }
 
@@ -42,11 +56,104 @@
   }
 }
 
-@media (min-width: $tablet-width) {.expert-one {
-  .order-page__customer-data {
-    width: 270px;
-    margin-right: 10px;
-  }
-}}
+@media (min-width: $tablet-width) {
+  .expert-one {
+    .order-page {
+      .wrap {
+        justify-content: flex-end;
+      }
+      
+      .speakers__speaker {
+        margin-left: 30px;
+        margin-right: 30px;
+      }
 
-// @media (min-width: $desktop-width) {.expert-one {}}
+      .speaker {
+        min-height: 300px;
+        padding-bottom: 30px;
+      }
+
+      .speaker__name,
+      .speaker__info,
+      .speaker__availability {
+        margin-left: 0;
+        padding-left: 200px;
+      }
+
+      .speaker__info {
+        min-height: 60px;
+        margin-bottom: 7px;
+      }
+
+      .speaker__btn-wrap {
+        order: 4;
+      }
+
+      .speaker__order-btn {
+        position: static;
+        margin-bottom: 0;
+      }
+
+      .speaker__availability {
+        margin-bottom: 10px;
+        min-height: 67px;
+      }
+
+      .speaker__more-btn {
+        padding-left: 0;
+        padding-bottom: 2px;
+      }
+    }
+
+    .order-page__orders {
+      min-width: 520px;
+    }
+
+    .order-page__customer-data {
+      width: 270px;
+      margin-right: 10px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .expert-one {
+    .order-page {
+      .speaker {
+        min-height: 241px;
+        padding-right: 50px;
+      }
+
+      .speaker__name {
+        padding-right: 0;
+      }
+
+      .speaker__order-btn {
+        width: auto;
+      }
+
+      .speaker__info,
+      .speaker__availability {
+        min-height: auto;
+      }
+
+      .speaker__availability {
+        margin-bottom: 15px;
+      }
+
+      .availability__interview {
+        padding-left: 20px;
+      }
+
+      .speaker__btn-wrap {
+        min-height: 40px;
+        padding-left: 200px;
+      }
+
+      .speaker__order-btn {
+        padding-top: 16px;
+        padding-bottom: 16px;
+      }
+    }
+  }
+}

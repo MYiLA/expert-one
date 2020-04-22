@@ -1,5 +1,34 @@
 .expert-one {
+  .orders {
+    &--unsent {
+      .orders__date,
+      .date-time,
+      .speaker__order-btn {
+        display: none;
+      }
+    }
+
+    &--shipped {
+      .speaker__remove,
+      .orders__management {
+        display: none;
+      }
+    }
+
+    &--last {
+      .speaker__remove,
+      .orders__management,
+      .orders__title {
+        display: none;
+      }
+    }
+  }
+
   .orders__header {}
+
+  .orders__title-wrap {
+    margin-bottom: 27px;
+  }
 
   .orders__title {
     margin: 0;
@@ -20,18 +49,19 @@
     display: block;
     font-size: 16px;
     line-height: 16px;
-    margin-bottom: 27px;
   }
 }
 
 @media (min-width: $tablet-width) {
   .expert-one {
     .orders__title {
-      margin-bottom: 28px;
+      margin-bottom: 0;
     }
 
     .orders__title-wrap {
+      min-height: 22px;
       position: relative;
+      margin-bottom: 28px;
     }
 
     .orders__date {
@@ -44,4 +74,9 @@
   }
 }
 
-// @media (min-width: $desktop-width) {.expert-one {}}
+@media (min-width: $desktop-width) {.expert-one {
+  .orders__date {
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+}}
