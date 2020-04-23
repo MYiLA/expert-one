@@ -18,7 +18,9 @@
       background-color: $white;
       font-weight: 500;
 
-      &:hover, &:active, &:focus {
+      &:hover,
+      &:active,
+      &:focus {
         background-color: $white;
       }
     }
@@ -35,6 +37,15 @@
 
   .management__download {
     padding-top: 20px;
+    justify-content: center;
+
+    .download__label {
+      display: none;
+    }
+
+    .download__link {
+      margin-right: 20px;
+    }
   }
 }
 
@@ -59,24 +70,23 @@
   }
 }
 
-@media (min-width: $desktop-width) {.expert-one {
-  .management {
-    width: 770px;
-    justify-content: flex-start;
-  }
+@media (min-width: $desktop-width) {
+  .expert-one {
+    .management {
+      width: 770px;
+      justify-content: flex-start;
+    }
 
-  .management__btn {
-    width: auto;
-    margin-right: 10px;
-    margin-bottom: 0;
-  }
+    .management__btn {
+      width: auto;
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
 
-  .management__download {
-    flex-grow: 1;
-    display: flex;
-    justify-content: flex-end;
-    .download__label {
-      display: none;
+    .management__download {
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-end;
     }
   }
-}}
+}

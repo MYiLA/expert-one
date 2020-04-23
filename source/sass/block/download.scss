@@ -15,6 +15,7 @@
   .download__link {
     @include animation;
     margin-right: 9px;
+
     &:nth-last-child(1) {
       margin-right: 0;
     }

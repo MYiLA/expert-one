@@ -15,15 +15,15 @@
 
   .customer-data__title {
     margin: 0;
-    margin-bottom: 27px;
-    font-size: 22px;
-    line-height: 22px;
+    margin-bottom: 25px;
+    font-size: 20px;
+    line-height: 20px;
     font-weight: 400;
   }
 
   .customer-data__wrap {
     padding-top: 25px;
-    padding-bottom: 28px;
+    padding-bottom: 25px;
     padding-left: 20px;
     padding-right: 20px;
 
@@ -101,9 +101,17 @@
 }
 
 @media (min-width: $tablet-width) {
-  .expert-one {}
+  .expert-one {
+
+  }
 }
 
 @media (min-width: $desktop-width) {
-  .expert-one {}
+  .expert-one {
+    .customer-data__title {
+      margin-bottom: 27px;
+      font-size: 22px;
+      line-height: 22px;
+    }
+  }
 }
