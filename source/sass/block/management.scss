@@ -10,7 +10,7 @@
   .management__btn {
     @include btn;
     border: 2px solid #3d4f9c;
-    margin-bottom: 10px;
+    margin-bottom: 21px;
 
     &--add,
     &--clear {
@@ -53,15 +53,8 @@
   .expert-one {
     .management {
       width: 520px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
       padding-left: 30px;
       padding-right: 30px;
-    }
-
-    .management__btn {
-      width: 48.5%
     }
 
     .management__download {
@@ -73,6 +66,8 @@
 @media (min-width: $desktop-width) {
   .expert-one {
     .management {
+      display: flex;
+      flex-wrap: wrap;
       width: 770px;
       justify-content: flex-start;
     }
@@ -87,6 +82,10 @@
       flex-grow: 1;
       display: flex;
       justify-content: flex-end;
+      align-items: center;
+      .download__link {
+        margin-right: 10px;
+      }
     }
   }
 }

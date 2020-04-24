@@ -22,7 +22,25 @@
   }
 }
 
-@media (min-width: $tablet-width) {.expert-one {
+@media (min-width: $tablet-width) {
+  .expert-one {}
+}
 
-}}
-// @media (min-width: $desktop-width) {.expert-one {}}
+@media (min-width: $desktop-width) {
+  .expert-one {
+    .download__link {
+      width: 30px;
+      height: 32px;
+      position: relative;
+      margin-right: 10px;
+
+      img {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
 .expert-one {
   .orders {
     &--unsent {
+
       .orders__date,
       .date-time,
       .speaker__order-btn {
@@ -9,6 +10,7 @@
     }
 
     &--shipped {
+
       .speaker__remove,
       .orders__management {
         display: none;
@@ -16,6 +18,7 @@
     }
 
     &--last {
+
       .speaker__remove,
       .orders__management,
       .orders__title {
@@ -76,20 +79,22 @@
   }
 }
 
-@media (min-width: $desktop-width) {.expert-one {
-  .orders__title-wrap {
-    margin-bottom: 27px;
-  }
+@media (min-width: $desktop-width) {
+  .expert-one {
+    .orders__title-wrap {
+      margin-bottom: 27px;
+    }
 
-  .orders__title {
-    margin-bottom: 24px;
+    .orders__title {
+      margin-bottom: 24px;
 
-    font-size: 22px;
-    line-height: 22px;
-  }
+      font-size: 22px;
+      line-height: 22px;
+    }
 
-  .orders__date {
-    right: 50%;
-    transform: translate(50%, -50%);
+    .orders__date {
+      right: 50%;
+      transform: translate(50%, -50%);
+    }
   }
-}}
+}
