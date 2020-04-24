@@ -26,6 +26,7 @@
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     padding-top: 19px;
     padding-bottom: 17px;
     padding-left: 15px;
@@ -34,7 +35,7 @@
 
   .header__logo {
     margin-right: 21px;
-    padding-left: 45px;
+    padding-left: 0;
 
     a {
       display: block;
@@ -45,7 +46,7 @@
 
   .header__burger {
     position: static;
-    width: 60px;
+    width: 30px;
     height: auto;
     z-index: 5;
     order: -1;

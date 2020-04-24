@@ -108,6 +108,10 @@
         transform: rotate(225deg);
         border-color: #2e3e80;
       }
+
+      .choices__item--choice {
+        color: $black;
+      }
     }
 
     .choices__list {

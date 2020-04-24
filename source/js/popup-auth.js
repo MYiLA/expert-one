@@ -1,10 +1,10 @@
 'use strict';
-
+(function () {
 // кастомные селекты
 
 // import { template } from "babel-core";
-(function () {
-  var choiceAuthClient = new Choices('.form-auth__select--client', {
+
+  var choiceAuthClient = new Choices('.expert-one .form-auth__select--client', {
     searchChoices: false,
     shouldSort: true,
     sorter: function () {
@@ -12,7 +12,7 @@
     }
   });
 
-  var choiceAuthExpensiveSpeaker = new Choices('.form-auth__select--expensive-speaker', {
+  var choiceAuthExpensiveSpeaker = new Choices('.expert-one .form-auth__select--expensive-speaker', {
     searchChoices: false,
     shouldSort: true,
     sorter: function () {
@@ -20,7 +20,7 @@
     }
   });
 
-  var choiceAuthDepartment = new Choices('.form-auth__select--event-department', {
+  var choiceAuthDepartment = new Choices('.expert-one .form-auth__select--event-department', {
     searchChoices: false,
     shouldSort: true,
     sorter: function () {
@@ -28,7 +28,7 @@
     }
   });
 
-  var choiceAuthExternalConf = new Choices('.form-auth__select--external-conference', {
+  var choiceAuthExternalConf = new Choices('.expert-one .form-auth__select--external-conference', {
     searchChoices: false,
     shouldSort: true,
     sorter: function () {
@@ -36,7 +36,7 @@
     }
   });
 
-  var choiceAuthFieldConf = new Choices('.form-auth__select--field-conference', {
+  var choiceAuthFieldConf = new Choices('.expert-one .form-auth__select--field-conference', {
     searchChoices: false,
     shouldSort: true,
     sorter: function () {
@@ -47,7 +47,7 @@
 
   var invalidTime = 4000;
   // маски для формы
-  var formAuthElement = document.querySelector('.form-auth__form');
+  var formAuthElement = document.querySelector('.expert-one .form-auth__form');
   var nameInputElement = formAuthElement.querySelector('#auth-first-name');
   var nameLastInputElement = formAuthElement.querySelector('#auth-last-name');
   var nameMiddleInputElement = formAuthElement.querySelector('#auth-middle-name');
@@ -131,7 +131,7 @@
     openUserProfile();
   })
 
-  $('.form-auth__input--mask').on('focus', function () {
+  $('.expert-one .form-auth__input--mask').on('focus', function () {
     $(this).addClass('active')
   })
 

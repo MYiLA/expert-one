@@ -7,7 +7,7 @@ $('.expert-one .biography__btn-collapse').on('click', function () {
 
 // слайдер .video__glide
 
-var videoSlider = new Glide('.video__glide', {
+var videoSlider = new Glide('.expert-one .video__glide', {
   type: 'carousel',
   startAt: 0,
   perView: 3,

@@ -1,9 +1,29 @@
 .expert-one {
   .filter-clients {}
 
-  .filter-clients__wrap {}
+  .filter-clients__wrap {
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
 
-  .filter-clients__title {}
+  }
+
+  .filter-clients__wrap-checkbox {
+    display: none;
+    transition: 0.4s;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .filter-clients__wrap-title-popup {}
+
+  .filter-clients__title-popup {}
+
+  .filter-clients__close-popup {}
+
+  .filter-clients__wrap-popup .filter-clients__title {}
 
   .filter-clients__counter {}
 
