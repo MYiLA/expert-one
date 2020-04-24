@@ -2,8 +2,8 @@
   span.client-order__label Дата
   span.client-order__date 16.04.2020
   span.client-order__label Статус
-  .client-order__select
-    select.filter__select--country(value="Статус" id="expert-country")
+  .client-order__select-wrap
+    select.client-order__select(value="Статус" id="expert-country")
       option(selected="selected") Новый
       option Нереализован
       option В работе
@@ -34,26 +34,26 @@
   
 .client-order__wrap
   span.client-order__label Спикеры:
-  .client-order__speakers-order.speakers-order
-    ul.speakers-order__list
-      li.speakers-order__item
-        a.speakers-order__link(href="#" onclick="return false") Дейв Логан,
-      li.speakers-order__item
-        a.speakers-order__link(href="#" onclick="return false") Коди Фостер,
-      li.speakers-order__item
-        a.speakers-order__link(href="#" onclick="return false") Марк Гоулстон,
-      li.speakers-order__item
-        a.speakers-order__link(href="#" onclick="return false") Дейв Логан,
-      li.speakers-order__item
-        a.speakers-order__link(href="#" onclick="return false") Петров Федор,
-      li.speakers-order__item
-        a.speakers-order__link(href="#" onclick="return false") Ковалевская Светлана,
-      li.speakers-order__item
-        a.speakers-order__link(href="#" onclick="return false") Марк Гоулстон,
-      li.speakers-order__item
-        a.speakers-order__link(href="#" onclick="return false") Дейв Логан,
-      li.speakers-order__item
-        a.speakers-order__link(href="#" onclick="return false") Петров Федор,
-      li.speakers-order__item
-        a.speakers-order__link(href="#" onclick="return false") Ковалевская Светлана
-  button.speakers-order__expand(type="button" aria-label="раскрыть весь список спикеров")
+  .client-order__speaker-link.speaker-link
+    ul.speakers-link__list
+      li.speaker-link__item
+        a.speaker-link__link(href="#" onclick="return false") Дейв Логан,
+      li.speaker-link__item
+        a.speaker-link__link(href="#" onclick="return false") Коди Фостер,
+      li.speaker-link__item
+        a.speaker-link__link(href="#" onclick="return false") Марк Гоулстон,
+      li.speaker-link__item
+        a.speaker-link__link(href="#" onclick="return false") Дейв Логан,
+      li.speaker-link__item
+        a.speaker-link__link(href="#" onclick="return false") Петров Федор,
+      li.speaker-link__item
+        a.speaker-link__link(href="#" onclick="return false") Ковалевская Светлана,
+      li.speaker-link__item
+        a.speaker-link__link(href="#" onclick="return false") Марк Гоулстон,
+      li.speaker-link__item
+        a.speaker-link__link(href="#" onclick="return false") Дейв Логан,
+      li.speaker-link__item
+        a.speaker-link__link(href="#" onclick="return false") Петров Федор,
+      li.speaker-link__item
+        a.speaker-link__link(href="#" onclick="return false") Ковалевская Светлана
+    button.speaker-link__expand(type="button" aria-label="раскрыть весь список спикеров")

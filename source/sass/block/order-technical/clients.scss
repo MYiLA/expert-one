@@ -1,0 +1,28 @@
+.expert-one {
+  .clients {}
+
+  .clients__wrap {
+    overflow: hidden;
+  }
+
+  .clients__date {}
+
+  .clients__list {}
+
+  .clients__client-order {
+    &.new {}
+
+    &.unrealized {}
+
+    &.work {}
+
+    &.realized {}
+  }
+
+  .clients__loading {
+   margin-bottom: 40px;
+  }
+}
+
+// @media (min-width: $tablet-width) {.expert-one {}}
+// @media (min-width: $desktop-width) {.expert-one {}}

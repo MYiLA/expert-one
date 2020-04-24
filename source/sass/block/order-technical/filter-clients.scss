@@ -1,0 +1,24 @@
+.expert-one {
+  .filter-clients {}
+
+  .filter-clients__wrap {}
+
+  .filter-clients__title {}
+
+  .filter-clients__counter {}
+
+  .filter-clients__form {}
+
+  .filter-clients__checkbox {
+    &--new {}
+
+    &--work {}
+
+    &--realized {}
+
+    &--unrealized {}
+  }
+}
+
+// @media (min-width: $tablet-width) {.expert-one {}}
+// @media (min-width: $desktop-width) {.expert-one {}}
