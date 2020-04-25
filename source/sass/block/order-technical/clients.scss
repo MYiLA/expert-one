@@ -2,21 +2,38 @@
   .clients {}
 
   .clients__wrap {
+    margin-bottom: 26px;
+
+    &:nth-last-child(1), 
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+  }
+
+  .clients__wrap-loading {
     overflow: hidden;
   }
 
-  .clients__date {}
+  .clients__date {
+    display: block;
+    margin-bottom: 27px;
 
-  .clients__list {}
+    text-align: center;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .clients__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
   .clients__client-order {
-    &.new {}
-
-    &.unrealized {}
-
-    &.work {}
-
-    &.realized {}
+  margin-bottom: 10px;
+  &:nth-last-child(1) {
+    margin-bottom: 0;
+  }
   }
 
   .clients__loading {

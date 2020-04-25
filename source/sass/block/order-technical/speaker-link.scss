@@ -1,13 +1,26 @@
 .expert-one {
   .speaker-link {}
 
-  .speaker-link__list {}
+  .speaker-link__list {
+    margin: 0;
+    padding: 0;
+  }
 
-  .speaker-link__item {}
+  .speaker-link__item {
+    display: inline-block;
+    // margin-right: 5px;
+    margin-bottom: 10px;
+  }
 
-  .speaker-link__link {}
+  .speaker-link__link {
+    font-size: 16px;
+    line-height: 16px;
+    color: #3d4f9c;
+  }
 
-  .speaker-link__expand {}
+  .speaker-link__expand {
+    display: none;
+  }
 
 }
 

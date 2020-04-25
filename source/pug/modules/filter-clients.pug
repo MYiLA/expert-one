@@ -1,22 +1,24 @@
 h2.filter-clients__title Заказы
   span.filter-clients__counter (128)
 button.filter-clients__open(type=button) Открыть фильтры
-.filter-clients__wrap-checkbox
-  .filter-clients__wrap-title-popup
+.filter-clients__wrap-checkbox.dissolve
+  .filter-clients__wrap-header
     h3.filter-clients__title-popup Фильтры
     button.filter-clients__close-popup(type="button" aria-label="закрыть фильтры")
   .filter-clients__wrap-popup
-    input.visually-hidden(type="checkbox" id="order" name="order" value="Все заказы")
-    label.filter-clients__checkbox(for="order") Все заказы
+    .filter-clients__wrap-popup-checkbox
+      input.visually-hidden(type="checkbox" id="order" name="order" value="Все заказы")
+      label.filter-clients__checkbox(for="order") Все заказы
 
-    input.visually-hidden(type="checkbox" id="order-new" name="order" value="Новые заказы")
-    label.filter-clients__checkbox.filter-clients__checkbox--new(for="order-new") Новые заказы
+      input.visually-hidden(type="checkbox" id="order-new" name="order" value="Новые заказы")
+      label.filter-clients__checkbox.filter-clients__checkbox--new(for="order-new") Новые заказы
 
-    input.visually-hidden(type="checkbox" id="order-work" name="order" value="В работе")
-    label.filter-clients__checkbox.filter-clients__checkbox--work(for="order-work") В работе
+      input.visually-hidden(type="checkbox" id="order-work" name="order" value="В работе")
+      label.filter-clients__checkbox.filter-clients__checkbox--work(for="order-work") В работе
 
-    input.visually-hidden(type="checkbox" id="order-realized" name="order" value="Реализованы")
-    label.filter-clients__checkbox.filter-clients__checkbox--realized(for="order-realized") Реализованы
+      input.visually-hidden(type="checkbox" id="order-realized" name="order" value="Реализованы")
+      label.filter-clients__checkbox.filter-clients__checkbox--realized(for="order-realized") Реализованы
 
-    input.visually-hidden(type="checkbox" id="order-unrealized" name="order" value="Нереализованы")
-    label.filter-clients__checkbox.filter-clients__checkbox--unrealized(for="order-unrealized") Нереализованы
+      input.visually-hidden(type="checkbox" id="order-unrealized" name="order" value="Нереализованы")
+      label.filter-clients__checkbox.filter-clients__checkbox--unrealized(for="order-unrealized") Нереализованы
+    button.filter-clients__apply-btn(type="button") Применить

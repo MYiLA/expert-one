@@ -1,59 +1,51 @@
 .client-order__wrap-color
-  span.client-order__label Дата
-  span.client-order__date 16.04.2020
-  span.client-order__label Статус
-  .client-order__select-wrap
-    select.client-order__select(value="Статус" id="expert-country")
-      option(selected="selected") Новый
-      option Нереализован
-      option В работе
-      option Реализован
-
-    //- ul.client-order__select-wrap
-    //-   li.client-order__select-item.active
-    //-     a.client-order__select-link(href="#" onclick="return false") Новый
-    //-   li.client-order__select-item.active
-    //-     a.client-order__select-link(href="#" onclick="return false") Нереализован
-    //-   li.client-order__select-item.active
-    //-     a.client-order__select-link(href="#" onclick="return false") В работе
-    //-   li.client-order__select-item.active
-    //-     a.client-order__select-link(href="#" onclick="return false") Реализован
+  .client-order__sub-wrap
+    span.client-order__label Дата
+    span.client-order__date 16.04.2020
+  .client-order__sub-wrap
+    span.client-order__label Статус
+    .client-order__select-wrap
+      select.client-order__select(value="Статус" id="expert-country")
+        option(selected="selected") Новый
+        option Нереализован
+        option В работе
+        option Реализован
 .client-order__wrap
-  .client-order__sub-wrap
-    span.client-order__label Заказчик
-    span.client-order__name Петрова Екатерина 
-  .client-order__sub-wrap
-    span.client-order__label Компания
-    span.client-order__company ООО "Название компании"
-  .client-order__sub-wrap
-    span.client-order__label Телефон
-    span.client-order__tel +7 123 456 78 90
-  .client-order__sub-wrap
-    span.client-order__label E-mail
-    span.client-order__mail primer@mail.ru
-  
-.client-order__wrap
-  span.client-order__label Спикеры:
-  .client-order__speaker-link.speaker-link
-    ul.speakers-link__list
-      li.speaker-link__item
-        a.speaker-link__link(href="#" onclick="return false") Дейв Логан,
-      li.speaker-link__item
-        a.speaker-link__link(href="#" onclick="return false") Коди Фостер,
-      li.speaker-link__item
-        a.speaker-link__link(href="#" onclick="return false") Марк Гоулстон,
-      li.speaker-link__item
-        a.speaker-link__link(href="#" onclick="return false") Дейв Логан,
-      li.speaker-link__item
-        a.speaker-link__link(href="#" onclick="return false") Петров Федор,
-      li.speaker-link__item
-        a.speaker-link__link(href="#" onclick="return false") Ковалевская Светлана,
-      li.speaker-link__item
-        a.speaker-link__link(href="#" onclick="return false") Марк Гоулстон,
-      li.speaker-link__item
-        a.speaker-link__link(href="#" onclick="return false") Дейв Логан,
-      li.speaker-link__item
-        a.speaker-link__link(href="#" onclick="return false") Петров Федор,
-      li.speaker-link__item
-        a.speaker-link__link(href="#" onclick="return false") Ковалевская Светлана
-    button.speaker-link__expand(type="button" aria-label="раскрыть весь список спикеров")
+  .client-order__wrap-border
+    .client-order__sub-wrap
+      span.client-order__label Заказчик
+      a.client-order__name(href="#") Петрова Екатерина 
+    .client-order__sub-wrap
+      span.client-order__label Компания
+      span.client-order__company ООО "Название компании"
+    .client-order__sub-wrap
+      span.client-order__label Телефон
+      a(href="tel:+7 123 456 78 90").client-order__tel +7 123 456 78 90
+    .client-order__sub-wrap
+      span.client-order__label E-mail
+      a(href="mailto:+7 123 456 78 90").client-order__mail primer@mail.ru
+  .client-order__wrap-border
+    span.client-order__label Спикеры:
+    .client-order__speaker-link.speaker-link
+      ul.speaker-link__list
+        li.speaker-link__item
+          a.speaker-link__link(href="#" onclick="return false") Дейв Логан,
+        li.speaker-link__item
+          a.speaker-link__link(href="#" onclick="return false") Коди Фостер,
+        li.speaker-link__item
+          a.speaker-link__link(href="#" onclick="return false") Марк Гоулстон,
+        li.speaker-link__item
+          a.speaker-link__link(href="#" onclick="return false") Дейв Логан,
+        li.speaker-link__item
+          a.speaker-link__link(href="#" onclick="return false") Петров Федор,
+        li.speaker-link__item
+          a.speaker-link__link(href="#" onclick="return false") Ковалевская Светлана,
+        li.speaker-link__item
+          a.speaker-link__link(href="#" onclick="return false") Марк Гоулстон,
+        li.speaker-link__item
+          a.speaker-link__link(href="#" onclick="return false") Дейв Логан,
+        li.speaker-link__item
+          a.speaker-link__link(href="#" onclick="return false") Петров Федор,
+        li.speaker-link__item
+          a.speaker-link__link(href="#" onclick="return false") Ковалевская Светлана
+      button.speaker-link__expand(type="button" aria-label="раскрыть весь список спикеров")

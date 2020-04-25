@@ -19,6 +19,7 @@
 
   var openPopup = function (element) {
     element.addClass('active')
+    $('.expert-one').addClass('no-scroll');
     setTimeout(function () {
       element.removeClass('dissolve');
     }, 10);
@@ -31,6 +32,7 @@
 
     setTimeout(function () {
       element.removeClass('active');
+      $('.expert-one').removeClass('no-scroll');
     }, 400);
   }
 

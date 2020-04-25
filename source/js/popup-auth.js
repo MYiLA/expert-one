@@ -105,10 +105,12 @@
   var closeSocialEnter = function () {
     $('.expert-one .social-enter').addClass('dissolve');
     $('.expert-one .social-enter').removeClass('active')
+    $('.expert-one').removeClass('no-scroll');
   }
 
   var openSocialEnter = function () {
     $('.expert-one .social-enter').addClass('active')
+    $('.expert-one').addClass('no-scroll');
     setTimeout(function () {
       $('.expert-one .social-enter').removeClass('dissolve');
     }, 10);
@@ -116,6 +118,7 @@
 
   var openUserProfile = function () {
     $('.expert-one .user-profile').addClass('active');
+    $('.expert-one').addClass('no-scroll');
     setTimeout(function () {
       $('.expert-one .user-profile').removeClass('dissolve');
     }, 10);
@@ -124,6 +127,7 @@
   var closeUserProfile = function () {
     $('.expert-one .user-profile').addClass('dissolve');
     $('.expert-one .user-profile').removeClass('active');
+    $('.expert-one').removeClass('no-scroll');
   }
 
   $('.expert-one .social-enter__link').on('click', function () {
@@ -143,6 +147,7 @@
 
     setTimeout(function () {
       $('.expert-one .popup-auth--auth').removeClass('active');
+      $('.expert-one').removeClass('no-scroll');
       $('.expert-one .auth').removeClass('signin');
       $('.expert-one .auth').removeClass('signup');
       closeUserProfile();
@@ -159,6 +164,7 @@
     // закрыть и сбросить форму
     setTimeout(function () {
       $('.expert-one .popup-auth--form').removeClass('active');
+      $('.expert-one').removeClass('no-scroll');
       form[0].reset();
     }, 400)
   }
@@ -170,6 +176,7 @@
 
     setTimeout(function () {
       $('.expert-one .popup-auth--thanks').removeClass('active');
+      $('.expert-one').removeClass('no-scroll');
     }, 400);
   }
 
@@ -178,6 +185,7 @@
 
   var openPopupAuth = function () {
     $('.expert-one .popup-auth--auth').addClass('active');
+    $('.expert-one').addClass('no-scroll');
     openSocialEnter();
     setTimeout(function () {
       $('.expert-one .popup-auth--auth').removeClass('dissolve');
@@ -186,6 +194,7 @@
 
   var openAuthForm = function () {
     $('.expert-one .popup-auth--form').addClass('active');
+    $('.expert-one').addClass('no-scroll');
     setTimeout(function () {
       $('.expert-one .popup-auth--form').removeClass('dissolve');
     }, 10);
@@ -195,6 +204,7 @@
     closePopupAuth();
     closeAuthForm();
     $('.expert-one .popup-auth--thanks').addClass('active');
+    $('.expert-one').addClass('no-scroll');
     setTimeout(function () {
       $('.expert-one .popup-auth--thanks').removeClass('dissolve');
     }, 10);
