@@ -1,6 +1,12 @@
 .expert-one {
   .order-page {
 
+    .speaker {
+      border: none;
+      border-bottom: 1px dashed #c0c4ce;
+      padding-bottom: 28px;
+    }
+
     .speaker__name,
     .speaker__info {
       margin-left: 110px;

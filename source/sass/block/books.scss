@@ -16,18 +16,21 @@
     padding-top: 23px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 28px;
+    padding-bottom: 23px;
     margin-bottom: 10px;
 
     background-color: #eff0f3;
     border-radius: 3px;
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
   }
 
   .books__title-book {
     display: block;
     padding: 0;
     margin-top: 0;
-    margin-bottom: 6px;
+    margin-bottom: 3px;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;

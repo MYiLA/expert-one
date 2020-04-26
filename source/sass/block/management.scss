@@ -1,9 +1,9 @@
 .expert-one {
   .management {
     padding-left: 20px;
-    padding-top: 30px;
+    padding-top: 32px;
     padding-right: 20px;
-    padding-bottom: 30px;
+    padding-bottom: 23px;
     background-color: $white;
   }
 
@@ -11,6 +11,8 @@
     @include btn;
     border: 2px solid #3d4f9c;
     margin-bottom: 21px;
+    padding-top: 16px;
+    padding-bottom: 16px;
 
     &--add,
     &--clear {
@@ -36,7 +38,7 @@
   }
 
   .management__download {
-    padding-top: 20px;
+    padding-top: 8px;
     justify-content: center;
 
     .download__label {
@@ -45,6 +47,9 @@
 
     .download__link {
       margin-right: 20px;
+      &:nth-last-child(1) {
+        margin-right: 0;
+      }
     }
   }
 }

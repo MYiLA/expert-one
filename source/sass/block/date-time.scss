@@ -6,8 +6,8 @@
 
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 24px;
-    padding-top: 24px;
+    padding-bottom: 13px;
+    padding-top: 20px;
 
     background-color: $white;
     .download__label {
@@ -17,6 +17,7 @@
 
   .date-time__date {
     display: block;
+    padding-bottom: 8px;
     color: $black;
     font-size: 16px;
     line-height: 16px;

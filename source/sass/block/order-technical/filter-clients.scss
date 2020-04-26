@@ -22,6 +22,7 @@
 
   .filter-clients__open {
     @include filter-btn;
+    margin-top: 2px;
   }
 
   .filter-clients__wrap-checkbox {
@@ -113,7 +114,7 @@
     padding-left: 40px;
     padding-bottom: 7px;
     padding-top: 7px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     cursor: pointer;
 
     font-weight: 400;

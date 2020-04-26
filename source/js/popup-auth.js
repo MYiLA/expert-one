@@ -133,6 +133,8 @@
   $('.expert-one .social-enter__link').on('click', function () {
     closeSocialEnter();
     openUserProfile();
+    $('.auth__change').addClass('active');
+    $('.auth__help').removeClass('active');
   })
 
   $('.expert-one .form-auth__input--mask').on('focus', function () {
@@ -186,6 +188,10 @@
   var openPopupAuth = function () {
     $('.expert-one .popup-auth--auth').addClass('active');
     $('.expert-one').addClass('no-scroll');
+
+    $('.auth__change').removeClass('active');
+    $('.auth__help').addClass('active');
+
     openSocialEnter();
     setTimeout(function () {
       $('.expert-one .popup-auth--auth').removeClass('dissolve');

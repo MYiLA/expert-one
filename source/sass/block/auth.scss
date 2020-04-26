@@ -9,7 +9,7 @@
     padding-top: 53px;
     padding-left: 15px;
     padding-right: 15px;
-    padding-bottom: 57px;
+    padding-bottom: 56px;
   
     background-color: white;
 
@@ -44,13 +44,14 @@
     text-align: center;
     margin: 0;
     padding: 0;
-    margin-bottom: 36px;
+    margin-bottom: 37px;
   }
 
   .auth__desc {
     margin: 0;
     margin-bottom: 36px;
     padding: 20px;
+    padding-bottom: 22px;
     background-color: rgba(173, 189, 255, .2);
     border-radius: 5px;
     text-align: center;
@@ -97,7 +98,12 @@
     width: auto;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 46px;
+    margin-bottom: 42px;
+
+    padding-left: 33px;
+    padding-right: 33px;
+    font-size: 16px;
+    line-height: 16px;
     &--signin {}
 
     &--signup {}
