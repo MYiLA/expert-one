@@ -16,5 +16,28 @@
 
 }
 
-// @media (min-width: $tablet-width) {.expert-one {}}
-// @media (min-width: $desktop-width) {.expert-one {}}
+@media (min-width: $tablet-width) {
+  .expert-one {
+    .order-technical__header {
+      margin-bottom: 2px;
+    }
+
+    .order-technical__wrap {
+      width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .order-technical__filter-clients {
+      margin-bottom: 26px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .expert-one {
+    .order-technical__wrap {
+      width: 1050px;
+    }
+  }
+}

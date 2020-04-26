@@ -24,5 +24,51 @@
 
 }
 
-// @media (min-width: $tablet-width) {.expert-one {}}
-// @media (min-width: $desktop-width) {.expert-one {}}
+@media (min-width: $tablet-width) {
+  .expert-one {
+    .speaker-link {
+
+    }
+
+    .speaker-link__list {
+      overflow: hidden;
+    }
+
+    .speaker-link__expand {
+      @include animation-dark--blue;
+      position: absolute;
+      cursor: pointer;
+      width: 20px;
+      height: 15px;
+      top: 31px;
+      right: 25px;
+      display: block;
+      transition: 0.4s;
+      background-color: transparent;
+      border: none;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 2px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $blue;
+        box-shadow: 
+        7px 0 0 0 $blue,
+        -7px 0 0 0 $blue;
+      }
+    }
+  }
+
+
+}
+
+@media (min-width: $desktop-width) {
+  .expert-one {
+    
+  }
+}
