@@ -414,7 +414,16 @@
   .expert-one {
     .client-order__wrap-border {
       .client-order__sub-wrap {
+        max-width: 170px;
+        width: auto;
+        flex-shrink: 0;
         margin-right: 50px;
+
+        &:nth-child(1) {
+          max-width: auto;
+          flex-grow: 1;
+          margin-right: 120px;
+        }
         &:nth-last-child(1) {
           margin-right: 50px;
         }
