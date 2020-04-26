@@ -4,18 +4,21 @@
     display: flex;
     flex-wrap: wrap;
 
-    padding-top: 30px;
+    padding-top: 26px;
     padding-right: 20px;
     padding-bottom: 25px;
     padding-left: 20px;
+
+    border: 1px solid #e2e4e9;
+    border-radius: 3px;
 
     background-color: $white;
   }
 
   .speaker__photo {
     position: absolute;
-    top: 30px;
-    left: 20px;
+    top: 28px;
+    left: 18px;
     width: 100px;
     height: 100px;
     text-align: left;
@@ -41,7 +44,7 @@
 
   .speaker__name,
   .speaker__info {
-    margin-left: 130px;
+    margin-left: 120px;
     margin-right: 0;
     margin-top: 0;
 
@@ -71,7 +74,7 @@
 
   .speaker__desc {
     margin-top: 0;
-    margin-bottom: 14px;
+    margin-bottom: 13px;
     color: #666666;
     font-size: 14px;
     line-height: 22px;
@@ -153,7 +156,7 @@
   }
 
   .speaker__availability {
-    margin-bottom: 26px;
+    margin-bottom: 24px;
   }
 
   .speaker__order-btn {

@@ -34,7 +34,7 @@
     color: $white;
     display: flex;
     justify-content: space-between;
-    padding-top: 27px;
+    padding-top: 33px;
     padding-right: 15px;
     padding-bottom: 27px;
     padding-left: 15px;
@@ -57,7 +57,7 @@
     &::after {
       content: '';
       position: absolute;
-      width: 22px;
+      width: 27px;
       height: 2px;
       background-color: $white;
       left: 50%;
@@ -77,8 +77,8 @@
 
   .filter__wrap {
     display: block;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 26px;
+    padding-bottom: 29px;
     margin-left: 15px;
     margin-right: 15px;
     border-bottom: 1px dashed #c0c4ce;
@@ -418,12 +418,16 @@
   .filter__submit {
     @include btn;
 
-    width: 190px;
+    width: 50%;
   }
 
   .filter__dropping {
     cursor: pointer;
     position: relative;
+
+    margin-left: auto;
+    margin-right: auto;
+
     padding-left: 32px;
     padding-top: 2px;
     padding-bottom: 2px;

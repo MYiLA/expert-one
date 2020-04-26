@@ -5,8 +5,15 @@
     &.active {
       .header__burger-icon {
         position: absolute;
-        top: 20px;
-        left: 21px;
+        width: 60px;
+        height: 60px;
+        top: 0;
+        left: 0;
+
+        &::before,
+        &::after {
+          width: 30px;
+        }
 
         &::before {
           box-shadow: none;
@@ -27,8 +34,8 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-top: 19px;
-    padding-bottom: 17px;
+    padding-top: 16px;
+    padding-bottom: 15px;
     padding-left: 15px;
     padding-right: 27px;
   }
@@ -47,11 +54,12 @@
   .header__burger {
     position: static;
     width: 30px;
-    height: auto;
+    height: 30px;
     z-index: 5;
     order: -1;
 
-    margin-right: 20px;
+    margin-right: 21px;
+    margin-left: -9px;
     background-color: transparent;
     border: none;
 
@@ -63,7 +71,7 @@
   .header__burger-icon {
     position: relative;
     display: block;
-    width: 20px;
+    width: 30px;
     height: 20px;
     @include animation;
 
