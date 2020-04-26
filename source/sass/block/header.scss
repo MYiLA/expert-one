@@ -129,6 +129,7 @@
     .header__wrap {
       padding-top: 3px;
       padding-bottom: 0;
+      padding-right: 0;
 
       @media (min-width: $desktop-width) {
         width: 1050px;

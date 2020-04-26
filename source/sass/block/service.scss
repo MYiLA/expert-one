@@ -67,21 +67,27 @@
       display: flex;
 
       .service__service {
+        position: relative;
         background-image: none;
         width: auto;
-        margin-right: 5px;
+        margin-right: 0;
+        padding-right: 30px;
       }
     }
 
     .service__label {
       display: block;
+      margin-right: 0;
+
       font-size: 18px;
       line-height: 18px;
       font-weight: 400;
     }
 
     .service__counter {
-      position: static;
+      top: 0;
+      right: 0;
+      left: auto;
     }
   }
 }
