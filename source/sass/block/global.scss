@@ -44,7 +44,7 @@ body {
   box-sizing: border-box;
   max-width: 100%;
   min-width: $mobile-width;
-  overflow-x: hidden;
+  overflow: hidden;
   @include text;
   background-color: #eff0f3;
 
@@ -77,6 +77,9 @@ body {
 
     @media (min-width: $desktop-width) {
       width: 1050px;
+      .expert-one_btn {
+        margin-right: 50px;
+      }
     }
   }
 

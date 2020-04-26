@@ -10,52 +10,53 @@ html(lang="ru")
     link(rel="stylesheet" href="lib/glide/glide.core.min.css")
     link(rel="stylesheet" href="css/style.min.css")
 
-  body.expert-one
-    main.expert-one__card.card
-      .card__header.header
-        .header__wrap
-          include ../modules/header
-      .card__hover-wrap
+  body
+    .expert-one
+      main.expert-one__card.card
+        .card__header.header
+          .header__wrap
+            include ../modules/header
+        .card__hover-wrap
+          .wrap
+            .speakers__speaker.speaker
+              a(href="./card.html").speaker__photo
+                img(src="./img/photo.jpg", alt="фотография спикера")
+              h2.speaker__name Константин Константинопольский
+              .speaker__info.info
+                span.info__item.info__item--country Россия
+                span.info__item.info__item--lang Ru, En
+                span.info__item.info__item--range 15 000 - 20 000 USD
+              p.speaker__desc Единственный в России обладатель статуса Certified Speaking Professional, занимает 30 позицию в мировом рейтинге спикеров.
+              button(type="button").speaker__favourites.active
+                span.speaker__favourites-icon
+                span.speaker__favourites-text В избранном
+              .speaker__availability.availability
+                .availability__performance
+                  span.availability__title Доступность для&nbsp;выступления:
+                  span.availability__desc Да (Tолько в ЕС)
+                .availability__interview
+                  span.availability__title Доступность для&nbsp;интервью:
+                  span.availability__desc Да
+              .speaker__order-btn Добавить в заказ
+              a(href="./card.html").speaker__more-btn Подробнее
         .wrap
-          .speakers__speaker.speaker
-            a(href="./card.html").speaker__photo
-              img(src="./img/photo.jpg", alt="фотография спикера")
-            h2.speaker__name Константин Константинопольский
-            .speaker__info.info
-              span.info__item.info__item--country Россия
-              span.info__item.info__item--lang Ru, En
-              span.info__item.info__item--range 15 000 - 20 000 USD
-            p.speaker__desc Единственный в России обладатель статуса Certified Speaking Professional, занимает 30 позицию в мировом рейтинге спикеров.
-            button(type="button").speaker__favourites.active
-              span.speaker__favourites-icon
-              span.speaker__favourites-text В избранном
-            .speaker__availability.availability
-              .availability__performance
-                span.availability__title Доступность для&nbsp;выступления:
-                span.availability__desc Да (Tолько в ЕС)
-              .availability__interview
-                span.availability__title Доступность для&nbsp;интервью:
-                span.availability__desc Да
-            .speaker__order-btn Добавить в заказ
-            a(href="./card.html").speaker__more-btn Подробнее
-      .wrap
-        .card__technical.technical
-          include ../modules/technical
-        .card__progress.progress
-          include ../modules/progress
-        .card__hashtags.hashtags
-          include ../modules/hashtags
-        .card__video.video
-          include ../modules/video
-        .card__biography.biography
-          include ../modules/biography
-        .card__topics.topics
-          include ../modules/topics
-        .card__books.books
-          include ../modules/books
-        .card__reviews.reviews
-          include ../modules/reviews
-        .card__loading.loading
+          .card__technical.technical
+            include ../modules/technical
+          .card__progress.progress
+            include ../modules/progress
+          .card__hashtags.hashtags
+            include ../modules/hashtags
+          .card__video.video
+            include ../modules/video
+          .card__biography.biography
+            include ../modules/biography
+          .card__topics.topics
+            include ../modules/topics
+          .card__books.books
+            include ../modules/books
+          .card__reviews.reviews
+            include ../modules/reviews
+          .card__loading.loading
       
     script(src="lib/jquery3.4.1.js")
     script(src="lib/glide/glide.min.js")

@@ -8,45 +8,46 @@ html(lang="ru")
     link(rel="stylesheet" href="lib/choices/choices.min.css")
     link(rel="stylesheet" href="css/style.min.css")
 
-  body.expert-one
-    main.expert-one__order-technical.order-technical
-      .order-technical__header.header
-        .header__wrap
-          include ../modules/header
-      .order-technical__filter-clients.filter-clients
-        .filter-clients__wrap
-          include ../modules/filter-clients
-      .order-technical__wrap
-        .order-technical__clients.clients
-          .clients__wrap
-            span.clients__date Сегодня
-            ul.clients__list
-              li.clients__client-order.client-order.new
-                include ../modules/client-order
-              li.clients__client-order.client-order.unrealized
-                include ../modules/client-order
-              li.clients__client-order.client-order.work
-                include ../modules/client-order
-              li.clients__client-order.client-order.realized
-                include ../modules/client-order
-          .clients__wrap
-            span.clients__date Вчера
-            ul.clients__list
-              li.clients__client-order.client-order.realized
-                include ../modules/client-order
-              li.clients__client-order.client-order.realized
-                include ../modules/client-order
-          .clients__wrap
-            span.clients__date 14.04.2020
-            ul.clients__list
-              li.clients__client-order.client-order.unrealized
-                include ../modules/client-order
-              li.clients__client-order.client-order.unrealized
-                include ../modules/client-order
-              li.clients__client-order.client-order.unrealized
-                include ../modules/client-order
-          .clients__wrap-loading
-            .clients__loading.loading
+  body
+    .expert-one
+      main.expert-one__order-technical.order-technical
+        .order-technical__header.header
+          .header__wrap
+            include ../modules/header
+        .order-technical__filter-clients.filter-clients
+          .filter-clients__wrap
+            include ../modules/filter-clients
+        .order-technical__wrap
+          .order-technical__clients.clients
+            .clients__wrap
+              span.clients__date Сегодня
+              ul.clients__list
+                li.clients__client-order.client-order.new
+                  include ../modules/client-order
+                li.clients__client-order.client-order.unrealized
+                  include ../modules/client-order
+                li.clients__client-order.client-order.work
+                  include ../modules/client-order
+                li.clients__client-order.client-order.realized
+                  include ../modules/client-order
+            .clients__wrap
+              span.clients__date Вчера
+              ul.clients__list
+                li.clients__client-order.client-order.realized
+                  include ../modules/client-order
+                li.clients__client-order.client-order.realized
+                  include ../modules/client-order
+            .clients__wrap
+              span.clients__date 14.04.2020
+              ul.clients__list
+                li.clients__client-order.client-order.unrealized
+                  include ../modules/client-order
+                li.clients__client-order.client-order.unrealized
+                  include ../modules/client-order
+                li.clients__client-order.client-order.unrealized
+                  include ../modules/client-order
+            .clients__wrap-loading
+              .clients__loading.loading
 
     script(src="lib/jquery3.4.1.js")
     script(src="lib/choices/choices.min.js")

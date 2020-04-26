@@ -7,7 +7,7 @@
   }
 
   var choiceDefoltSelect = function (el, value) {
-    var div = findAncestor(el, '.client-order');
+    var div = findAncestor(el, '.expert-one .client-order');
     if (
       div.classList.contains('new') &&
       value === 'Новый') {
