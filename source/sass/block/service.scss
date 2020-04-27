@@ -71,7 +71,7 @@
         background-image: none;
         width: auto;
         margin-right: 0;
-        padding-right: 30px;
+        padding-right: 28px;
       }
     }
 
@@ -85,9 +85,15 @@
     }
 
     .service__counter {
+      width: 20px;
+      height: 20px;
       top: 0;
       right: 0;
       left: auto;
+    }
+
+    .service__favourites {
+      margin-right: 27px;
     }
   }
 }

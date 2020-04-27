@@ -219,7 +219,7 @@
       box-shadow: none;
       flex-grow: 1;
       margin-right: 30px;
-      
+
     }
 
     .menu__list {
@@ -258,10 +258,18 @@
   }
 }
 
+@media(min-width: $tablet-width) {
+  .expert-one {
+    .menu__lang-wrap .choices__list--single {
+      padding-right: 18px;
+    }
+  }
+}
+
 @media (min-width: $desktop-width) {
   .expert-one {
     .menu {
-      margin-right: 20px;
+      margin-right: 10px;
     }
 
     .header__logo {
@@ -279,6 +287,10 @@
     .menu__link {
       font-size: 18px;
       line-height: 18px;
+    }
+
+    .menu__item {
+      margin-right: 22px;
     }
   }
 }

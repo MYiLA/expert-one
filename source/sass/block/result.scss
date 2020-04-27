@@ -40,6 +40,15 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .expert-one {
+    .result__counter,
+    .result__item {
+      padding-left: 30px;
+    }
+  }
+}
+
 @media (min-width: $desktop-width) {
   .expert-one {
     .result {

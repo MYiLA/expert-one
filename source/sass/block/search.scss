@@ -76,16 +76,32 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .expert-one {
+    .search__input {
+      padding-left: 30px;
+    }
+  }
+}
+
 @media (min-width: $desktop-width) {
   .expert-one {
     .search__input {
       font-size: 18px;
       line-height: 18px;
+      height: 61px;
 
       &::placeholder {
         font-size: 18px;
         line-height: 18px;
       }
+    }
+
+    .search__btn {
+      width: 45px;
+      height: 45px;
+      right: 17px;
+      background-size: 25px auto;
     }
   }
 }

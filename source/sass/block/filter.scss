@@ -499,6 +499,7 @@
       padding-right: 30px;
       border-bottom: none;
       margin-bottom: 10px;
+      border-radius: 3px;
 
       &:nth-last-child(2) {
         margin-bottom: 0;
@@ -585,6 +586,26 @@
     .filter {
       max-width: 450px;
       padding: 0;
+    }
+
+    .filter__select {
+      .choices__list--single {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      .choices__inner {
+        min-height: 40px;
+      }
+    }
+
+    .filter__sub-wrap {
+      padding-bottom: 28px;
+    }
+
+    .filter__submit {
+      font-size: 16px;
+      line-height: 16px;
     }
   }
 }
