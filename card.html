@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -10,214 +11,216 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body class="expert-one">
-    <main class="expert-one__card card">
-        <div class="card__header header">
-            <div class="header__wrap">
-                <div class="header__logo"><a href="./index.html"><img src="./img/logo.svg" alt="логотип expert one" width="150"></a></div>
-                <button class="header__burger" type="button"><span class="header__burger-icon"></span></button>
-                <div class="header__menu menu">
-                    <div class="menu__wrap"><a class="menu__tel" href="tel:+74951234567">+7 495 123 45 67</a>
-                        <ul class="menu__list">
-                            <li class="menu__item"><a class="menu__link" href="#">Спикеры</a></li>
-                        </ul>
-                        <div class="menu__lang-wrap">
-                            <select class="menu__lang" value="USD">
-                                <option selected="selected">USD</option>
-                                <option>RUB</option>
-                                <option>EUR</option>
-                            </select>
+<body>
+    <div class="expert-one">
+        <main class="expert-one__card card">
+            <div class="card__header header">
+                <div class="header__wrap">
+                    <div class="header__logo"><a href="./index.html"><img src="./img/logo.svg" alt="логотип expert one" width="150"></a></div>
+                    <button class="header__burger" type="button"><span class="header__burger-icon"></span></button>
+                    <div class="header__menu menu">
+                        <div class="menu__wrap"><a class="menu__tel" href="tel:+74951234567">+7 495 123 45 67</a>
+                            <ul class="menu__list">
+                                <li class="menu__item"><a class="menu__link" href="#">Спикеры</a></li>
+                            </ul>
+                            <div class="menu__lang-wrap">
+                                <select class="menu__lang" value="USD">
+                                    <option selected="selected">USD</option>
+                                    <option>RUB</option>
+                                    <option>EUR</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="header__service service">
-                    <div class="service__favourites">
-                        <button class="service__service" type="button"><span class="service__label">Избранное</span></button><span class="service__counter">2</span>
+                    <div class="header__service service">
+                        <div class="service__favourites">
+                            <button class="service__service" type="button"><span class="service__label">Избранное</span><span class="service__counter">2</span></button>
+                        </div>
+                        <div class="service__basket"><a class="service__service" href="./order-page.html"><span class="service__label">Мои&nbsp;заказы</span><span class="service__counter">1</span></a></div>
                     </div>
-                    <div class="service__basket"><a class="service__service" href="./order-page.html"><span class="service__label">Мои&nbsp;заказы</span></a><span class="service__counter">1</span></div>
                 </div>
             </div>
-        </div>
-        <div class="card__hover-wrap">
+            <div class="card__hover-wrap">
+                <div class="wrap">
+                    <div class="speakers__speaker speaker"><a class="speaker__photo" href="./card.html"><img src="./img/photo.jpg" alt="фотография спикера"></a>
+                        <h2 class="speaker__name">Константин Константинопольский</h2>
+                        <div class="speaker__info info"><span class="info__item info__item--country">Россия</span><span class="info__item info__item--lang">Ru, En</span><span class="info__item info__item--range">15 000 - 20 000 USD</span></div>
+                        <p class="speaker__desc">Единственный в России обладатель статуса Certified Speaking Professional, занимает 30 позицию в мировом рейтинге спикеров.</p>
+                        <button class="speaker__favourites active" type="button"><span class="speaker__favourites-icon"></span><span class="speaker__favourites-text">В избранном</span></button>
+                        <div class="speaker__availability availability">
+                            <div class="availability__performance"><span class="availability__title">Доступность для&nbsp;выступления:</span><span class="availability__desc">Да (Tолько в ЕС)</span></div>
+                            <div class="availability__interview"><span class="availability__title">Доступность для&nbsp;интервью:</span><span class="availability__desc">Да</span></div>
+                        </div>
+                        <div class="speaker__order-btn">Добавить в заказ</div><a class="speaker__more-btn" href="./card.html">Подробнее</a>
+                    </div>
+                </div>
+            </div>
             <div class="wrap">
-                <div class="speakers__speaker speaker"><a class="speaker__photo" href="./card.html"><img src="./img/photo.jpg" alt="фотография спикера"></a>
-                    <h2 class="speaker__name">Константин Константинопольский</h2>
-                    <div class="speaker__info info"><span class="info__item info__item--country">Россия</span><span class="info__item info__item--lang">Ru, En</span><span class="info__item info__item--range">15 000 - 20 000 USD</span></div>
-                    <p class="speaker__desc">Единственный в России обладатель статуса Certified Speaking Professional, занимает 30 позицию в мировом рейтинге спикеров.</p>
-                    <button class="speaker__favourites active" type="button"><span class="speaker__favourites-icon"></span><span class="speaker__favourites-text">В избранном</span></button>
-                    <div class="speaker__availability availability">
-                        <div class="availability__performance"><span class="availability__title">Доступность для&nbsp;выступления:</span><span class="availability__desc">Да (Tолько в ЕС)</span></div>
-                        <div class="availability__interview"><span class="availability__title">Доступность для&nbsp;интервью:</span><span class="availability__desc">Да</span></div>
+                <div class="card__technical technical">
+                    <h3 class="card__title technical__title">Служебный блок</h3>
+                    <button class="technical__edit-btn" type="button">Редактировать
+                        <svg width="19" height="18" viewBox="0 0 19 18" fill="none">
+                            <path d="M15.9346 0.724575C14.9668 -0.241525 13.3996 -0.241525 12.4318 0.724575L11.5549 1.60621L2.22108 10.9351L2.20124 10.9551C2.19644 10.9599 2.19644 10.965 2.19132 10.965C2.1814 10.9799 2.16653 10.9946 2.15676 11.0095C2.15676 11.0144 2.15165 11.0144 2.15165 11.0194C2.14173 11.0343 2.13693 11.0442 2.12685 11.0591C2.12205 11.064 2.12205 11.0688 2.11709 11.074C2.11213 11.0888 2.10717 11.0988 2.10206 11.1136C2.10206 11.1184 2.09725 11.1184 2.09725 11.1236L0.0263543 17.351C-0.034395 17.5283 0.0117868 17.7246 0.145218 17.8562C0.238977 17.9487 0.365434 18.0005 0.497006 18C0.550782 17.9991 0.604092 17.9907 0.655543 17.9752L6.87816 15.8993C6.88296 15.8993 6.88296 15.8993 6.88808 15.8945C6.90373 15.8899 6.91876 15.8832 6.93256 15.8745C6.93643 15.8741 6.93984 15.8724 6.94263 15.8697C6.95735 15.8598 6.97719 15.8498 6.99206 15.8398C7.00679 15.8301 7.02182 15.8152 7.0367 15.8053C7.04166 15.8002 7.04646 15.8002 7.04646 15.7954C7.05157 15.7904 7.06149 15.7856 7.06645 15.7755L17.2771 5.56484C18.2432 4.59703 18.2432 3.02979 17.2771 2.06214L15.9346 0.724575ZM6.71962 14.735L3.27148 11.287L11.9018 2.65677L15.3499 6.10476L6.71962 14.735ZM2.7858 12.2036L5.79816 15.2158L1.27481 16.7218L2.7858 12.2036ZM16.5787 4.87118L16.0535 5.40134L12.6052 1.95304L13.1355 1.42304C13.7156 0.843439 14.6558 0.843439 15.236 1.42304L16.5835 2.77052C17.1592 3.35322 17.157 4.29127 16.5787 4.87118Z" fill="#999999"></path>
+                        </svg>
+                    </button>
+                    <div class="technical__wrap technical__wrap--1 technical__wrap-back">
+                        <div class="technical__contacts contacts">
+                            <div class="technical__sub-title contacts__title">Контакты спикера:</div><a class="contacts__link" href="mailto:primer@gmail.com">primer@gmail.com</a><a class="contacts__tel" href="tel:+7 123 456 78 90">+7 123 456 78 90</a><a class="contacts__link" href="radislavgandapas.com">radislavgandapas.com</a>
+                            <ul class="contacts__social social">
+                                <li class="social__item"><a class="social__link" href="#"><img src="./img/social-vk.svg" alt="спикер вконтакте" width="30" height="30"></a></li>
+                                <li class="social__item"><a class="social__link" href="#"><img src="./img/social-fb.svg" alt="спикер в фейсбуке" width="30" height="30"></a></li>
+                                <li class="social__item"><a class="social__link" href="#"><img src="./img/social-inst.svg" alt="спикер в инстаграмме" width="30" height="30"></a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="speaker__order-btn">Добавить в заказ</div><a class="speaker__more-btn" href="./card.html">Подробнее</a>
-                </div>
-            </div>
-        </div>
-        <div class="wrap">
-            <div class="card__technical technical">
-                <h3 class="card__title technical__title">Служебный блок</h3>
-                <button class="technical__edit-btn" type="button">Редактировать
-                    <svg width="19" height="18" viewBox="0 0 19 18" fill="none">
-                        <path d="M15.9346 0.724575C14.9668 -0.241525 13.3996 -0.241525 12.4318 0.724575L11.5549 1.60621L2.22108 10.9351L2.20124 10.9551C2.19644 10.9599 2.19644 10.965 2.19132 10.965C2.1814 10.9799 2.16653 10.9946 2.15676 11.0095C2.15676 11.0144 2.15165 11.0144 2.15165 11.0194C2.14173 11.0343 2.13693 11.0442 2.12685 11.0591C2.12205 11.064 2.12205 11.0688 2.11709 11.074C2.11213 11.0888 2.10717 11.0988 2.10206 11.1136C2.10206 11.1184 2.09725 11.1184 2.09725 11.1236L0.0263543 17.351C-0.034395 17.5283 0.0117868 17.7246 0.145218 17.8562C0.238977 17.9487 0.365434 18.0005 0.497006 18C0.550782 17.9991 0.604092 17.9907 0.655543 17.9752L6.87816 15.8993C6.88296 15.8993 6.88296 15.8993 6.88808 15.8945C6.90373 15.8899 6.91876 15.8832 6.93256 15.8745C6.93643 15.8741 6.93984 15.8724 6.94263 15.8697C6.95735 15.8598 6.97719 15.8498 6.99206 15.8398C7.00679 15.8301 7.02182 15.8152 7.0367 15.8053C7.04166 15.8002 7.04646 15.8002 7.04646 15.7954C7.05157 15.7904 7.06149 15.7856 7.06645 15.7755L17.2771 5.56484C18.2432 4.59703 18.2432 3.02979 17.2771 2.06214L15.9346 0.724575ZM6.71962 14.735L3.27148 11.287L11.9018 2.65677L15.3499 6.10476L6.71962 14.735ZM2.7858 12.2036L5.79816 15.2158L1.27481 16.7218L2.7858 12.2036ZM16.5787 4.87118L16.0535 5.40134L12.6052 1.95304L13.1355 1.42304C13.7156 0.843439 14.6558 0.843439 15.236 1.42304L16.5835 2.77052C17.1592 3.35322 17.157 4.29127 16.5787 4.87118Z" fill="#999999"></path>
-                    </svg>
-                </button>
-                <div class="technical__wrap technical__wrap--1 technical__wrap-back">
-                    <div class="technical__contacts contacts">
-                        <div class="technical__sub-title contacts__title">Контакты спикера:</div><a class="contacts__link" href="mailto:primer@gmail.com">primer@gmail.com</a><a class="contacts__tel" href="tel:+7 123 456 78 90">+7 123 456 78 90</a><a class="contacts__link" href="radislavgandapas.com">radislavgandapas.com</a>
-                        <ul class="contacts__social social">
-                            <li class="social__item"><a class="social__link" href="#"><img src="./img/social-vk.svg" alt="спикер вконтакте" width="30" height="30"></a></li>
-                            <li class="social__item"><a class="social__link" href="#"><img src="./img/social-fb.svg" alt="спикер в фейсбуке" width="30" height="30"></a></li>
-                            <li class="social__item"><a class="social__link" href="#"><img src="./img/social-inst.svg" alt="спикер в инстаграмме" width="30" height="30"></a></li>
-                        </ul>
+                    <div class="technical__wrap technical__wrap--2">
+                        <div class="technical__wrap-back technical__verify active">
+                            <div class="technical__sub-title">Верификация:</div><span class="technical__verify-ok">Пройдена</span><span class="technical__verify-no">Не пройдена</span>
+                        </div>
+                        <div class="technical__wrap-back">
+                            <div class="technical__sub-title">Популярность:</div><span class="technical__desc">253 просмотра</span>
+                        </div>
                     </div>
-                </div>
-                <div class="technical__wrap technical__wrap--2">
-                    <div class="technical__wrap-back technical__verify active">
-                        <div class="technical__sub-title">Верификация:</div><span class="technical__verify-ok">Пройдена</span><span class="technical__verify-no">Не пройдена</span>
-                    </div>
-                    <div class="technical__wrap-back">
-                        <div class="technical__sub-title">Популярность:</div><span class="technical__desc">253 просмотра</span>
+                    <div class="technical__wrap technical__wrap--3 technical__wrap-back">
+                        <div class="technical__sub-title">Комментарий по работе:</div>
+                        <p class="technical__desc">Самый титулованный бизнес-тренер России, единственный в стране трижды был признан лучшим в профессии по результатам года. Лауреат Книжной премии Рунета 2013.</p>
                     </div>
                 </div>
-                <div class="technical__wrap technical__wrap--3 technical__wrap-back">
-                    <div class="technical__sub-title">Комментарий по работе:</div>
-                    <p class="technical__desc">Самый титулованный бизнес-тренер России, единственный в стране трижды был признан лучшим в профессии по результатам года. Лауреат Книжной премии Рунета 2013.</p>
+                <div class="card__progress progress">
+                    <h3 class="card__title progress__title">Должности, достижения и награды</h3>
+                    <ul class="progress__list">
+                        <li class="progress__item">Almost everyone faces tough financial decisions, and many don’t know where to turn for the right solutions.</li>
+                        <li class="progress__item">Almost everyone faces tough financial decisions, and many don’t know where to turn for the right solutions.</li>
+                        <li class="progress__item">Almost everyone faces tough financial decisions, and many don’t know where to turn for the right solutions.</li>
+                        <li class="progress__item">Almost everyone faces tough financial decisions, and many don’t know where to turn for the right solutions.</li>
+                        <li class="progress__item">Almost everyone faces tough financial decisions, and many don’t know where to turn for the right solutions.</li>
+                    </ul>
                 </div>
-            </div>
-            <div class="card__progress progress">
-                <h3 class="card__title progress__title">Должности, достижения и награды</h3>
-                <ul class="progress__list">
-                    <li class="progress__item">Almost everyone faces tough financial decisions, and many don’t know where to turn for the right solutions.</li>
-                    <li class="progress__item">Almost everyone faces tough financial decisions, and many don’t know where to turn for the right solutions.</li>
-                    <li class="progress__item">Almost everyone faces tough financial decisions, and many don’t know where to turn for the right solutions.</li>
-                    <li class="progress__item">Almost everyone faces tough financial decisions, and many don’t know where to turn for the right solutions.</li>
-                    <li class="progress__item">Almost everyone faces tough financial decisions, and many don’t know where to turn for the right solutions.</li>
-                </ul>
-            </div>
-            <div class="card__hashtags hashtags">
-                <ul class="hashtags__list">
-                    <li class="hashtags__item"><a class="hashtags__hashtag" href="#" onclick="return false">#Бизнес</a></li>
-                    <li class="hashtags__item"><a class="hashtags__hashtag" href="#" onclick="return false">#Управление</a></li>
-                    <li class="hashtags__item"><a class="hashtags__hashtag" href="#" onclick="return false">#Экономика</a></li>
-                    <li class="hashtags__item"><a class="hashtags__hashtag" href="#" onclick="return false">#Психология</a></li>
-                    <li class="hashtags__item"><a class="hashtags__hashtag" href="#" onclick="return false">#Урбанистика</a></li>
-                    <li class="hashtags__item"><a class="hashtags__hashtag" href="#" onclick="return false">#Урбанистика</a></li>
-                    <li class="hashtags__item"><a class="hashtags__hashtag" href="#" onclick="return false">#Бизнес</a></li>
-                    <li class="hashtags__item"><a class="hashtags__hashtag" href="#" onclick="return false">#Управление</a></li>
-                    <li class="hashtags__item"><a class="hashtags__hashtag" href="#" onclick="return false">#Экономика</a></li>
-                    <li class="hashtags__item"><a class="hashtags__hashtag" href="#" onclick="return false">#Психология</a></li>
-                </ul>
-            </div>
-            <div class="card__video video">
-                <div class="video__glide">
-                    <div class="video__track glide__track" data-glide-el="track">
-                        <ul class="video__list glide__slides">
-                            <li class="glide__slide video__item-wrap">
-                                <div class="video__slide">
-                                    <div class="video__wrap-hover">
-                                        <button class="video__play" type="button" aria-label="включить видео"></button><img class="video__hover" src="./img/video.jpg" alt="обложка видео">
+                <div class="card__hashtags hashtags">
+                    <ul class="hashtags__list">
+                        <li class="hashtags__item"><a class="hashtags__hashtag" href="#" onclick="return false">#Бизнес</a></li>
+                        <li class="hashtags__item"><a class="hashtags__hashtag" href="#" onclick="return false">#Управление</a></li>
+                        <li class="hashtags__item"><a class="hashtags__hashtag" href="#" onclick="return false">#Экономика</a></li>
+                        <li class="hashtags__item"><a class="hashtags__hashtag" href="#" onclick="return false">#Психология</a></li>
+                        <li class="hashtags__item"><a class="hashtags__hashtag" href="#" onclick="return false">#Урбанистика</a></li>
+                        <li class="hashtags__item"><a class="hashtags__hashtag" href="#" onclick="return false">#Урбанистика</a></li>
+                        <li class="hashtags__item"><a class="hashtags__hashtag" href="#" onclick="return false">#Бизнес</a></li>
+                        <li class="hashtags__item"><a class="hashtags__hashtag" href="#" onclick="return false">#Управление</a></li>
+                        <li class="hashtags__item"><a class="hashtags__hashtag" href="#" onclick="return false">#Экономика</a></li>
+                        <li class="hashtags__item"><a class="hashtags__hashtag" href="#" onclick="return false">#Психология</a></li>
+                    </ul>
+                </div>
+                <div class="card__video video">
+                    <div class="video__glide">
+                        <div class="video__track glide__track" data-glide-el="track">
+                            <ul class="video__list glide__slides">
+                                <li class="glide__slide video__item-wrap">
+                                    <div class="video__slide">
+                                        <div class="video__wrap-hover">
+                                            <button class="video__play" type="button" aria-label="включить видео"></button><img class="video__hover" src="./img/video.jpg" alt="обложка видео">
+                                        </div>
+                                        <div class="video__wrap-video">
+                                            <iframe width="330" height="186" src="https://www.youtube.com/embed/UwoekIZd47Y?rel=0&amp;showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+                                        </div>
                                     </div>
-                                    <div class="video__wrap-video">
-                                        <iframe width="330" height="186" src="https://www.youtube.com/embed/UwoekIZd47Y?rel=0&amp;showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+                                </li>
+                                <li class="glide__slide video__item-wrap">
+                                    <div class="video__slide">
+                                        <div class="video__wrap-hover">
+                                            <button class="video__play" type="button" aria-label="включить видео"></button><img class="video__hover" src="./img/video.jpg" alt="обложка видео">
+                                        </div>
+                                        <div class="video__wrap-video">
+                                            <iframe width="330" height="186" src="https://www.youtube.com/embed/UwoekIZd47Y?rel=0&amp;showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li class="glide__slide video__item-wrap">
-                                <div class="video__slide">
-                                    <div class="video__wrap-hover">
-                                        <button class="video__play" type="button" aria-label="включить видео"></button><img class="video__hover" src="./img/video.jpg" alt="обложка видео">
+                                </li>
+                                <li class="glide__slide video__item-wrap">
+                                    <div class="video__slide">
+                                        <div class="video__wrap-hover">
+                                            <button class="video__play" type="button" aria-label="включить видео"></button><img class="video__hover" src="./img/video.jpg" alt="обложка видео">
+                                        </div>
+                                        <div class="video__wrap-video">
+                                            <iframe width="330" height="186" src="https://www.youtube.com/embed/UwoekIZd47Y?rel=0&amp;showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+                                        </div>
                                     </div>
-                                    <div class="video__wrap-video">
-                                        <iframe width="330" height="186" src="https://www.youtube.com/embed/UwoekIZd47Y?rel=0&amp;showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="glide__slide video__item-wrap">
-                                <div class="video__slide">
-                                    <div class="video__wrap-hover">
-                                        <button class="video__play" type="button" aria-label="включить видео"></button><img class="video__hover" src="./img/video.jpg" alt="обложка видео">
-                                    </div>
-                                    <div class="video__wrap-video">
-                                        <iframe width="330" height="186" src="https://www.youtube.com/embed/UwoekIZd47Y?rel=0&amp;showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="video__bullets glide__bullets" data-glide-el="controls[nav]">
-                        <button class="video__bullet glide__bullet" type="button" data-glide-dir="=0" aria-label="переключить на слайд 1"></button>
-                        <button class="video__bullet glide__bullet" type="button" data-glide-dir="=1" aria-label="переключить на слайд 2"></button>
-                        <button class="video__bullet glide__bullet" type="button" data-glide-dir="=2" aria-label="переключить на слайд 3"></button>
-                    </div>
-                    <div class="video__arrow-wrap glide__arrows" data-glide-el="controls">
-                        <button class="video__arrow video__arrow--left glide__arrow glide__arrow--left" type="button" aria-label="last slide" data-glide-dir="&lt;"></button>
-                        <button class="video__arrow video__arrow--right glide__arrow glide__arrow--right" type="button" aria-label="next slide" data-glide-dir="&gt;"></button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="video__bullets glide__bullets" data-glide-el="controls[nav]">
+                            <button class="video__bullet glide__bullet" type="button" data-glide-dir="=0" aria-label="переключить на слайд 1"></button>
+                            <button class="video__bullet glide__bullet" type="button" data-glide-dir="=1" aria-label="переключить на слайд 2"></button>
+                            <button class="video__bullet glide__bullet" type="button" data-glide-dir="=2" aria-label="переключить на слайд 3"></button>
+                        </div>
+                        <div class="video__arrow-wrap glide__arrows" data-glide-el="controls">
+                            <button class="video__arrow video__arrow--left glide__arrow glide__arrow--left" type="button" aria-label="last slide" data-glide-dir="&lt;"></button>
+                            <button class="video__arrow video__arrow--right glide__arrow glide__arrow--right" type="button" aria-label="next slide" data-glide-dir="&gt;"></button>
+                        </div>
                     </div>
                 </div>
+                <div class="card__biography biography">
+                    <h3 class="card__title biography__title">Биография</h3>
+                    <p>Радислав Гандапас (17 июня 1967 г., Куйбышев, Новосибирская область) – российский бизнес-тренер, один из владельцев компании «Ораторика». Его клиентами являются лидеры политических партий, главы крупнейших компаний и даже министры. В частности, Гандапас участвовал в организации публичных событий для П. Глобы, Г. Колля, Л. Кучмы, Б. Гребенщикова, а также торговых марок Schick, Motorola и Doctor Theiss.</p>
+                    <p>Радислав Гандапас (17 июня 1967 г., Куйбышев, Новосибирская область) – российский бизнес-тренер, один из владельцев компании «Ораторика». Его клиентами являются лидеры политических партий, главы крупнейших компаний и даже министры. В частности, Гандапас участвовал в организации публичных событий для П. Глобы, Г. Колля, Л. Кучмы, Б. Гребенщикова, а также торговых марок Schick, Motorola и Doctor Theiss.</p>
+                    <p>Радислав Гандапас (17 июня 1967 г., Куйбышев, Новосибирская область) – российский бизнес-тренер, один из владельцев компании «Ораторика». Его клиентами являются лидеры политических партий, главы крупнейших компаний и даже министры. В частности, Гандапас участвовал в организации публичных событий для П. Глобы, Г. Колля, Л. Кучмы, Б. Гребенщикова, а также торговых марок Schick, Motorola и Doctor Theiss.</p>
+                    <button class="biography__btn-collapse biography__btn-collapse--max" type="button">Развернуть</button>
+                    <button class="biography__btn-collapse biography__btn-collapse--min" type="button">Свернуть</button>
+                </div>
+                <div class="card__topics topics">
+                    <h3 class="card__title topics__title">Темы выступлений</h3>
+                    <ul class="topics__list">
+                        <li class="topics__item">Almost everyone faces tough financial decisions, and many don’t know where to turn for the right solutions.</li>
+                        <li class="topics__item">Almost everyone faces tough financial decisions, and many don’t know where to turn for the right solutions.</li>
+                        <li class="topics__item">Paul Luchau helps all types of people gain financial security and independence, peace of mind, quality of life, and lifestyle security.</li>
+                    </ul>
+                </div>
+                <div class="card__books books">
+                    <h3 class="card__title books__title">Автор книг</h3>
+                    <ul class="books__list">
+                        <li class="books__item">
+                            <div class="books__item-wrap">
+                                <h4 class="books__title-book">Харизма лидера</h4><span class="books__year">2013 г.</span>
+                            </div>
+                        </li>
+                        <li class="books__item">
+                            <div class="books__item-wrap">
+                                <h4 class="books__title-book">Камасутра для оратора. Десять глав о том, как получать и доставлять максимальное удовольствие, выступая публично.</h4><span class="books__year">2013 г.</span>
+                            </div>
+                        </li>
+                        <li class="books__item">
+                            <div class="books__item-wrap">
+                                <h4 class="books__title-book">Полная ж: жизнь как бизнес-проект</h4><span class="books__year">2013 г.</span>
+                            </div>
+                        </li>
+                        <li class="books__item">
+                            <div class="books__item-wrap">
+                                <h4 class="books__title-book">Книга о бизнесе раз</h4><span class="books__year">2013 г.</span>
+                            </div>
+                        </li>
+                        <li class="books__item">
+                            <div class="books__item-wrap">
+                                <h4 class="books__title-book">Еще одна книга о бизнесе</h4><span class="books__year">2013 г.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card__reviews reviews">
+                    <h3 class="card__title reviews__title">Отзывы</h3>
+                    <ul class="reviews__list">
+                        <li class="reviews__item">
+                            <p class="reviews__desc">С другой стороны дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p><strong class="reviews__autor">Алексей Леонидович Петров</strong><span class="reviews__position">Бизнесмен</span>
+                        </li>
+                        <li class="reviews__item">
+                            <p class="reviews__desc">С другой стороны дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p><strong class="reviews__autor">Екатерина Иванова</strong><span class="reviews__position"></span>
+                        </li>
+                        <li class="reviews__item">
+                            <p class="reviews__desc">С другой стороны дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p><strong class="reviews__autor">Роман Иванов</strong><span class="reviews__position">Дизайнер</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card__loading loading"></div>
             </div>
-            <div class="card__biography biography">
-                <h3 class="card__title biography__title">Биография</h3>
-                <p>Радислав Гандапас (17 июня 1967 г., Куйбышев, Новосибирская область) – российский бизнес-тренер, один из владельцев компании «Ораторика». Его клиентами являются лидеры политических партий, главы крупнейших компаний и даже министры. В частности, Гандапас участвовал в организации публичных событий для П. Глобы, Г. Колля, Л. Кучмы, Б. Гребенщикова, а также торговых марок Schick, Motorola и Doctor Theiss.</p>
-                <p>Радислав Гандапас (17 июня 1967 г., Куйбышев, Новосибирская область) – российский бизнес-тренер, один из владельцев компании «Ораторика». Его клиентами являются лидеры политических партий, главы крупнейших компаний и даже министры. В частности, Гандапас участвовал в организации публичных событий для П. Глобы, Г. Колля, Л. Кучмы, Б. Гребенщикова, а также торговых марок Schick, Motorola и Doctor Theiss.</p>
-                <p>Радислав Гандапас (17 июня 1967 г., Куйбышев, Новосибирская область) – российский бизнес-тренер, один из владельцев компании «Ораторика». Его клиентами являются лидеры политических партий, главы крупнейших компаний и даже министры. В частности, Гандапас участвовал в организации публичных событий для П. Глобы, Г. Колля, Л. Кучмы, Б. Гребенщикова, а также торговых марок Schick, Motorola и Doctor Theiss.</p>
-                <button class="biography__btn-collapse biography__btn-collapse--max" type="button">Развернуть</button>
-                <button class="biography__btn-collapse biography__btn-collapse--min" type="button">Свернуть</button>
-            </div>
-            <div class="card__topics topics">
-                <h3 class="card__title topics__title">Темы выступлений</h3>
-                <ul class="topics__list">
-                    <li class="topics__item">Almost everyone faces tough financial decisions, and many don’t know where to turn for the right solutions.</li>
-                    <li class="topics__item">Almost everyone faces tough financial decisions, and many don’t know where to turn for the right solutions.</li>
-                    <li class="topics__item">Paul Luchau helps all types of people gain financial security and independence, peace of mind, quality of life, and lifestyle security.</li>
-                </ul>
-            </div>
-            <div class="card__books books">
-                <h3 class="card__title books__title">Автор книг</h3>
-                <ul class="books__list">
-                    <li class="books__item">
-                        <div class="books__item-wrap">
-                            <h4 class="books__title-book">Харизма лидера</h4><span class="books__year">2013 г.</span>
-                        </div>
-                    </li>
-                    <li class="books__item">
-                        <div class="books__item-wrap">
-                            <h4 class="books__title-book">Камасутра для оратора. Десять глав о том, как получать и доставлять максимальное удовольствие, выступая публично.</h4><span class="books__year">2013 г.</span>
-                        </div>
-                    </li>
-                    <li class="books__item">
-                        <div class="books__item-wrap">
-                            <h4 class="books__title-book">Полная ж: жизнь как бизнес-проект</h4><span class="books__year">2013 г.</span>
-                        </div>
-                    </li>
-                    <li class="books__item">
-                        <div class="books__item-wrap">
-                            <h4 class="books__title-book">Книга о бизнесе раз</h4><span class="books__year">2013 г.</span>
-                        </div>
-                    </li>
-                    <li class="books__item">
-                        <div class="books__item-wrap">
-                            <h4 class="books__title-book">Еще одна книга о бизнесе</h4><span class="books__year">2013 г.</span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="card__reviews reviews">
-                <h3 class="card__title reviews__title">Отзывы</h3>
-                <ul class="reviews__list">
-                    <li class="reviews__item">
-                        <p class="reviews__desc">С другой стороны дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p><strong class="reviews__autor">Алексей Леонидович Петров</strong><span class="reviews__position">Бизнесмен</span>
-                    </li>
-                    <li class="reviews__item">
-                        <p class="reviews__desc">С другой стороны дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p><strong class="reviews__autor">Екатерина Иванова</strong><span class="reviews__position"></span>
-                    </li>
-                    <li class="reviews__item">
-                        <p class="reviews__desc">С другой стороны дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p><strong class="reviews__autor">Роман Иванов</strong><span class="reviews__position">Дизайнер</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="card__loading loading"></div>
-        </div>
-    </main>
+        </main>
+    </div>
     <script src="lib/jquery3.4.1.js"></script>
     <script src="lib/glide/glide.min.js"></script>
     <script src="lib/choices/choices.min.js"></script>

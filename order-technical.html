@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ExpertOne</title>
+    <link rel="stylesheet" href="lib/choices/choices.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="expert-one">
+        <main class="expert-one__order-technical order-technical">
+            <div class="order-technical__header header">
+                <div class="header__wrap">
+                    <div class="header__logo"><a href="./index.html"><img src="./img/logo.svg" alt="логотип expert one" width="150"></a></div>
+                    <button class="header__burger" type="button"><span class="header__burger-icon"></span></button>
+                    <div class="header__menu menu">
+                        <div class="menu__wrap"><a class="menu__tel" href="tel:+74951234567">+7 495 123 45 67</a>
+                            <ul class="menu__list">
+                                <li class="menu__item"><a class="menu__link" href="#">Спикеры</a></li>
+                            </ul>
+                            <div class="menu__lang-wrap">
+                                <select class="menu__lang" value="USD">
+                                    <option selected="selected">USD</option>
+                                    <option>RUB</option>
+                                    <option>EUR</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__service service">
+                        <div class="service__favourites">
+                            <button class="service__service" type="button"><span class="service__label">Избранное</span><span class="service__counter">2</span></button>
+                        </div>
+                        <div class="service__basket"><a class="service__service" href="./order-page.html"><span class="service__label">Мои&nbsp;заказы</span><span class="service__counter">1</span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-technical__filter-clients filter-clients">
+                <div class="filter-clients__wrap">
+                    <h2 class="filter-clients__title">Заказы<span class="filter-clients__counter">(128)</span></h2>
+                    <button class="filter-clients__open">Открыть фильтры</button>
+                    <div class="filter-clients__wrap-checkbox dissolve">
+                        <div class="filter-clients__wrap-header">
+                            <h3 class="filter-clients__title-popup">Фильтры</h3>
+                            <button class="filter-clients__close-popup" type="button" aria-label="закрыть фильтры"></button>
+                        </div>
+                        <div class="filter-clients__wrap-popup">
+                            <div class="filter-clients__wrap-popup-checkbox">
+                                <input class="visually-hidden" type="checkbox" id="order" name="order" value="Все заказы">
+                                <label class="filter-clients__checkbox" for="order">Все заказы</label>
+                                <input class="visually-hidden" type="checkbox" id="order-new" name="order" value="Новые заказы">
+                                <label class="filter-clients__checkbox filter-clients__checkbox--new" for="order-new">Новые заказы</label>
+                                <input class="visually-hidden" type="checkbox" id="order-work" name="order" value="В работе">
+                                <label class="filter-clients__checkbox filter-clients__checkbox--work" for="order-work">В работе</label>
+                                <input class="visually-hidden" type="checkbox" id="order-realized" name="order" value="Реализованы">
+                                <label class="filter-clients__checkbox filter-clients__checkbox--realized" for="order-realized">Реализованы</label>
+                                <input class="visually-hidden" type="checkbox" id="order-unrealized" name="order" value="Нереализованы">
+                                <label class="filter-clients__checkbox filter-clients__checkbox--unrealized" for="order-unrealized">Нереализованы</label>
+                            </div>
+                            <button class="filter-clients__apply-btn" type="button">Применить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-technical__wrap">
+                <div class="order-technical__clients clients">
+                    <div class="clients__wrap"><span class="clients__date">Сегодня</span>
+                        <ul class="clients__list">
+                            <li class="clients__client-order client-order new">
+                                <div class="client-order__wrap-color">
+                                    <div class="client-order__sub-wrap"><span class="client-order__label">Дата</span><span class="client-order__date">16.04.2020</span></div>
+                                    <div class="client-order__sub-wrap"><span class="client-order__label">Статус</span>
+                                        <div class="client-order__select-wrap">
+                                            <select class="client-order__select" value="Статус" id="order-select"></select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="client-order__wrap">
+                                    <div class="client-order__wrap-border">
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">Заказчик</span><a class="client-order__name" href="#">Петрова Екатерина </a></div>
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">Компания</span><span class="client-order__company">ООО "Название компании"</span></div>
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">Телефон</span><a class="client-order__tel" href="tel:+7 123 456 78 90">+7 123 456 78 90</a></div>
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">E-mail</span><a class="client-order__mail" href="mailto:+7 123 456 78 90">primer@mail.ru</a></div>
+                                    </div>
+                                    <div class="client-order__wrap-border">
+                                        <div class="client-order__wrap-speaker"><span class="client-order__label">Спикеры:</span>
+                                            <div class="client-order__speaker-link speaker-link">
+                                                <ul class="speaker-link__list">
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Дейв Логан,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Коди Фостер,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Марк Гоулстон,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Дейв Логан,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Петров Федор,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Ковалевская Светлана,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Марк Гоулстон,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Дейв Логан,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Петров Федор,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Ковалевская Светлана</a></li>
+                                                </ul>
+                                                <button class="speaker-link__expand" type="button" aria-label="раскрыть весь список спикеров"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="clients__client-order client-order unrealized">
+                                <div class="client-order__wrap-color">
+                                    <div class="client-order__sub-wrap"><span class="client-order__label">Дата</span><span class="client-order__date">16.04.2020</span></div>
+                                    <div class="client-order__sub-wrap"><span class="client-order__label">Статус</span>
+                                        <div class="client-order__select-wrap">
+                                            <select class="client-order__select" value="Статус" id="order-select"></select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="client-order__wrap">
+                                    <div class="client-order__wrap-border">
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">Заказчик</span><a class="client-order__name" href="#">Петрова Екатерина </a></div>
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">Компания</span><span class="client-order__company">ООО "Название компании"</span></div>
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">Телефон</span><a class="client-order__tel" href="tel:+7 123 456 78 90">+7 123 456 78 90</a></div>
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">E-mail</span><a class="client-order__mail" href="mailto:+7 123 456 78 90">primer@mail.ru</a></div>
+                                    </div>
+                                    <div class="client-order__wrap-border">
+                                        <div class="client-order__wrap-speaker"><span class="client-order__label">Спикеры:</span>
+                                            <div class="client-order__speaker-link speaker-link">
+                                                <ul class="speaker-link__list">
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Дейв Логан,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Коди Фостер,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Марк Гоулстон,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Дейв Логан,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Петров Федор,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Ковалевская Светлана,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Марк Гоулстон,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Дейв Логан,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Петров Федор,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Ковалевская Светлана</a></li>
+                                                </ul>
+                                                <button class="speaker-link__expand" type="button" aria-label="раскрыть весь список спикеров"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="clients__client-order client-order work">
+                                <div class="client-order__wrap-color">
+                                    <div class="client-order__sub-wrap"><span class="client-order__label">Дата</span><span class="client-order__date">16.04.2020</span></div>
+                                    <div class="client-order__sub-wrap"><span class="client-order__label">Статус</span>
+                                        <div class="client-order__select-wrap">
+                                            <select class="client-order__select" value="Статус" id="order-select"></select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="client-order__wrap">
+                                    <div class="client-order__wrap-border">
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">Заказчик</span><a class="client-order__name" href="#">Петрова Екатерина </a></div>
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">Компания</span><span class="client-order__company">ООО "Название компании"</span></div>
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">Телефон</span><a class="client-order__tel" href="tel:+7 123 456 78 90">+7 123 456 78 90</a></div>
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">E-mail</span><a class="client-order__mail" href="mailto:+7 123 456 78 90">primer@mail.ru</a></div>
+                                    </div>
+                                    <div class="client-order__wrap-border">
+                                        <div class="client-order__wrap-speaker"><span class="client-order__label">Спикеры:</span>
+                                            <div class="client-order__speaker-link speaker-link">
+                                                <ul class="speaker-link__list">
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Дейв Логан,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Коди Фостер,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Марк Гоулстон,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Дейв Логан,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Петров Федор,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Ковалевская Светлана,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Марк Гоулстон,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Дейв Логан,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Петров Федор,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Ковалевская Светлана</a></li>
+                                                </ul>
+                                                <button class="speaker-link__expand" type="button" aria-label="раскрыть весь список спикеров"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="clients__client-order client-order realized">
+                                <div class="client-order__wrap-color">
+                                    <div class="client-order__sub-wrap"><span class="client-order__label">Дата</span><span class="client-order__date">16.04.2020</span></div>
+                                    <div class="client-order__sub-wrap"><span class="client-order__label">Статус</span>
+                                        <div class="client-order__select-wrap">
+                                            <select class="client-order__select" value="Статус" id="order-select"></select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="client-order__wrap">
+                                    <div class="client-order__wrap-border">
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">Заказчик</span><a class="client-order__name" href="#">Петрова Екатерина </a></div>
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">Компания</span><span class="client-order__company">ООО "Название компании"</span></div>
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">Телефон</span><a class="client-order__tel" href="tel:+7 123 456 78 90">+7 123 456 78 90</a></div>
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">E-mail</span><a class="client-order__mail" href="mailto:+7 123 456 78 90">primer@mail.ru</a></div>
+                                    </div>
+                                    <div class="client-order__wrap-border">
+                                        <div class="client-order__wrap-speaker"><span class="client-order__label">Спикеры:</span>
+                                            <div class="client-order__speaker-link speaker-link">
+                                                <ul class="speaker-link__list">
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Дейв Логан,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Коди Фостер,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Марк Гоулстон,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Дейв Логан,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Петров Федор,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Ковалевская Светлана,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Марк Гоулстон,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Дейв Логан,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Петров Федор,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Ковалевская Светлана</a></li>
+                                                </ul>
+                                                <button class="speaker-link__expand" type="button" aria-label="раскрыть весь список спикеров"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clients__wrap"><span class="clients__date">Вчера</span>
+                        <ul class="clients__list">
+                            <li class="clients__client-order client-order realized">
+                                <div class="client-order__wrap-color">
+                                    <div class="client-order__sub-wrap"><span class="client-order__label">Дата</span><span class="client-order__date">16.04.2020</span></div>
+                                    <div class="client-order__sub-wrap"><span class="client-order__label">Статус</span>
+                                        <div class="client-order__select-wrap">
+                                            <select class="client-order__select" value="Статус" id="order-select"></select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="client-order__wrap">
+                                    <div class="client-order__wrap-border">
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">Заказчик</span><a class="client-order__name" href="#">Петрова Екатерина </a></div>
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">Компания</span><span class="client-order__company">ООО "Название компании"</span></div>
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">Телефон</span><a class="client-order__tel" href="tel:+7 123 456 78 90">+7 123 456 78 90</a></div>
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">E-mail</span><a class="client-order__mail" href="mailto:+7 123 456 78 90">primer@mail.ru</a></div>
+                                    </div>
+                                    <div class="client-order__wrap-border">
+                                        <div class="client-order__wrap-speaker"><span class="client-order__label">Спикеры:</span>
+                                            <div class="client-order__speaker-link speaker-link">
+                                                <ul class="speaker-link__list">
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Дейв Логан,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Коди Фостер,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Марк Гоулстон,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Дейв Логан,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Петров Федор,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Ковалевская Светлана,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Марк Гоулстон,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Дейв Логан,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Петров Федор,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Ковалевская Светлана</a></li>
+                                                </ul>
+                                                <button class="speaker-link__expand" type="button" aria-label="раскрыть весь список спикеров"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="clients__client-order client-order realized">
+                                <div class="client-order__wrap-color">
+                                    <div class="client-order__sub-wrap"><span class="client-order__label">Дата</span><span class="client-order__date">16.04.2020</span></div>
+                                    <div class="client-order__sub-wrap"><span class="client-order__label">Статус</span>
+                                        <div class="client-order__select-wrap">
+                                            <select class="client-order__select" value="Статус" id="order-select"></select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="client-order__wrap">
+                                    <div class="client-order__wrap-border">
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">Заказчик</span><a class="client-order__name" href="#">Петрова Екатерина </a></div>
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">Компания</span><span class="client-order__company">ООО "Название компании"</span></div>
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">Телефон</span><a class="client-order__tel" href="tel:+7 123 456 78 90">+7 123 456 78 90</a></div>
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">E-mail</span><a class="client-order__mail" href="mailto:+7 123 456 78 90">primer@mail.ru</a></div>
+                                    </div>
+                                    <div class="client-order__wrap-border">
+                                        <div class="client-order__wrap-speaker"><span class="client-order__label">Спикеры:</span>
+                                            <div class="client-order__speaker-link speaker-link">
+                                                <ul class="speaker-link__list">
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Дейв Логан,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Коди Фостер,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Марк Гоулстон,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Дейв Логан,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Петров Федор,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Ковалевская Светлана,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Марк Гоулстон,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Дейв Логан,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Петров Федор,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Ковалевская Светлана</a></li>
+                                                </ul>
+                                                <button class="speaker-link__expand" type="button" aria-label="раскрыть весь список спикеров"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clients__wrap"><span class="clients__date">14.04.2020</span>
+                        <ul class="clients__list">
+                            <li class="clients__client-order client-order unrealized">
+                                <div class="client-order__wrap-color">
+                                    <div class="client-order__sub-wrap"><span class="client-order__label">Дата</span><span class="client-order__date">16.04.2020</span></div>
+                                    <div class="client-order__sub-wrap"><span class="client-order__label">Статус</span>
+                                        <div class="client-order__select-wrap">
+                                            <select class="client-order__select" value="Статус" id="order-select"></select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="client-order__wrap">
+                                    <div class="client-order__wrap-border">
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">Заказчик</span><a class="client-order__name" href="#">Петрова Екатерина </a></div>
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">Компания</span><span class="client-order__company">ООО "Название компании"</span></div>
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">Телефон</span><a class="client-order__tel" href="tel:+7 123 456 78 90">+7 123 456 78 90</a></div>
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">E-mail</span><a class="client-order__mail" href="mailto:+7 123 456 78 90">primer@mail.ru</a></div>
+                                    </div>
+                                    <div class="client-order__wrap-border">
+                                        <div class="client-order__wrap-speaker"><span class="client-order__label">Спикеры:</span>
+                                            <div class="client-order__speaker-link speaker-link">
+                                                <ul class="speaker-link__list">
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Дейв Логан,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Коди Фостер,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Марк Гоулстон,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Дейв Логан,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Петров Федор,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Ковалевская Светлана,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Марк Гоулстон,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Дейв Логан,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Петров Федор,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Ковалевская Светлана</a></li>
+                                                </ul>
+                                                <button class="speaker-link__expand" type="button" aria-label="раскрыть весь список спикеров"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="clients__client-order client-order unrealized">
+                                <div class="client-order__wrap-color">
+                                    <div class="client-order__sub-wrap"><span class="client-order__label">Дата</span><span class="client-order__date">16.04.2020</span></div>
+                                    <div class="client-order__sub-wrap"><span class="client-order__label">Статус</span>
+                                        <div class="client-order__select-wrap">
+                                            <select class="client-order__select" value="Статус" id="order-select"></select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="client-order__wrap">
+                                    <div class="client-order__wrap-border">
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">Заказчик</span><a class="client-order__name" href="#">Петрова Екатерина </a></div>
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">Компания</span><span class="client-order__company">ООО "Название компании"</span></div>
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">Телефон</span><a class="client-order__tel" href="tel:+7 123 456 78 90">+7 123 456 78 90</a></div>
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">E-mail</span><a class="client-order__mail" href="mailto:+7 123 456 78 90">primer@mail.ru</a></div>
+                                    </div>
+                                    <div class="client-order__wrap-border">
+                                        <div class="client-order__wrap-speaker"><span class="client-order__label">Спикеры:</span>
+                                            <div class="client-order__speaker-link speaker-link">
+                                                <ul class="speaker-link__list">
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Дейв Логан,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Коди Фостер,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Марк Гоулстон,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Дейв Логан,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Петров Федор,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Ковалевская Светлана,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Марк Гоулстон,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Дейв Логан,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Петров Федор,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Ковалевская Светлана</a></li>
+                                                </ul>
+                                                <button class="speaker-link__expand" type="button" aria-label="раскрыть весь список спикеров"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="clients__client-order client-order unrealized">
+                                <div class="client-order__wrap-color">
+                                    <div class="client-order__sub-wrap"><span class="client-order__label">Дата</span><span class="client-order__date">16.04.2020</span></div>
+                                    <div class="client-order__sub-wrap"><span class="client-order__label">Статус</span>
+                                        <div class="client-order__select-wrap">
+                                            <select class="client-order__select" value="Статус" id="order-select"></select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="client-order__wrap">
+                                    <div class="client-order__wrap-border">
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">Заказчик</span><a class="client-order__name" href="#">Петрова Екатерина </a></div>
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">Компания</span><span class="client-order__company">ООО "Название компании"</span></div>
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">Телефон</span><a class="client-order__tel" href="tel:+7 123 456 78 90">+7 123 456 78 90</a></div>
+                                        <div class="client-order__sub-wrap"><span class="client-order__label">E-mail</span><a class="client-order__mail" href="mailto:+7 123 456 78 90">primer@mail.ru</a></div>
+                                    </div>
+                                    <div class="client-order__wrap-border">
+                                        <div class="client-order__wrap-speaker"><span class="client-order__label">Спикеры:</span>
+                                            <div class="client-order__speaker-link speaker-link">
+                                                <ul class="speaker-link__list">
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Дейв Логан,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Коди Фостер,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Марк Гоулстон,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Дейв Логан,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Петров Федор,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Ковалевская Светлана,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Марк Гоулстон,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Дейв Логан,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Петров Федор,</a></li>
+                                                    <li class="speaker-link__item"><a class="speaker-link__link" href="#" onclick="return false">Ковалевская Светлана</a></li>
+                                                </ul>
+                                                <button class="speaker-link__expand" type="button" aria-label="раскрыть весь список спикеров"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clients__wrap-loading">
+                        <div class="clients__loading loading"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="lib/jquery3.4.1.js"></script>
+    <script src="lib/choices/choices.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/order-technical.js"></script>
+</body>
+
+</html>
