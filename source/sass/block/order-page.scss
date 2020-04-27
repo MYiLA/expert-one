@@ -146,6 +146,7 @@
       }
 
       .speaker__name {
+        margin-top: -10px;
         padding-right: 0;
       }
 
@@ -183,13 +184,14 @@
       .speaker__order-btn {
         padding-top: 16px;
         padding-bottom: 16px;
+        margin-right: 20px;
       }
 
       .speaker__more-btn {
         order: 1;
         padding-left: 0;
-        margin-left: 20px;
         margin-right: 0;
+        margin-left: 0;
         margin-bottom: 0;
       }
     }
