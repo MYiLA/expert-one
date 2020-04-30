@@ -1,6 +1,7 @@
 @mixin input {
   width: 100%;
   min-height: 50px;
+  font-family: $font-main;
 
   margin-bottom: 20px;
   padding: 0;
