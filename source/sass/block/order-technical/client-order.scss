@@ -364,6 +364,7 @@
     .client-order__company,
     .client-order__tel,
     .client-order__mail {
+      word-wrap: break-word;
       overflow-y: hidden;
       text-overflow: ellipsis;
       max-height: 17px;
@@ -375,6 +376,7 @@
       &:hover {
         -webkit-line-clamp: unset;
         max-height: 200px;
+        display: block;
       }
     }
 
@@ -414,7 +416,7 @@
   .expert-one {
     .client-order__wrap-border {
       .client-order__sub-wrap {
-        max-width: 170px;
+        max-width: 165px;
         width: auto;
         flex-shrink: 0;
         margin-right: 50px;
@@ -425,7 +427,7 @@
           margin-right: 120px;
         }
         &:nth-last-child(1) {
-          margin-right: 50px;
+          margin-right: 0;
         }
       }
     }

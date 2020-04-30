@@ -1,8 +1,11 @@
 .expert-one {
   .customer-data {
-    .contacts__link, .contacts__tel {
+
+    .contacts__link,
+    .contacts__tel {
       display: block;
       margin-bottom: 5px;
+
       &:nth-last-child(1) {
         margin-bottom: 0;
       }
@@ -11,107 +14,160 @@
 
   .customer-data__wrap-main {
     border: 1px solid #e2e4e9;
-  }
 
-  .customer-data__title {
-    margin: 0;
-    margin-bottom: 28px;
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: 400;
-  }
-
-  .customer-data__wrap {
-    padding-top: 23px;
-    padding-bottom: 24px;
-    padding-left: 20px;
-    padding-right: 20px;
-
-    text-align: left;
-
-    background-color: $white;
-    border-bottom: 1px dashed #c0c4ce;
-
-    &:nth-last-child(1) {
-      border-bottom: none;
-    }
-  }
-
-  .customer-data__wrap-title {
-    display: block;
-    margin: 0;
-    margin-bottom: 15px;
-    padding: 0;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 16px;
-
-    &:nth-last-child(1) {
-      margin-bottom: 0;
-    }
-  }
-
-  .customer-data__position {
-    font-size: 16px;
-    line-height: 16px;
-    color: #888888;
-  }
-
-  .customer-data__btn {
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    padding-left: 21px;
-    font-family: $font-main;
-    font-size: 15px;
-    line-height: 15px;
-    font-weight: 400;
-    border: none;
-    
-    background-color: transparent;
-
-    svg {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-    }
-
-    &--edit {
-      @include animation-dark--blue;
-      color: #3d4f9c;
-      path {
-        fill: #3d4f9c;
+    &.edit {
+      .customer-data__position {
+        display: block;
+        margin-bottom: 10px;
       }
-    }
 
-    &--exit {
-      @include animation-dark--red;
-      color: #eb5757;
-      path {
-        fill: #eb5757;
+      .customer-data__wrap-title {
+        margin-bottom: 10px;
       }
-      svg {
-        left: 0;
+
+      .input-wrap {
+        margin-bottom: 20px;
+        max-height: 320px;
+
+        &:nth-last-child(1) {
+          margin-bottom: 0;
+        }
+      }
+
+      .customer-data__wrap {
+        &--save-btn {
+          max-height: 200px;
+          padding-top: 23px;
+          padding-bottom: 24px;
+          border-bottom-color: transparent;
+        }
+
+        &--edit-btn {
+          max-height: 0;
+          overflow: hidden;
+          padding: 0;
+          border-bottom-color: #c0c4ce;
+        }
       }
     }
   }
-}
-
-// @media (min-width: $tablet-width) {
-//   .expert-one {
-
-//   }
-// }
-
-@media (min-width: $desktop-width) {
-  .expert-one {
     .customer-data__title {
-      margin-bottom: 27px;
-      font-size: 22px;
-      line-height: 22px;
+      margin: 0;
+      margin-bottom: 28px;
+      font-size: 20px;
+      line-height: 20px;
+      font-weight: 400;
+    }
+
+    .customer-data__wrap {
+      padding-top: 23px;
+      padding-bottom: 24px;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      text-align: left;
+
+      background-color: $white;
+      border-bottom: 1px dashed #c0c4ce;
+      transition: 0.4s;
+
+      &:nth-last-child(1) {
+        border-bottom: none;
+      }
+
+      &--save-btn {
+        max-height: 0;
+        overflow: hidden;
+        padding: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-bottom-color: transparent;
+      }
+    }
+
+    .customer-data__wrap-title {
+      display: block;
+      margin: 0;
+      margin-bottom: 15px;
+      padding: 0;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 16px;
+
+      &:nth-last-child(1),
+      &:nth-last-child(2) {
+        margin-bottom: 0;
+      }
+    }
+
+    .customer-data__position {
+      font-size: 16px;
+      line-height: 16px;
+      color: #888888;
+    }
+
+    .customer-data__btn {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      padding-left: 21px;
+      font-family: $font-main;
+      font-size: 15px;
+      line-height: 15px;
+      font-weight: 400;
+      border: none;
+
+      background-color: transparent;
+
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+
+      &--edit {
+        @include animation-dark--blue;
+        color: #3d4f9c;
+
+        path {
+          fill: #3d4f9c;
+        }
+      }
+
+      &--exit {
+        @include animation-dark--red;
+        color: #eb5757;
+
+        path {
+          fill: #eb5757;
+        }
+
+        svg {
+          left: 0;
+        }
+      }
+
+      &--save {
+        @include btn;
+      }
     }
   }
-}
+
+  // @media (min-width: $tablet-width) {
+  //   .expert-one {
+
+  //   }
+  // }
+
+  @media (min-width: $desktop-width) {
+    .expert-one {
+      .customer-data__title {
+        margin-bottom: 27px;
+        font-size: 22px;
+        line-height: 22px;
+      }
+    }
+  }

@@ -1,0 +1,16 @@
+.expert-one {
+  .input-wrap {
+    max-height: 0;
+    overflow: hidden;
+    margin-bottom: 0;
+    transition: 0.4s;
+  }
+
+  .input-wrap__input {
+    @include input;
+
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+  }
+}
