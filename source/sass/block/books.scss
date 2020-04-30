@@ -55,6 +55,10 @@
   }
 }
 @media (min-width: $tablet-width) {.expert-one {
+  .books {
+    padding-bottom: 20px;
+  }
+
   .books__list {
     display: flex;
     flex-wrap: wrap;
@@ -70,6 +74,10 @@
     align-items: center;
     &:nth-child(3n+3) {
       margin-right: 0;
+    }
+
+    &:nth-last-child(1) {
+      margin-bottom: 24px;
     }
   }
 
