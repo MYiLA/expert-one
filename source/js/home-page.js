@@ -30,4 +30,23 @@ $('.expert-one .filter__close').on('click', function () {
   $('.expert-one').removeClass('no-scroll');
 })
 
+// избранное. смена вида кнопки
+
+$('.expert-one .speaker__favourites').on('click', function () {
+  if($(this).hasClass('active')) {
+    $(this).removeClass('active');
+    $(this).children('.speaker__favourites-text').text('В избранное');
+    $(this).children('.speaker__favourites-icon').css({
+      'background-image': 'url(./img/heart-gray.svg)',
+    });
+    
+  } else {
+    $(this).addClass('active');
+    $(this).children('.speaker__favourites-text').text('В избранном');
+    $(this).children('.speaker__favourites-icon').css({
+      'background-image': 'url(./img/heart-full.svg)',
+    });
+  }
+})
+
 })();
