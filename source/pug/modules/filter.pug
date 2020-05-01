@@ -22,7 +22,7 @@ button.filter__open(type=button) Открыть фильтры
     .filter__sub-wrap
       label.filter__title(for="expert-lang") Язык
       .filter__select
-        select.filter__select--lang(value="Язык" id="expert-lang")
+        select.filter__select--lang(id="expert-lang")
           option(disabled selected="selected") Выберите язык
           option Русский
           option Английский
@@ -31,7 +31,7 @@ button.filter__open(type=button) Открыть фильтры
           option Испанский
       label.filter__title(for="expert-country") Страна
       .filter__select
-        select.filter__select--country(value="Страна" id="expert-country")
+        select.filter__select--country(id="expert-country")
           option(disabled selected="selected") Выберите страну
           option Россия
           option Франция
@@ -74,7 +74,7 @@ button.filter__open(type=button) Открыть фильтры
       label.filter__title(for="expert-tags") Теги
       button.filter__clean-tags(type="button") Очистить все
       .filter__textarea
-        textarea(id="expert-tags" name="tags" value="#Психология, #Финансы, #Образование")
+        textarea(id="expert-tags" name="tags")
       button.filter__add-tags(type="button") + 
         span Добавить условие
     .filter__sub-wrap
