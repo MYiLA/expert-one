@@ -69,7 +69,10 @@
 
       background-color: $white;
       border-bottom: 1px dashed #c0c4ce;
-      transition: 0.4s;
+      transition:
+        max-height 0.4s,
+        border 0.4s,
+        padding 0.4s;
 
       &:nth-last-child(1) {
         border-bottom: none;

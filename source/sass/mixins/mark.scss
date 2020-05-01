@@ -1,5 +1,7 @@
 @mixin mark {
-  transition: 0.4s;
+  transition: 
+  background-color 0.4s,
+  border 0.4s;
   &:after {
     content: '';
     position: absolute;
@@ -10,7 +12,7 @@
     height: 10px;
     border-bottom: 2px solid $blue;
     border-right: 2px solid $blue;
-    transition: 0.4s;
+    transition: border 0.4s;
     transform: translateY(-50%) rotate(45deg);
   }
 

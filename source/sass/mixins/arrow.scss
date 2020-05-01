@@ -7,6 +7,8 @@
     height: 8px;
     border-bottom: 2px solid $blue;
     border-right: 2px solid $blue;
-    transition: 0.4s;
+    transition: 
+      transform 0.4s,
+      border-color 0.4s;
   }
 }

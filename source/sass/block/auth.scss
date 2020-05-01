@@ -68,7 +68,7 @@
     margin-left: auto;
     margin-right: auto;
     display: none;
-    transition: 0.4s;
+    transition: opacity 0.4s;
     &.active {
       display: inline-block;
     }
@@ -86,7 +86,7 @@
 
   .auth__user-profile {
     display: none;
-    transition: 0.4s;
+    transition: opacity 0.4s;
     &.active {
       display: inline-block;
     }

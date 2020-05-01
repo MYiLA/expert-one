@@ -21,7 +21,9 @@
   line-height: 16px;
   font-weight: 400;
 
-  transition: 0.4s;
+  transition: 
+    background-color 0.4s,
+    color 0.4s;
 
   &:hover {
     background-color: #ebebee;

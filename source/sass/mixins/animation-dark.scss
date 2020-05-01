@@ -3,11 +3,11 @@
   cursor: pointer;
 
   &::after {
-    transition: 0.4s;
+    transition: border-color 0.4s;
   }
 
   path {
-    transition: 0.4s;
+    transition: fill 0.4s;
   }
 
   &:focus, &:active, &:hover {

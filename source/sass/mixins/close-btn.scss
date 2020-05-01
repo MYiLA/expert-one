@@ -18,7 +18,9 @@
     left: 0;
     background-color: #999999;
     transform: translate(-50%);
-    transition: 0.4s;
+    transition: 
+      transform 0.4s,
+      background-color 0.4s;
   }
 
   &::before {

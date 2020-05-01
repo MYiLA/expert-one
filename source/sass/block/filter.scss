@@ -21,7 +21,7 @@
     opacity: 0;
     pointer-events: none;
     background-color: $white;
-    transition: 0.4s;
+    transition: opacity .4s;
 
     &.active {
       opacity: 1;
@@ -61,7 +61,10 @@
       height: 2px;
       background-color: $white;
       left: 50%;
-      transition: 0.4s;
+      transition:
+        border 0.4s,
+        opacity 0.4s,
+        background-color 0.4s;
     }
 
     &::before {
