@@ -116,40 +116,4 @@
       checkInputTel(telInputElement, telInvalidMessage)
     });
 
-    // // учесть isRequiredFilled = true
-    // var isValide = function () {
-    //   var tel = telIsValide();
-    //   var mail = mailIsValide();
-    //   return tel && mail;
-    // };
-  
-  
-    // // отправка формы
-    // var formSubmit = function(evt) {
-    //   evt.preventDefault();
-  
-    //   if (isValide() && isRequiredFilled) {
-    //     form.find('.form-auth__submit').css({
-    //       'cursor': 'auto',
-    //       'background-color': '#888888',
-    //       'pointer-event': 'auto',
-    //     });
-    //     setTimeout(function () {
-    //       form.find('.form-auth__submit').removeAttr('style');
-    //     }, 5000);
-  
-    //     setTimeout(openPopupThanks, 1000);
-    //   } else {
-    //     lightEmpty();
-    //   }
-    // }
-  
-    // $('.expert-one .form-auth__submit').on('click', function (evt) {
-    //   formSubmit(evt)
-    // });
-  
-    // form.on('submit', function (evt) {
-    //   formSubmit(evt)
-    // });
-
 })();

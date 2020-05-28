@@ -296,17 +296,6 @@
     });
   }
 
-  // Функция подсветки незаполненных полей
-  var lightEmpty = function () {
-    form.find('.js__empty-field').css({
-      'border-color': '#eb5757'
-    });
-
-    setTimeout(function () {
-      form.find('.js__empty-field').removeAttr('style');
-    }, invalidTime);
-  }
-
   var isRequiredFilled = false;
   // Проверка в режиме реального времени
   setInterval(function () {
@@ -316,19 +305,20 @@
     checkInputMail();
     checkInputTel();
     checkSelectClient();
-
+    
     var sizeEmpty = form.find('.js__empty-field').length;
+
     if (sizeEmpty > 0) {
-      if (!btn.hasClass('active')) {
+      if (btn.prop('disabled')) {
         isRequiredFilled = false;
         return false
       } else {
         isRequiredFilled = false;
-        btn.removeClass('active')
+        btn.prop('disabled', true);
       }
     } else {
       isRequiredFilled = true;
-      btn.addClass('active')
+      btn.prop('disabled', false);
     }
   }, 500);
 
@@ -340,7 +330,12 @@
       return true
     } else {
       $('#auth-mail').siblings('.form-auth__invalid-message').addClass('active');
+      $('#auth-mail').css({
+            'border-color': '#eb5757'
+      });
+
       setTimeout(function () {
+        $('#auth-mail').removeAttr('style');
         $('#auth-mail').siblings('.form-auth__invalid-message').removeClass('active');
       }, invalidTime);
       return false;
@@ -348,15 +343,24 @@
   };
 
   $('#auth-mail').on('focusout', mailIsValide);
-  
+
   // подсказка для телефона по потере фокуса
   var telIsValide = function () {
 
-    if ($('#auth-tel').val()[3] === '9') {
+    if (
+      $('#auth-tel').val()[3] === '9' 
+      && 
+      $('#auth-tel').val().search('_') === -1
+      &&
+      $('#auth-tel').val() !== '') {
       return true;
     } else {
       $('#auth-tel').siblings('.form-auth__invalid-message').addClass('active');
+      $('#auth-tel').css({
+        'border-color': '#eb5757'
+        });
       setTimeout(function () {
+        $('#auth-tel').removeAttr('style');
         $('#auth-tel').siblings('.form-auth__invalid-message').removeClass('active');
       }, invalidTime);
       return false;
@@ -378,18 +382,7 @@
     evt.preventDefault();
 
     if (isValide() && isRequiredFilled) {
-      form.find('.form-auth__submit').css({
-        'cursor': 'auto',
-        'background-color': '#888888',
-        'pointer-event': 'auto',
-      });
-      setTimeout(function () {
-        form.find('.form-auth__submit').removeAttr('style');
-      }, 5000);
-
       setTimeout(openPopupThanks, 1000);
-    } else {
-      lightEmpty();
     }
   }
 
