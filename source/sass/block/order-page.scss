@@ -78,6 +78,12 @@
       .wrap {
         justify-content: flex-end;
       }
+
+      .order-page__main-wrap {
+        min-width: 520px;
+        min-height: 520px;
+        background-color: transparent;
+      }
       
       .speakers__speaker {
         margin-left: 30px;
@@ -193,6 +199,13 @@
         margin-right: 0;
         margin-left: 0;
         margin-bottom: 0;
+      }
+
+      
+      .order-page__main-wrap {
+        min-width: 770px;
+        min-height: 770px;
+        background-color: transparent;
       }
     }
   }

@@ -7,7 +7,9 @@ $('.expert-one .biography__btn-collapse').on('click', function () {
 
 // слайдер .video__glide
 
-var videoSlider = new Glide('.expert-one .video__glide', {
+var sliderWrap = $('.expert-one .video__glide');
+
+var videoSlider = new Glide(sliderWrap[0], {
   type: 'carousel',
   startAt: 0,
   perView: 3,
@@ -27,7 +29,33 @@ var videoSlider = new Glide('.expert-one .video__glide', {
 },
 });
 
-videoSlider.mount();
+// проверка кол-ва слайдов .glide__slide внутри .expert-one .video__glide
+
+var destroySlider = function (wrap, slider) {
+  slider.destroy();
+  wrap.addClass('disabled');
+}
+
+var initSlider = function(slideCount) {
+
+  sliderWrap.find('.video__item-wrap').length > slideCount
+  ?
+  videoSlider.mount()
+  :
+  destroySlider($('.video__glide'), videoSlider);
+}
+
+if ($(document).width() >= 1220) {
+  initSlider(3);
+} else if ($(document).width() >= 820) {
+  initSlider(2);
+} else {
+  initSlider(1);
+};
+
+// $(window).resize(function() {
+//   ($(document).width() >= 820) ? initSlider(3) : initSlider(2);
+// };
 
 //открыть видео 
 

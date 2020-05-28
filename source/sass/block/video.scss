@@ -86,6 +86,31 @@
 
   .video__glide {
     position: relative;
+
+    &.disabled {
+
+      .video__list {
+        display: flex;
+        justify-content: center;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+      };
+
+      .video__bullets,
+      .video__arrow-wrap {
+        display: none;
+      };
+
+      .video__item-wrap {
+        width: auto;
+        margin-right: 30px;
+
+        &:nth-last-child(1) {
+          margin-right: 0;
+        };
+      };
+    }
   }
 
   .video__wrap-video {

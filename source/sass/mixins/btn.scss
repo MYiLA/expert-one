@@ -27,6 +27,10 @@
     background-color: #253369;
   }
 
+  &:disabled {
+    background-color: #888888;
+  }
+
   &--white {
     background-color: $white;
     color: #3d4f9c;
@@ -39,6 +43,10 @@
     &:active, &:focus {
       outline: none;
       opacity: 0.7;
+    }
+
+    &:disabled {
+      background-color: #b3b3b3;
     }
   }
 }

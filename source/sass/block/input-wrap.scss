@@ -1,5 +1,6 @@
 .expert-one {
   .input-wrap {
+    position: relative;
     max-height: 0;
     overflow: hidden;
     margin-bottom: 0;
@@ -11,6 +12,23 @@
 
     &:nth-last-child(1) {
       margin-bottom: 0;
+    }
+  }
+
+  .input-wrap__invalid-message {
+    opacity: 0;
+    position: absolute;
+    top: 53px;
+    left: 0;
+    color: $red;
+    margin: 0;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+
+    transition: 0.4s;
+    &.active {
+      opacity: 1;
     }
   }
 }

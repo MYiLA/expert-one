@@ -27,20 +27,21 @@ form.form-auth__form.js__rf(method="POST")
   label.form-auth__label(for="auth-website") Сайт
   input.form-auth__input(type="text" id="auth-website" name="website" placeholder="Введите адрес сайта")
 
-  label.form-auth__label(for="auth-client") Вы заказчик или агентство?
+  label.form-auth__label(for="auth-client") Вы заказчик или агентство?*
   .form-auth__select
     select.form-auth__select--client(id="auth-client")
-      option(selected="selected") Заказчик
+      option(selected="selected" disabled)
+      option Заказчик
       option Агентство
-
   label.form-auth__label(for="auth-speakers-num") Сколько спикеров заказали за последний год?
-  input.form-auth__input(type="text" id="auth-speakers-num" name="speakers-num" placeholder="0")
+  input.form-auth__input(type="text" id="auth-speakers-num" name="speakers-num" placeholder="")
 
   label.form-auth__label(for="auth-expensive-speaker") Ваш самый дорогой спикер за последние 3 года?
   .form-auth__select
     select.form-auth__select--expensive-speaker(id="auth-expensive-speaker")
+      option(selected="selected" disabled)
       option более 200к
-      option(selected="selected") до 200к
+      option до 200к
       option до 100к
       option до 50к
       option до 30к
@@ -51,19 +52,22 @@ form.form-auth__form.js__rf(method="POST")
   label.form-auth__label(for="auth-event-department") Есть ли собственный event-отдел?
   .form-auth__select
     select.form-auth__select--event-department(id="auth-event-department")
-      option(selected="selected") Да
+      option(selected="selected" disabled)
+      option Да
       option Нет
 
   label.form-auth__label(for="auth-external-conference") Проводите ли вы внешние конференции?
   .form-auth__select
     select.form-auth__select--external-conference(id="auth-external-conference")
+      option(selected="selected" disabled)
       option Да
-      option(selected="selected") Нет
+      option Нет
 
   label.form-auth__label(for="auth-field-conference") Проводите ли выездные конференции?
   .form-auth__select
     select.form-auth__select--field-conference(id="auth-field-conference")
-      option(selected="selected") Да
+      option(selected="selected" disabled)
+      option Да
       option Нет
 
   p.form-auth__privacy Регистрируясь, вы принимаете #[a.form-auth__privacy-link(href="#" onclick="return false") Пользовательское соглашение] и даете Согласие на обработку #[a.form-auth__privacy-link(href="#" onclick="return false") персональных данных].

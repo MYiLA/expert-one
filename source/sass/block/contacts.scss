@@ -10,12 +10,16 @@
   }
 
   .contacts__link {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .contacts__link--mail,
+  .contacts__link--site {
     transition: 
       color 0.4s,
       border 0.4s;
     display: block;
-    font-size: 16px;
-    line-height: 26px;
     color: #3d4f9c;
 
     &:hover {
@@ -33,9 +37,16 @@
     }
   }
 
-  .contacts__tel {
+  .contacts__link--mail,
+  .contacts__link--tel {
+    & + .contacts__input-wrap {
+      .input-wrap__input {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .contacts__link--tel {
     @include animation;
-    font-size: 16px;
-    line-height: 26px;
   }
 }

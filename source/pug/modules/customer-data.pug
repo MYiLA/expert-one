@@ -13,17 +13,21 @@ h2.customer-data__title Мои данные
       input.input-wrap__input(type="text" name="name" placeholder="Изменить банк")
   .customer-data__wrap
     .customer-data__contacts.contacts
-      a.contacts__link(href="mailto:mironova@mail.ru") mironova@mail.ru
+      a.contacts__link.contacts__link--mail(href="mailto:mironova@mail.ru") mironova@mail.ru
       .contacts__input-wrap.input-wrap
         input.input-wrap__input(type="text" name="name" placeholder="Изменить почту")
-      a.contacts__tel(href="tel:+74955555555") +7 495 555 55 55
+        p.input-wrap__invalid-message неверно введен e-mail
+      a.contacts__link.contacts__link--tel(href="tel:+74955555555") +7 495 555 55 55
       .contacts__input-wrap.input-wrap
         input.input-wrap__input(type="text" name="name" placeholder="Изменить телефон")
-      a.contacts__link(href="mironova.com") mironova.com
+        p.input-wrap__invalid-message неверно введен телефон
+      a.contacts__link.contacts__link--site(href="mironova.com" target="_blank") mironova.com
       .contacts__input-wrap.input-wrap
         input.input-wrap__input(type="text" name="name" placeholder="Изменить сайт")
+
   .customer-data__wrap.customer-data__wrap--save-btn
-    button.customer-data__btn.customer-data__btn--save(type="button") Сохранить данные
+    button.customer-data__btn.customer-data__btn--save(type="submit") Сохранить данные
+    p.customer-data__invalid-message Пользователь с таким номером телефона или e-mail уже существует.
   .customer-data__wrap.customer-data__wrap--edit-btn
     button.customer-data__btn.customer-data__btn--edit(type="button") Редактировать данные
       svg(width="14" height="14" viewBox="0 0 19 18" fill="none")

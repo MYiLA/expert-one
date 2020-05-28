@@ -259,7 +259,7 @@
   })
 
   //функции проверки заполненности обязательных полей
-  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/;
   var btn = form.find('.js__btn-submit');
   form.children('.js__rfield').addClass('js__empty-field');
 
@@ -281,6 +281,11 @@
     } else $('#auth-tel').addClass('js__empty-field')
   }
 
+  var checkSelectClient = function () {
+    var wrapSelect = $('#auth-client').parents('.choices__inner');
+    $('#auth-client').val() === '' ? wrapSelect.addClass('js__empty-field') : wrapSelect.removeClass('js__empty-field');
+  }
+
   var checkInput = function () {
     form.children('.js__rfield').each(function () {
       if ($(this).val() != '') {
@@ -293,10 +298,10 @@
 
   // Функция подсветки незаполненных полей
   var lightEmpty = function () {
-
     form.find('.js__empty-field').css({
       'border-color': '#eb5757'
     });
+
     setTimeout(function () {
       form.find('.js__empty-field').removeAttr('style');
     }, invalidTime);
@@ -310,6 +315,7 @@
     checkInput();
     checkInputMail();
     checkInputTel();
+    checkSelectClient();
 
     var sizeEmpty = form.find('.js__empty-field').length;
     if (sizeEmpty > 0) {
@@ -325,7 +331,7 @@
       btn.addClass('active')
     }
   }, 500);
-  // проверка валидации после нажатия на сабмит
+
 
 
   // подсказка для емейла по потере фокуса
