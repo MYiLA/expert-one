@@ -28,11 +28,10 @@ form.form-auth__form.js__rf(method="POST")
   input.form-auth__input(type="text" id="auth-website" name="website" placeholder="Введите адрес сайта")
 
   label.form-auth__label(for="auth-client") Вы заказчик или агентство?*
-  .form-auth__select
-    select.form-auth__select--client(id="auth-client")
-      option(selected="selected" disabled)
-      option Заказчик
-      option Агентство
+  select.form-auth__select(id="auth-client")
+    option(selected="selected" disabled)
+    option Заказчик
+    option Агентство
   label.form-auth__label(for="auth-speakers-num") Сколько спикеров заказали за последний год?
   input.form-auth__input(type="text" id="auth-speakers-num" name="speakers-num" placeholder="")
 
