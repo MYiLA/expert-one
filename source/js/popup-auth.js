@@ -1,49 +1,55 @@
 'use strict';
-(function () {
+$(document).ready(function () {
 // кастомные селекты
+  if ($('.form-auth__select--client').length > 0 ) {
+      var choiceAuthClient = new Choices('.form-auth__select--client', {
+      searchChoices: false,
+      shouldSort: true,
+      sorter: function () {
+        return true
+      }
+    });
+  }
 
-// import { template } from "babel-core";
-
-  var choiceAuthClient = new Choices('.expert-one .form-auth__select--client', {
+  if ($('.form-auth__select--expensive-speaker').length > 0 ) {
+  var choiceAuthExpensiveSpeaker = new Choices('.form-auth__select--expensive-speaker', {
     searchChoices: false,
     shouldSort: true,
     sorter: function () {
       return true
     }
   });
+  }
 
-  var choiceAuthExpensiveSpeaker = new Choices('.expert-one .form-auth__select--expensive-speaker', {
+  if ($('.form-auth__select--event-department').length > 0 ) {
+  var choiceAuthDepartment = new Choices('.form-auth__select--event-department', {
     searchChoices: false,
     shouldSort: true,
     sorter: function () {
       return true
     }
   });
+  }
 
-  var choiceAuthDepartment = new Choices('.expert-one .form-auth__select--event-department', {
+  if ($('.form-auth__select--external-conference').length > 0 ) {
+  var choiceAuthExternalConf = new Choices('.form-auth__select--external-conference', {
     searchChoices: false,
     shouldSort: true,
     sorter: function () {
       return true
     }
   });
+  }
 
-  var choiceAuthExternalConf = new Choices('.expert-one .form-auth__select--external-conference', {
+  if ($('.form-auth__select--field-conference').length > 0 ) {
+  var choiceAuthFieldConf = new Choices('.form-auth__select--field-conference', {
     searchChoices: false,
     shouldSort: true,
     sorter: function () {
       return true
     }
   });
-
-  var choiceAuthFieldConf = new Choices('.expert-one .form-auth__select--field-conference', {
-    searchChoices: false,
-    shouldSort: true,
-    sorter: function () {
-      return true
-    }
-  });
-
+}
 
   var invalidTime = 4000;
   // маски для формы
@@ -51,6 +57,7 @@
   var nameInputElement = formAuthElement.querySelector('#auth-first-name');
   var nameLastInputElement = formAuthElement.querySelector('#auth-last-name');
   var nameMiddleInputElement = formAuthElement.querySelector('#auth-middle-name');
+  var websiteInputElement = $('#auth-website');
 
   var positionInputElement = formAuthElement.querySelector('#auth-position');
 
@@ -63,19 +70,19 @@
 
 
   var nameMask = IMask(nameInputElement, {
-    mask: /^(?!.*\s{2,})[a-zA-Zа-яА-Я\s]+$/,
+    mask: /^(?!.*\s{2,})[a-zA-Zа-яА-Я\.]{1,20}$/,
   });
 
   var nameLastMask = IMask(nameLastInputElement, {
-    mask: /^(?!.*\s{2,})[a-zA-Zа-яА-Я\s]+$/,
+    mask: /^(?!.*\s{2,})[a-zA-Zа-яА-Я\.]{1,20}$/,
   });
 
   var nameMiddleMask = IMask(nameMiddleInputElement, {
-    mask: /^(?!.*\s{2,})[a-zA-Zа-яА-Я\s]+$/,
+    mask: /^(?!.*\s{2,})[a-zA-Zа-яА-Я\.]{1,20}$/,
   });
 
   var positionMask = IMask(positionInputElement, {
-    mask: /^(?!.*\s{2,})[a-zA-Zа-яА-Я\s]+$/,
+    mask: /^(?!.*\s{2,})[a-zA-Zа-яА-Я\.]{1,20}$/,
   });
 
   var phoneMask = IMask(phoneInputElement, {
@@ -130,12 +137,12 @@
     $('.expert-one').removeClass('no-scroll');
   }
 
-  $('.expert-one .social-enter__link').on('click', function () {
-    closeSocialEnter();
-    openUserProfile();
-    $('.auth__change').addClass('active');
-    $('.auth__help').removeClass('active');
-  })
+  // $('.expert-one .social-enter__link').on('click', function () {
+  //   closeSocialEnter();
+  //   openUserProfile();
+  //   $('.auth__change').addClass('active');
+  //   $('.auth__help').removeClass('active');
+  // })
 
   $('.expert-one .form-auth__input--mask').on('focus', function () {
     $(this).addClass('active')
@@ -189,8 +196,8 @@
     $('.expert-one .popup-auth--auth').addClass('active');
     $('.expert-one').addClass('no-scroll');
 
-    $('.auth__change').removeClass('active');
-    $('.auth__help').addClass('active');
+    // $('.auth__change').removeClass('active');
+    // $('.auth__help').addClass('active');
 
     openSocialEnter();
     setTimeout(function () {
@@ -277,13 +284,35 @@
       ($('#auth-tel').val() != '') &&
       ($('#auth-tel').val()[3] === '9')
     ) {
-      $('#auth-tel').removeClass('js__empty-field')
+      $('#auth-tel').removeClass('js__empty-field');
     } else $('#auth-tel').addClass('js__empty-field')
   }
 
-  var checkSelectClient = function () {
-    var wrapSelect = $('#auth-client').parents('.choices__inner');
-    $('#auth-client').val() === '' ? wrapSelect.addClass('js__empty-field') : wrapSelect.removeClass('js__empty-field');
+  var checkInputWebsite = function () {
+    if (
+      (websiteInputElement.val() === '') ||
+      (websiteInputElement.val().match(/^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/))) {
+        websiteInputElement.removeClass('js__empty-field');
+      }
+     else 
+    websiteInputElement.addClass('js__empty-field');
+  }
+
+  websiteInputElement.on('focusout', function () {
+    if (websiteInputElement.hasClass('js__empty-field')) {
+      websiteInputElement.css({
+        'border-color': '#eb5757'
+      });
+
+      setTimeout(function () {
+        websiteInputElement.removeAttr('style');
+      }, invalidTime);
+    };
+  });
+
+  var checkSelectClient = function (selectIdString) {
+    var wrapSelect = $(selectIdString).parents('.choices__inner');
+    $(selectIdString).val() === '' ? wrapSelect.addClass('js__empty-field') : wrapSelect.removeClass('js__empty-field');
   }
 
   var checkInput = function () {
@@ -304,10 +333,14 @@
     checkInput();
     checkInputMail();
     checkInputTel();
-    checkSelectClient();
+    checkSelectClient('#auth-client');
+    checkSelectClient('#auth-expensive-speaker');
+    checkSelectClient('#auth-event-department');
+    checkSelectClient('#auth-external-conference');
+    checkSelectClient('#auth-field-conference');
+    checkInputWebsite();
     
     var sizeEmpty = form.find('.js__empty-field').length;
-
     if (sizeEmpty > 0) {
       if (btn.prop('disabled')) {
         isRequiredFilled = false;
@@ -315,10 +348,12 @@
       } else {
         isRequiredFilled = false;
         btn.prop('disabled', true);
+        btn.removeClass('active');
       }
     } else {
       isRequiredFilled = true;
       btn.prop('disabled', false);
+      btn.addClass('active');
     }
   }, 500);
 
@@ -344,6 +379,8 @@
 
   $('#auth-mail').on('focusout', mailIsValide);
 
+
+
   // подсказка для телефона по потере фокуса
   var telIsValide = function () {
 
@@ -368,35 +405,4 @@
   };
 
   $('#auth-tel').on('focusout', telIsValide);
-
-  // учесть isRequiredFilled = true
-  var isValide = function () {
-    var tel = telIsValide();
-    var mail = mailIsValide();
-    return tel && mail;
-  };
-
-
-  // отправка формы
-  var formSubmit = function(evt) {
-    evt.preventDefault();
-
-    if (isValide() && isRequiredFilled) {
-      setTimeout(openPopupThanks, 1000);
-    }
-  }
-
-  $('.expert-one .form-auth__submit').on('click', function (evt) {
-    formSubmit(evt)
-  });
-
-  form.on('submit', function (evt) {
-    formSubmit(evt)
-  });
-
-  // закрыть попап "спасибо"
-
-  $('.expert-one .thanks__close').on('click', function () {
-    closePopupThanks()
-  });
-})();
+})

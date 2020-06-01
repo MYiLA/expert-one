@@ -8,6 +8,8 @@
   var btnElement = customerWrapElement.find('.customer-data__btn--save');
   var telInputElement = customerWrapElement.find('.contacts__link--tel + .input-wrap .input-wrap__input');
   var mailInputElement = customerWrapElement.find('.contacts__link--mail + .input-wrap .input-wrap__input');
+  var nameInputElement = customerWrapElement.find('.customer-data__wrap-title + .input-wrap .input-wrap__input');
+  var siteInputElement = customerWrapElement.find('.contacts__link--site + .input-wrap .input-wrap__input');
 
 //сообщения об ошибке
   var mailInvalidMessage = mailInputElement.siblings('.input-wrap__invalid-message');
@@ -28,6 +30,10 @@
 
   // маски
 
+  // var nameMask = IMask(nameInputElement[0], {
+  //   mask: /^(?!.*\s{2,})[a-zA-Zа-яА-Я\.]{1,20}$/,
+  // });
+
   var phoneMask = IMask(telInputElement[0], {
     mask: '+{7} 000 000-00-00',
     placeholderChar: '_',
@@ -44,7 +50,19 @@
     }, invalidTime);
   }
 
-  // функции проверки емейла и телефона.
+  siteInputElement.on('focusout', function () {
+    if (siteInputElement.hasClass('js__empty-field')) {
+      siteInputElement.css({
+        'border-color': '#eb5757'
+      });
+
+      setTimeout(function () {
+        siteInputElement.removeAttr('style');
+      }, invalidTime);
+    };
+  });
+
+  // функции проверки.
 
   var addMessageInInput = function (input, message) {
     console.log(message);
@@ -84,6 +102,16 @@
     addMessageInInput(tel, message)
   }
 
+  var checkInputWebsite = function () {
+    if (
+      (siteInputElement.val() === '') ||
+      (siteInputElement.val().match(/^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/))) {
+        siteInputElement.removeClass('js__empty-field');
+      }
+     else 
+     siteInputElement.addClass('js__empty-field');
+  }
+
   var isRequiredFilled = false;
 
   // Проверка в режиме реального времени
@@ -91,6 +119,7 @@
     // Запускаем функцию проверки полей на заполненность
     checkInputMail(mailInputElement);
     checkInputTel(telInputElement);
+    checkInputWebsite();
 
     var sizeEmpty = customerWrapElement.find('.js__empty-field').length;
     if (sizeEmpty > 0) {

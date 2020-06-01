@@ -1,5 +1,5 @@
 'use strict';
-(function () {
+$(function () {
 // кастомные селекты
 
 if ($('.expert-one .menu__lang').length > 0) {
@@ -20,4 +20,4 @@ $('.expert-one .header__burger').on('click', function () {
   $('.expert-one').toggleClass('no-scroll');
 })
 
-})();
+});
