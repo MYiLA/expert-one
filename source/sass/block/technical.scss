@@ -8,10 +8,20 @@
     border-radius: 5px;
   }
 
+  .technical__flex-row {
+    &:nth-child(1) {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
   .technical__title {
     min-width: 50%;
     text-align: left;
     flex-grow: 1;
+    margin-right: 10px;
   }
 
   .technical__edit-btn {
@@ -142,6 +152,13 @@
     .technical {
       padding-bottom: 30px;
     }
+
+    .technical__flex-row {
+      width: 100%;
+      display: flex;
+      justify-content: left;
+    }
+
   .technical__wrap {
     margin-bottom: 0;
     &--1 {

@@ -17,6 +17,10 @@
     color: $black;
   }
 
+  .card__technical {
+    min-width: 100%;
+  }
+
   .card__technical,
   .card__progress,
   .card__hashtags,
@@ -31,7 +35,6 @@
 
 @media (min-width: $desktop-width) {
   .expert-one {
-
 
     .card__title {
       font-size: 22px;
