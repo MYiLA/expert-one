@@ -65,3 +65,6 @@ html(lang="ru")
   
     script(src="js/script.js")
     script(src="js/card.js")
+    scrip(src="js/video-slider.js")
+
+    script $(document).ready(function () {if ($(document).width() >= 1220) {initSlider(3);} else if ($(document).width() >= 820) { initSlider(2);} else {initSlider(1);};})

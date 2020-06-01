@@ -39,6 +39,17 @@
     background-position: center;
     background-size: 100% auto;
     border: none;
+
+    &.disabled {
+      cursor: default;
+      &:hover, &:focus, &:active {
+        opacity: 1;
+      }
+      .service__counter {
+        background-color: #888888;
+        opacity: 1;
+      }
+    }
   }
 
   .service__counter {
