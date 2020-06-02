@@ -10,6 +10,7 @@
   var mailInputElement = customerWrapElement.find('.contacts__link--mail + .input-wrap .input-wrap__input');
   var nameInputElement = customerWrapElement.find('.customer-data__wrap-title + .input-wrap .input-wrap__input');
   var siteInputElement = customerWrapElement.find('.contacts__link--site + .input-wrap .input-wrap__input');
+  var positionInputElement = customerWrapElement.find('.customer-data__position + .input-wrap .input-wrap__input');
 
 //сообщения об ошибке
   var mailInvalidMessage = mailInputElement.siblings('.input-wrap__invalid-message');
@@ -31,7 +32,11 @@
   // маски
 
   // var nameMask = IMask(nameInputElement[0], {
-  //   mask: /^(?!.*\s{2,})[a-zA-Zа-яА-Я\.]{1,20}$/,
+  //   mask: /^(?!.*\s{2,})[a-zA-Zа-яА-Я\.]{1,60}$/,
+  // });
+
+  // var positionMask = IMask(positionInputElement[0], {
+  //   mask: /^(?!. "-_><*\s{2,})[a-zA-Zа-яА-Я\.]{1,20}$/,
   // });
 
   var phoneMask = IMask(telInputElement[0], {
@@ -65,7 +70,6 @@
   // функции проверки.
 
   var addMessageInInput = function (input, message) {
-    console.log(message);
     input.addClass('js__empty-field');
     if (message) {
       message.addClass('active');
@@ -78,7 +82,6 @@
 
 
   var checkInputMail = function (mail, message) {
-    console.log(message);
     mail.val().match(mailformat)
     ||
     mail.val() === ''

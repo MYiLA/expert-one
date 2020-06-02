@@ -4,13 +4,16 @@ h2.customer-data__title Мои данные
     span.customer-data__wrap-title Миронова Василиса
     .customer-data__input-wrap.input-wrap
       input.input-wrap__input(type="text" name="name" placeholder="Изменить имя")
+      p.input-wrap__invalid-message неверно введено имя
     span.customer-data__position TND менеджер
     .customer-data__input-wrap.input-wrap
       input.input-wrap__input(type="text" name="name" placeholder="Изменить должность")
+      p.input-wrap__invalid-message неверно введена должность
   .customer-data__wrap
     span.customer-data__wrap-title ВТБ Банк
     .customer-data__input-wrap.input-wrap
       input.input-wrap__input(type="text" name="name" placeholder="Изменить банк")
+      p.input-wrap__invalid-message неверно введен банк
   .customer-data__wrap
     .customer-data__contacts.contacts
       a.contacts__link.contacts__link--mail(href="mailto:mironova@mail.ru") mironova@mail.ru
@@ -24,6 +27,7 @@ h2.customer-data__title Мои данные
       a.contacts__link.contacts__link--site(href="mironova.com" target="_blank") mironova.com
       .contacts__input-wrap.input-wrap
         input.input-wrap__input(type="text" name="name" placeholder="Изменить сайт")
+        p.input-wrap__invalid-message неверно введен сайт
 
   .customer-data__wrap.customer-data__wrap--save-btn
     button.customer-data__btn.customer-data__btn--save(type="submit") Сохранить данные

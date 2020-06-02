@@ -29,12 +29,13 @@
         padding-bottom: 20px;
         max-height: 320px;
 
-        &:nth-last-child(1) {
-          padding-bottom: 0;
-        }
+        // &:nth-last-child(1) {
+        //   padding-bottom: 0;
+        // }
       }
 
       .customer-data__wrap {
+        padding-bottom: 4px;
         &--save-btn {
           max-height: 200px;
           padding-top: 23px;
@@ -47,6 +48,12 @@
           overflow: hidden;
           padding: 0;
           border-bottom-color: #c0c4ce;
+        }
+      }
+
+      .customer-data__btn {
+        &--exit {
+          margin-bottom: 24px;
         }
       }
     }
@@ -146,7 +153,7 @@
     &--exit {
       @include animation-dark--red;
       color: #eb5757;
-
+      
       path {
         fill: #eb5757;
       }

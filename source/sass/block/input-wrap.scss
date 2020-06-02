@@ -10,7 +10,7 @@
   .input-wrap__input {
     @include input;
 
-    &:nth-last-child(1) {
+    &:nth-last-child(2) {
       margin-bottom: 0;
     }
   }

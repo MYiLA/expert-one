@@ -1,14 +1,17 @@
 button(type="button").form-auth__btn-back #[span.form-auth__arrow.form-auth__arrow--left]Вернуться назад
 form.form-auth__form.js__rf(method="POST")
-
-  label.form-auth__label(for="auth-last-name") Фамилия*
-  input.form-auth__input.js__rfield(type="text" id="auth-last-name" name="last-name" placeholder="Введите фамилию")
-
-  label.form-auth__label(for="auth-first-name") Имя*
-  input.form-auth__input.js__rfield(type="text" id="auth-first-name" name="first-name" placeholder="Введите имя")
-
-  label.form-auth__label(for="auth-middle-name") Отчество
-  input.form-auth__input(type="text" id="auth-middle-name" name="middle-name" placeholder="Введите отчество")
+  .form-auth__wrap-hint
+    label.form-auth__label(for="auth-last-name") Фамилия*
+    input.form-auth__input.js__rfield(type="text" id="auth-last-name" name="last-name" placeholder="Введите фамилию")
+    p.form-auth__invalid-message неверно введена фамилия
+  .form-auth__wrap-hint
+    label.form-auth__label(for="auth-first-name") Имя*
+    input.form-auth__input.js__rfield(type="text" id="auth-first-name" name="first-name" placeholder="Введите имя")
+    p.form-auth__invalid-message неверно введено имя
+  .form-auth__wrap-hint
+    label.form-auth__label(for="auth-middle-name") Отчество
+    input.form-auth__input(type="text" id="auth-middle-name" name="middle-name" placeholder="Введите отчество")
+    p.form-auth__invalid-message неверно введено отчество
   .form-auth__wrap-hint
     label.form-auth__label(for="auth-mail") E-mail*
     input.form-auth__input.js__rfield(type="text" id="auth-mail" name="mail" placeholder="Введите почту")
@@ -17,15 +20,20 @@ form.form-auth__form.js__rf(method="POST")
     label.form-auth__label(for="auth-tel") Телефон*
     input.form-auth__input.form-auth__input--mask.js__rf(type="text" id="auth-tel" name="tel")
     p.form-auth__invalid-message неверно введен номер
+  .form-auth__wrap-hint
+    label.form-auth__label(for="auth-position") Должность*
+    input.form-auth__input.js__rfield(type="text" id="auth-position" name="position" placeholder="Ваша должность")
+    p.form-auth__invalid-message неверно введена должность
 
-  label.form-auth__label(for="auth-position") Должность*
-  input.form-auth__input.js__rfield(type="text" id="auth-position" name="position" placeholder="Ваша должность")
-  
-  label.form-auth__label(for="auth-company") Компания*
-  input.form-auth__input.js__rfield(type="text" id="auth-company" name="company" placeholder="Введите название компании")
+  .form-auth__wrap-hint
+    label.form-auth__label(for="auth-company") Компания*
+    input.form-auth__input.js__rfield(type="text" id="auth-company" name="company" placeholder="Введите название компании")
+    p.form-auth__invalid-message неверно введено название Компании
 
-  label.form-auth__label(for="auth-website") Сайт
-  input.form-auth__input(type="text" id="auth-website" name="website" placeholder="Введите адрес сайта")
+  .form-auth__wrap-hint
+    label.form-auth__label(for="auth-website") Сайт
+    input.form-auth__input(type="text" id="auth-website" name="website" placeholder="Введите адрес сайта")
+    p.form-auth__invalid-message неверно введен сайт
 
   label.form-auth__label(for="auth-client") Вы заказчик или агентство?*
   .form-auth__select
@@ -33,8 +41,10 @@ form.form-auth__form.js__rf(method="POST")
       option(selected="selected" disabled)
       option Заказчик
       option Агентство
-  label.form-auth__label(for="auth-speakers-num") Сколько спикеров заказали за последний год?*
-  input.form-auth__input.js__rfield(type="text" id="auth-speakers-num" name="speakers-num" placeholder="")
+  .form-auth__wrap-hint
+    label.form-auth__label(for="auth-speakers-num") Сколько спикеров заказали за последний год?*
+    input.form-auth__input.js__rfield(type="text" id="auth-speakers-num" name="speakers-num" placeholder="")
+    p.form-auth__invalid-message пожалуйста используйте только цифры
 
   label.form-auth__label(for="auth-expensive-speaker") Ваш самый дорогой спикер за последние 3 года?*
   .form-auth__select

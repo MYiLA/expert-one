@@ -18,6 +18,18 @@
           display: block;
         }
       }
+
+      .previewText {
+        display: none;
+      };
+    }
+
+    .previewText {
+      display: block;
+    };
+    
+    .detailText {
+      display: none;
     }
 
     p {
