@@ -1,32 +1,40 @@
 h2.customer-data__title Мои данные
 .customer-data__wrap-main
   .customer-data__wrap
-    span.customer-data__wrap-title Миронова Василиса
+    span.customer-data__wrap-title Василиса Миронова
     .customer-data__input-wrap.input-wrap
-      input.input-wrap__input(type="text" name="name" placeholder="Изменить имя")
+      input.input-wrap__input.js__name(type="text" name="name" placeholder="Изменить имя")
       p.input-wrap__invalid-message неверно введено имя
-    span.customer-data__position TND менеджер
+    span.customer-data__wrap-title
     .customer-data__input-wrap.input-wrap
-      input.input-wrap__input(type="text" name="name" placeholder="Изменить должность")
+      input.input-wrap__input.js__last-name(type="text" name="last-name" placeholder="Изменить фамилию")
+      p.input-wrap__invalid-message неверно введена фамилия
+    span.customer-data__wrap-title
+    .customer-data__input-wrap.input-wrap
+      input.input-wrap__input.js__middle-name(type="text" name="middle-name" placeholder="Изменить отчество")
+      p.input-wrap__invalid-message неверно введено отчество
+    span.customer-data__wrap-title.customer-data__wrap-title--position TND менеджер
+    .customer-data__input-wrap.input-wrap
+      input.input-wrap__input.js__position(type="text" name="position" placeholder="Изменить должность")
       p.input-wrap__invalid-message неверно введена должность
   .customer-data__wrap
-    span.customer-data__wrap-title ВТБ Банк
+    span.customer-data__wrap-title ООО Битрикс
     .customer-data__input-wrap.input-wrap
-      input.input-wrap__input(type="text" name="name" placeholder="Изменить банк")
-      p.input-wrap__invalid-message неверно введен банк
+      input.input-wrap__input.js__company(type="text" name="company" placeholder="Изменить компанию")
+      p.input-wrap__invalid-message Неверно введено название компании. Используйте только буквы, цифры и знаки "-" , "&", "."
   .customer-data__wrap
     .customer-data__contacts.contacts
       a.contacts__link.contacts__link--mail(href="mailto:mironova@mail.ru") mironova@mail.ru
       .contacts__input-wrap.input-wrap
-        input.input-wrap__input(type="text" name="name" placeholder="Изменить почту")
+        input.input-wrap__input.js__mail(type="text" name="mail" placeholder="Изменить почту")
         p.input-wrap__invalid-message неверно введен e-mail
       a.contacts__link.contacts__link--tel(href="tel:+74955555555") +7 495 555 55 55
       .contacts__input-wrap.input-wrap
-        input.input-wrap__input(type="text" name="name" placeholder="Изменить телефон")
+        input.input-wrap__input.js__tel(type="text" name="tel" placeholder="Изменить телефон")
         p.input-wrap__invalid-message неверно введен телефон
       a.contacts__link.contacts__link--site(href="mironova.com" target="_blank") mironova.com
       .contacts__input-wrap.input-wrap
-        input.input-wrap__input(type="text" name="name" placeholder="Изменить сайт")
+        input.input-wrap__input.js__site(type="text" name="site" placeholder="Изменить сайт")
         p.input-wrap__invalid-message неверно введен сайт
 
   .customer-data__wrap.customer-data__wrap--save-btn

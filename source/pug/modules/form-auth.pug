@@ -28,7 +28,7 @@ form.form-auth__form.js__rf(method="POST")
   .form-auth__wrap-hint
     label.form-auth__label(for="auth-company") Компания*
     input.form-auth__input.js__rfield(type="text" id="auth-company" name="company" placeholder="Введите название компании")
-    p.form-auth__invalid-message неверно введено название Компании
+    p.form-auth__invalid-message Неверно введено название компании. Используйте только буквы, цифры и знаки "-" , "&", "."
 
   .form-auth__wrap-hint
     label.form-auth__label(for="auth-website") Сайт
@@ -43,7 +43,7 @@ form.form-auth__form.js__rf(method="POST")
       option Агентство
   .form-auth__wrap-hint
     label.form-auth__label(for="auth-speakers-num") Сколько спикеров заказали за последний год?*
-    input.form-auth__input.js__rfield(type="text" id="auth-speakers-num" name="speakers-num" placeholder="")
+    input.form-auth__input.js__rfield(type="text" id="auth-speakers-num" name="speakers-num" placeholder="Введите число")
     p.form-auth__invalid-message пожалуйста используйте только цифры
 
   label.form-auth__label(for="auth-expensive-speaker") Ваш самый дорогой спикер за последние 3 года?*

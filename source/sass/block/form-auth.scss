@@ -129,19 +129,61 @@
   }
 
   .form-auth__invalid-message {
+    z-index: 5;
+    display: block;
+    pointer-events: none;
     opacity: 0;
     position: absolute;
-    top: 73px;
+    top: 85px;
     left: 0;
-    color: $red;
     margin: 0;
+    padding: 10px;
+
+    width: 100%;
+    border: 1px solid $red;
+    border-radius: 3px;
+    text-align: center;
+
     font-weight: 500;
     font-size: 12px;
     line-height: 16px;
+    background-color: $white;
+    color: $red;
+    box-shadow: 0 4px 16px #e4e7ee;
 
     transition: 0.4s;
+
+    &::after {
+      content: '';
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 25px;
+      border-radius: 3px;
+      background-color: $white;
+    }
+
+    &::before {
+      content: '';
+      z-index: -1;
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%) rotate(45deg);
+      width: 17px;
+      height: 17px;
+      border: 1px solid $red;
+      border-top-left-radius: 3px;
+      box-shadow: 0 4px 16px #e4e7ee;
+      background-color: $white;
+    }
+
     &.active {
       opacity: 1;
+      pointer-events: auto;
     }
   }
 

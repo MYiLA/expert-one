@@ -16,7 +16,7 @@
     border: 1px solid #e2e4e9;
 
     &.edit {
-      .customer-data__position {
+      .customer-data__wrap-title--position {
         display: block;
         margin-bottom: 10px;
       }
@@ -32,6 +32,10 @@
         // &:nth-last-child(1) {
         //   padding-bottom: 0;
         // }
+      }
+
+      .input-wrap__input {
+        display: block;
       }
 
       .customer-data__wrap {
@@ -112,7 +116,7 @@
     }
   }
 
-  .customer-data__position {
+  .customer-data__wrap-title--position {
     word-wrap: break-word;
     font-size: 16px;
     line-height: 16px;
@@ -184,12 +188,6 @@
     }
   }
 }
-
-  // @media (min-width: $tablet-width) {
-  //   .expert-one {
-
-  //   }
-  // }
 
   @media (min-width: $desktop-width) {
     .expert-one {
