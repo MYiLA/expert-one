@@ -195,6 +195,7 @@ $(document).ready(function () {
     // закрыть и сбросить форму
     setTimeout(function () {
       $('.expert-one .popup-auth--form').removeClass('active');
+      $(document).unbind('keyup', escDocumentHandler);
       $('.expert-one').removeClass('no-scroll');
       form[0].reset();
     }, 400)
@@ -230,6 +231,7 @@ $(document).ready(function () {
   var openAuthForm = function () {
     $('.expert-one .popup-auth--form').addClass('active');
     $('.expert-one').addClass('no-scroll');
+    $(document).bind('keyup', escDocumentHandler);
     setTimeout(function () {
       $('.expert-one .popup-auth--form').removeClass('dissolve');
     }, 10);
@@ -413,11 +415,18 @@ $(document).ready(function () {
     });
   }
 
+  var checkSpeakersNum = function () {
+    if($('#auth-speakers-num').val() != '') {
+      $('#auth-speakers-num').removeClass('js__empty-field');
+    } else
+      $('#auth-speakers-num').addClass('js__empty-field');
+  };
+
   var isRequiredFilled = false;
   // Проверка в режиме реального времени
   setInterval(function () {
     // Запускаем функцию проверки полей на заполненность
-
+    checkSpeakersNum();
     checkInput();
     checkInputFirstName();
     checkInputLastName();
@@ -453,8 +462,7 @@ $(document).ready(function () {
 
 
   // подсказки при потере фокуса
-  nameInputElement.on('focusout', function () {
-
+  var showErrorName = function () {
     if (!(nameInputElement.val() != '')) {
       showInvalideMsg(nameInputElement, createMsgInvalideEmpty('имя'))
       return false
@@ -471,13 +479,13 @@ $(document).ready(function () {
     };
 
     return true
-  })
+  }
+
+  nameInputElement.on('focusout', showErrorName)
 
 
-
- nameLastInputElement.on('focusout', function () {
-
-  if (!(nameLastInputElement.val() != '')) {
+  var showErrorNameLast = function () {
+      if (!(nameLastInputElement.val() != '')) {
     showInvalideMsg(nameLastInputElement, createMsgInvalideEmpty('фамилию'))
     return false
   };
@@ -493,12 +501,14 @@ $(document).ready(function () {
   }
 
   return true
-  })
+  };
+
+ nameLastInputElement.on('focusout', showErrorNameLast);
 
 
 
-  nameMiddleInputElement.on('focusout', function () {
-    if(nameMiddleInputElement.val() === '') {
+  var showErrorNameMiddle = function () {
+        if(nameMiddleInputElement.val() === '') {
       return true
     }
 
@@ -513,11 +523,14 @@ $(document).ready(function () {
     }
 
     return true
-  })
+  }
+
+  nameMiddleInputElement.on('focusout', showErrorNameMiddle)
 
 
-  mailInputElement.on('focusout', function () {
-    if (!(mailInputElement.val() != '')) {
+
+  var showErrorMail = function () {
+        if (!(mailInputElement.val() != '')) {
       showInvalideMsg(mailInputElement, createMsgInvalideEmpty('е-мейл'));
       return false;
     }
@@ -532,12 +545,14 @@ $(document).ready(function () {
       return false
     }
     return true
-  });
+  }
+
+  mailInputElement.on('focusout', showErrorMail);
 
 
 
-  phoneInputElement.on('focusout', function () {
-    if (
+  var showErrorPhone = function () {
+        if (
       !(phoneInputElement.val().search('_') === -1) ||
       !(phoneInputElement.val() != '')
     ) {
@@ -550,13 +565,14 @@ $(document).ready(function () {
       return false;
     }
     return true;
-  });
+  };
+
+  phoneInputElement.on('focusout', showErrorPhone);
 
 
 
-  positionInputElement.on('focusout', function () {
-
-    if (!(positionInputElement.val() != '')) {
+  var showErrorPosition = function () {
+        if (!(positionInputElement.val() != '')) {
       showInvalideMsg(positionInputElement, createMsgInvalideEmpty('вашу должность'))
       return false
     }
@@ -572,12 +588,14 @@ $(document).ready(function () {
     }
 
     return true
-  })
+  };
+
+  positionInputElement.on('focusout', showErrorPosition);
 
 
 
-  companyInputElement.on('focusout', function () {
-    if (!(companyInputElement.val() != '')) {
+  var showErrorCompany = function () {
+     if (!(companyInputElement.val() != '')) {
       showInvalideMsg(companyInputElement, createMsgInvalideEmpty('название компании'))
       return false
     }
@@ -598,12 +616,13 @@ $(document).ready(function () {
     }
 
     return true
-  })
+  };
+
+  companyInputElement.on('focusout', showErrorCompany);
 
 
 
-  siteInputElement.on('focusout', function () {
-
+  var showErrorSite = function () {
     if(siteInputElement.val() === '') {
       return true
     }
@@ -619,6 +638,54 @@ $(document).ready(function () {
     }
 
     return true
-  });
+  };
+
+  siteInputElement.on('focusout', showErrorSite);
+
+
+  var showErrorSelect = function (selectIdString) {
+    if ($(selectIdString).val() === '') {
+      var wrapSelect = $(selectIdString).parents('.choices__inner');
+      wrapSelect.css({
+      'border-color': '#eb5757',
+    });
+
+    setTimeout(function () {
+      wrapSelect.removeAttr('style');
+    }, invalidTime);
+    }
+  }
+
+
+  var showErrorSpeakersNum = function () {
+    if($('#auth-speakers-num').val() === '') {
+      showInvalideMsg($('#auth-speakers-num'), 'Введите целое число от 0 до 9999')
+      return false
+    }
+    return true
+  };
+
+  $('#auth-speakers-num').on('focusout', showErrorSpeakersNum);
+
+
+
+  var escDocumentHandler = function (evt) {
+    if(evt.keyCode == 13){
+      showErrorSpeakersNum();
+      showErrorSelect('#auth-client');
+      showErrorSelect('#auth-expensive-speaker');
+      showErrorSelect('#auth-event-department');
+      showErrorSelect('#auth-external-conference');
+      showErrorSelect('#auth-field-conference');
+      showErrorName();
+      showErrorNameLast();
+      showErrorNameMiddle();
+      showErrorMail();
+      showErrorPhone();
+      showErrorPosition();
+      showErrorCompany();
+      showErrorSite();
+    }
+  }
 
 })

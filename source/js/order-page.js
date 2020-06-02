@@ -66,18 +66,15 @@ $(document).ready(function () {
   var positionInputElement = $('.js__position');
   var companyInputElement = $('.js__company');
 
-//сообщения об ошибке
-  // var mailInvalidMessage = mailInputElement.siblings('.input-wrap__invalid-message');
-  // var telInvalidMessage = phoneInputElement.siblings('.input-wrap__invalid-message');
-  // var btnInvalidMessage = btnElement.siblings('.customer-data__invalid-message');
-
   //открыть и закрыть редактирование
   $('.expert-one .customer-data__btn--edit').on('click', function () {
     $('.expert-one .customer-data__wrap-main').addClass('edit');
+    $(document).bind('keyup', escDocumentHandler);
   });
 
   $('.expert-one .customer-data__btn--save').on('click', function () {
     $('.expert-one .customer-data__wrap-main').removeClass('edit');
+    $(document).unbind('keyup', escDocumentHandler)
   });
 
 
@@ -90,52 +87,6 @@ $(document).ready(function () {
   });
 
   // Функция подсветки незаполненных полей
-
-
-  // функции проверки.
-  // var addMessageInInput = function (input, message) {
-  //   input.addClass('js__empty-field');
-  //   if (message) {
-  //     message.addClass('active');
-  //     setTimeout(function () {
-  //       message.removeClass('active');
-  //     }, invalidTime);
-  //   }
-  // }
-
-  // var checkInputMail = function (mail, message) {
-  //   mail.val().match(mailformat)
-  //   ||
-  //   mail.val() === ''
-  //   ?
-  //   mail.removeClass('js__empty-field')
-  //   : 
-  //   addMessageInInput(mail, message);
-  // }
-
-  // var checkInputTel = function (tel, message) {
-  //   (
-  //     (tel.val().search('_') === -1)
-  //     &&
-  //     (tel.val()[3] === '9')
-  //   ) 
-  //   ||
-  //   (tel.val() === '+7 ___ ___-__-__')
-  //   ? 
-  //   tel.removeClass('js__empty-field')
-  //   :
-  //   addMessageInInput(tel, message)
-  // }
-
-  // var checkInputWebsite = function () {
-  //   if (
-  //     (siteInputElement.val() === '') ||
-  //     (siteInputElement.val().match(/^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/))) {
-  //       siteInputElement.removeClass('js__empty-field');
-  //     }
-  //    else 
-  //    siteInputElement.addClass('js__empty-field');
-  // }
 
   var checkInputFirstName = function () {
     if (
@@ -272,8 +223,7 @@ $(document).ready(function () {
   }, 500);
 
   // подсказки при потере фокуса
-  nameInputElement.on('focusout', function () {
-
+  var showErrorName = function () {
     if (!(nameInputElement.val() != '')) {
       showInvalideMsg(nameInputElement, createMsgInvalideEmpty('имя'))
       return false
@@ -290,13 +240,13 @@ $(document).ready(function () {
     };
 
     return true
-  })
+  }
+
+  nameInputElement.on('focusout', showErrorName)
 
 
-
- nameLastInputElement.on('focusout', function () {
-
-  if (!(nameLastInputElement.val() != '')) {
+  var showErrorNameLast = function () {
+      if (!(nameLastInputElement.val() != '')) {
     showInvalideMsg(nameLastInputElement, createMsgInvalideEmpty('фамилию'))
     return false
   };
@@ -312,12 +262,14 @@ $(document).ready(function () {
   }
 
   return true
-  })
+  };
+
+ nameLastInputElement.on('focusout', showErrorNameLast);
 
 
 
-  nameMiddleInputElement.on('focusout', function () {
-    if(nameMiddleInputElement.val() === '') {
+  var showErrorNameMiddle = function () {
+        if(nameMiddleInputElement.val() === '') {
       return true
     }
 
@@ -332,11 +284,14 @@ $(document).ready(function () {
     }
 
     return true
-  })
+  }
+
+  nameMiddleInputElement.on('focusout', showErrorNameMiddle)
 
 
-  mailInputElement.on('focusout', function () {
-    if (!(mailInputElement.val() != '')) {
+
+  var showErrorMail = function () {
+        if (!(mailInputElement.val() != '')) {
       showInvalideMsg(mailInputElement, createMsgInvalideEmpty('е-мейл'));
       return false;
     }
@@ -351,12 +306,14 @@ $(document).ready(function () {
       return false
     }
     return true
-  });
+  }
+
+  mailInputElement.on('focusout', showErrorMail);
 
 
 
-  phoneInputElement.on('focusout', function () {
-    if (
+  var showErrorPhone = function () {
+        if (
       !(phoneInputElement.val().search('_') === -1) ||
       !(phoneInputElement.val() != '')
     ) {
@@ -369,13 +326,14 @@ $(document).ready(function () {
       return false;
     }
     return true;
-  });
+  };
+
+  phoneInputElement.on('focusout', showErrorPhone);
 
 
 
-  positionInputElement.on('focusout', function () {
-
-    if (!(positionInputElement.val() != '')) {
+  var showErrorPosition = function () {
+        if (!(positionInputElement.val() != '')) {
       showInvalideMsg(positionInputElement, createMsgInvalideEmpty('вашу должность'))
       return false
     }
@@ -391,12 +349,14 @@ $(document).ready(function () {
     }
 
     return true
-  })
+  };
+
+  positionInputElement.on('focusout', showErrorPosition);
 
 
 
-  companyInputElement.on('focusout', function () {
-    if (!(companyInputElement.val() != '')) {
+  var showErrorCompany = function () {
+     if (!(companyInputElement.val() != '')) {
       showInvalideMsg(companyInputElement, createMsgInvalideEmpty('название компании'))
       return false
     }
@@ -417,12 +377,13 @@ $(document).ready(function () {
     }
 
     return true
-  })
+  };
+
+  companyInputElement.on('focusout', showErrorCompany);
 
 
 
-  siteInputElement.on('focusout', function () {
-
+  var showErrorSite = function () {
     if(siteInputElement.val() === '') {
       return true
     }
@@ -438,6 +399,24 @@ $(document).ready(function () {
     }
 
     return true
-  });
+  };
+
+  siteInputElement.on('focusout', showErrorSite);
+
+  var escDocumentHandler = function (evt) {
+    if(evt.keyCode == 13){
+      showErrorName();
+      showErrorNameLast();
+      showErrorNameMiddle();
+      showErrorMail();
+      showErrorPhone();
+      showErrorPosition();
+      showErrorCompany();
+      showErrorSite();
+    }
+  }
+
+  // $(document).bind('keyup', escDocumentHandler);
+  // $(document).unbind('keyup', escDocumentHandler)
 
 });
