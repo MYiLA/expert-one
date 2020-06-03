@@ -2,6 +2,9 @@
   .card {
     padding-bottom: 60px;
     background-color: $white;
+    .speaker__photo {
+      cursor: default;
+    }
   }
 
   .card__hover-wrap {
