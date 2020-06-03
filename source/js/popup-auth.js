@@ -54,7 +54,6 @@ $(document).ready(function () {
 
   var choices = [choiceAuthClient, choiceAuthExpensiveSpeaker, choiceAuthDepartment, choiceAuthExternalConf, choiceAuthFieldConf];
 
-  console.log(choices);
   // регулярки
   var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/;
   var siteFormat = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-zа-я0-9]+([\-\.]{1}[a-zа-я0-9]+)*\.[a-zа-я]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
