@@ -53,15 +53,15 @@ $(document).ready(function () {
  }
 
   var choices = [choiceAuthClient, choiceAuthExpensiveSpeaker, choiceAuthDepartment, choiceAuthExternalConf, choiceAuthFieldConf];
-
+  
   // регулярки
   var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/;
   var siteFormat = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-zа-я0-9]+([\-\.]{1}[a-zа-я0-9]+)*\.[a-zа-я]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
   var nameFormat = /^[a-zA-Zа-яА-Я-\.]{1,}$/;
   var companyFormat = /^[a-zA-Zа-яА-Я0-9- .&\.]{1,}$/;
 
-  // Проверка в режиме реального времени
-  var isChecking = false;
+  // Проверка в режиме реального времени true, пока на сервере нет кнопки "назад"g
+  var isChecking = true;
 
   // вывод подсказок
   var invalidTime = 3500;
@@ -203,14 +203,14 @@ $(document).ready(function () {
       $('.expert-one .popup-auth--form').removeClass('active');
       $(document).unbind('keyup', escDocumentHandler);
       $('.expert-one').removeClass('no-scroll');
-      // отключить селекты
-      choices.forEach(function(element) {
-        element.destroy();
-      });
+      // // отключить селекты
+      // choices.forEach(function(element) {
+      //   element.destroy();
+      // });
       // сброс формы
       form[0].reset();
-      // отключить проверку в режиме реального времени
-      isChecking = false;
+      // // отключить проверку в режиме реального времени
+      // isChecking = false;
     }, 400)
   }
 
@@ -245,12 +245,12 @@ $(document).ready(function () {
     $('.expert-one .popup-auth--form').addClass('active');
     $('.expert-one').addClass('no-scroll');
     $(document).bind('keyup', escDocumentHandler);
-    // включить селекты
-    choices.forEach(function(element) {
-      element.init();
-    });
-    // Включить проверку в режиме реального времени
-    isChecking = true;
+    // // включить селекты
+    // choices.forEach(function(element) {
+    //   element.init();
+    // });
+    // // Включить проверку в режиме реального времени
+    // isChecking = true;
     setTimeout(function () {
       $('.expert-one .popup-auth--form').removeClass('dissolve');
     }, 10);
@@ -446,7 +446,11 @@ $(document).ready(function () {
 
   btn.on('click', function () {
     isChecking = false;
-    btn.prop('disabled', true);
+    setTimeout(
+      function() {
+      btn.prop('disabled', true);
+      }, 600
+    )
   })
 
     setInterval(function () {
@@ -717,5 +721,14 @@ $(document).ready(function () {
       showErrorSite();
     }
   }
+
+  // так как на сервере нет кнопки назад. Иначе включить эти опции в openAuthForm/closeAuthForm
+  
+  // включить селекты
+  choices.forEach(function(element) {
+    element.init();
+  });
+  // // Включить проверку в режиме реального времени
+  // isChecking = true;
 
 })
