@@ -360,6 +360,8 @@
 
     .client-order__wrap-speaker {
       position: relative;
+      width: 100%;
+      padding-right: 35px;
       max-height: 25px;
       overflow-y: hidden;
       transition: max-height 1s;
