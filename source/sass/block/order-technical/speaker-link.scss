@@ -40,7 +40,7 @@
       cursor: pointer;
       width: 20px;
       height: 15px;
-      top: 31px;
+      top: 3px;
       right: 25px;
       display: block;
       transition: 0.4s;
@@ -69,6 +69,9 @@
 
 @media (min-width: $desktop-width) {
   .expert-one {
-    
+    .speaker-link__expand {
+      right: 5px;
+      top: 5px;
+    }
   }
 }
