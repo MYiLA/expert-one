@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title ExpertOne
+    link(rel="stylesheet" type="text/css" href="lib/choices/choices.min.css")
+    link(rel="stylesheet" type="text/css" href="css/style.min.css")
+
+  body
+    .expert-one
+      main.expert-one__order-page.order-page
+        .order-page__header.header
+          .header__wrap
+            include ../modules/header
+        .wrap
+          section.order-page__customer-data.customer-data
+            include ../modules/customer-data
+          .order-page__main-wrap
+            section.order-page__orders.orders.orders--unsent
+              include ../modules/orders-new
+            section.order-page__orders.orders.orders--shipped
+              .orders__title-wrap
+                h2.orders__title Отправленные заказы
+                  span.orders__title-num (2)
+                span.orders__date Вчера
+              .orders__date-time.date-time
+                include ../modules/date-time
+              .orders__speakers.speakers
+                ul.speakers__list
+                  include ../modules/speaker-orders-new
+                  include ../modules/speaker-orders-new
+              .orders__management.management
+                include ../modules/management
+            section.order-page__orders.orders.orders--last
+              .orders__title-wrap
+                span.orders__date 12.03.2020
+              .orders__date-time.date-time
+                include ../modules/date-time
+              .orders__speakers.speakers
+                ul.speakers__list
+                  include ../modules/speaker-orders-new
+                  include ../modules/speaker-orders-new
+
+
+    script(src="lib/jquery3.4.1.js")
+    script(src="lib/choices/choices.min.js")
+    script(src="lib/imask.js")
+    script(src="js/script.js")
+    script(src="js/order-page.js")
